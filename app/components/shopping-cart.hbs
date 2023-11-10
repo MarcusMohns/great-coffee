@@ -1,0 +1,39 @@
+<div
+  class={{if
+    this.open.isOpen
+    "shopping-cart shopping-cart-open"
+    "shopping-cart shopping-cart-closed"
+  }}
+  id="rightMenu"
+>
+  <button
+    onclick={{this.toggleOpen}}
+    class="close-shopping-cart"
+    type="button"
+  >&times;</button>
+
+  <div class="shopping-cart-content">
+    <div class="shopping-cart-header">
+      <h2>Shopping Cart</h2>
+      <small>x items</small>
+    </div>
+
+    <a href="#" class="">Link 1</a>
+    <a href="#" class="">Link 2</a>
+    <a href="#" class="">Link 3</a>
+
+    <div class="summary">Summary</div>
+  </div>
+
+</div>
+
+<div
+  class={{if
+    this.open.isOpen
+    "shopping-cart-overlay shopping-cart-overlay-open"
+    "shopping-cart-overlay-closed"
+  }}
+  onclick={{this.toggleOpen}}
+  style="cursor:pointer"
+  id="shopping-cart-overlay"
+></div>

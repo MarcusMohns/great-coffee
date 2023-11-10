@@ -1,0 +1,29 @@
+<article class="coffee">
+  <Coffee::Image
+    src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Crane_estate_(5).jpg"
+    alt="A picture of Grand Old Mansion"
+  />
+  <div class="details">
+    <h3>
+      <LinkTo @route="coffee" @model={{@coffee}}>
+        {{@coffee.name}}
+      </LinkTo>
+    </h3>
+    <div class="detail owner">
+      <span>Name:</span>
+      {{@coffee.name}}
+    </div>
+    <div class="detail type">
+      <span>Type:</span>
+      {{@coffee.type}}
+    </div>
+    <div class="detail location">
+      <span>Description:</span>
+      {{@coffee.description}}
+    </div>
+    <div class="detail bedrooms">
+      <span>Description:</span>
+      {{@coffee.description}}
+    </div>
+  </div>
+</article>
