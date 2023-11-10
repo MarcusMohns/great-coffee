@@ -4,11 +4,11 @@
     alt="A picture of Grand Old Mansion"
   />
   <div class="details">
-    <h3>
+    {{!-- <h3>
       <LinkTo @route="coffee" @model={{@coffee}}>
         {{@coffee.name}}
       </LinkTo>
-    </h3>
+    </h3> --}}
     <div class="detail owner">
       <span>Name:</span>
       {{@coffee.name}}
@@ -21,9 +21,6 @@
       <span>Description:</span>
       {{@coffee.description}}
     </div>
-    <div class="detail bedrooms">
-      <span>Description:</span>
-      {{@coffee.description}}
-    </div>
+
   </div>
 </article>

@@ -4,11 +4,11 @@
     <Input @value={{this.query}} class="light" />
   </label>
 
-  <ul class="results">
+  <div class="results">
     <Coffees::Filter @coffees={{@coffees}} @query={{this.query}} as |results|>
       {{#each results as |coffee|}}
-        <li><Coffee @coffee={{coffee}} /></li>
+        <Coffee @coffee={{coffee}} />
       {{/each}}
     </Coffees::Filter>
-  </ul>
+  </div>
 </div>
