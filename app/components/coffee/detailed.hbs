@@ -19,13 +19,22 @@
       <span>Price:</span>
       €{{@coffee.price}}
     </div>
-    <select name="ground" id="ground">
+    <select
+      name="ground"
+      id="ground"
+      value={{this.ground}}
+      {{on "change" (fn this.handleGroundChange this.value)}}
+    >
       <option value="wholeBean">Whole Bean</option>
       <option value="freshlyGround">Freshly Ground</option>
     </select>
     <p class="qty">
       <label for="qty">Quantity:</label>
-      <button class="qtyminus qtybtn" aria-hidden="true">&minus;</button>
+      <div
+        class="qtyminus qtybtn"
+        aria-hidden="true"
+        {{on "click" this.decrementQty}}
+      >&minus;</div>
       <input
         type="number"
         name="qty"
@@ -33,10 +42,15 @@
         min="1"
         max="10"
         step="1"
-        value="1"
+        value={{this.qty}}
       />
-      <button class="qtyplus qtybtn" aria-hidden="true">&plus;</button>
+      <div
+        class="qtyplus qtybtn"
+        aria-hidden="true"
+        {{on "click" this.incrementQty}}
+      >&plus;</div>
     </p>
+    <button {{on "click" (fn this.addToCart this.value)}}>Add to cart</button>
     <div class="detail reviews">
       <span>reviews:</span>
       {{@coffee.reviews}}
