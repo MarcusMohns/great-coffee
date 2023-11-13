@@ -1,8 +1,5 @@
 <article class="coffee">
-  <Coffee::Image
-    src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Crane_estate_(5).jpg"
-    alt="A picture of Grand Old Mansion"
-  />
+  <Coffee::Image src={{@coffee.image}} alt={{@coffee.name}} />
   <div class="details">
     <h3>
       <LinkTo @route="coffee" @model={{@coffee}}>
