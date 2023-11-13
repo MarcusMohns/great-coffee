@@ -447,9 +447,39 @@ p {
   display: flex;
   margin: 20px 25px;
   place-content: space-around space-between;
-  flex-direction:column;
-  
-  
+  flex-direction:column; 
+}
+#ground {
+  font-size: 1.2rem;
+}
+
+.qty {
+  display:flex;
+  height:3rem;
+  box-sizing:border-box;
+}
+
+.qty input {
+  width: 7rem;
+  font-size: 1.3rem;
+  text-align: center;
+  border: 1px solid #575757;
+}
+
+.qtybtn {
+  padding: 0;
+	margin: 0;
+	border-style: none;
+	touch-action: manipulation;
+	display: inline-block;
+	border: none;
+	background: none;
+	cursor: pointer;
+  width: 3rem;
+  height:100%;
+  color: #fff;
+  font-size: 2rem;
+  background: #575757;
 }
 
 .coffee h3 {
@@ -469,18 +499,6 @@ p {
 .coffee .detail span {
   font-weight: 400;
   font-style: normal;
-}
-
-.coffee .map {
-  flex-grow: 0;
-  flex-basis: 150px;
-  font-size: 0;
-  margin: 0 25px;
-}
-
-.coffee .map img {
-  width: 150px;
-  height: 150px;
 }
 
 .coffee.detailed {

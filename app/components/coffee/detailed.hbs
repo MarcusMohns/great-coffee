@@ -1,43 +1,49 @@
 <Jumbo>
-  <h2>{{@coffee.title}}</h2>
-  <p>Nice find! This looks like a nice place to stay near {{@coffee.city}}.</p>
-  <a
-    href="#"
-    target="_blank"
-    rel="external nofollow noopener noreferrer"
-    class="share button"
-  >
-    Share on Twitter
-  </a>
+  <h2>{{@coffee.name}}</h2>
 </Jumbo>
 
 <article class="coffee detailed">
   <Coffee::Image src={{@coffee.image}} alt="A picture of {{@coffee.name}}" />
 
   <div class="details">
-    <h3>About {{@coffee.name}}</h3>
-
-    <div class="detail owner">
-      <span>Owner:</span>
-      {{@coffee.description}}
+    <h3>{{@coffee.name}}</h3>
+    <div class="detail">
+      By Great Coffee Co.
     </div>
     <div class="detail type">
       <span>Type:</span>
       {{@coffee.type}}
-      –
-      {{@coffee.description}}
+
     </div>
-    <div class="detail location">
-      <span>Location:</span>
-      {{@coffee.description}}
+    <div class="detail price">
+      <span>Price:</span>
+      €{{@coffee.price}}
     </div>
-    <div class="detail bedrooms">
-      <span>Number of bedrooms:</span>
-      {{@coffee.description}}
+    <select name="ground" id="ground">
+      <option value="wholeBean">Whole Bean</option>
+      <option value="freshlyGround">Freshly Ground</option>
+    </select>
+    <p class="qty">
+      <label for="qty">Quantity:</label>
+      <button class="qtyminus qtybtn" aria-hidden="true">&minus;</button>
+      <input
+        type="number"
+        name="qty"
+        id="qty"
+        min="1"
+        max="10"
+        step="1"
+        value="1"
+      />
+      <button class="qtyplus qtybtn" aria-hidden="true">&plus;</button>
+    </p>
+    <div class="detail reviews">
+      <span>reviews:</span>
+      {{@coffee.reviews}}
     </div>
     <div class="detail description">
-      <p>{{@coffee.description}}</p>
+      {{@coffee.description}}
     </div>
-  </div>
 
+  </div>
 </article>

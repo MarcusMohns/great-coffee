@@ -4,13 +4,13 @@ const COMMUNITY_CATEGORIES = ['Condo', 'Townhouse', 'Apartment'];
 
 export default class RentalModel extends Model {
   @attr name;
-  @attr prices;
+  @attr price;
   //   @attr location;
   //   @attr category;
   @attr image;
   @attr description;
+  @attr reviews;
   //   @attr bedrooms;
-  //   @attr description;
 
   get type() {
     if (COMMUNITY_CATEGORIES.includes(this.category)) {
