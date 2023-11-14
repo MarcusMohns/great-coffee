@@ -5,21 +5,20 @@ import { action } from '@ember/object';
 export default class CoffeeImageComponent extends Component {
   @tracked qty = 1;
 
-  @tracked ground = 'freshlyGround';
+  @tracked selectedGround = 'freshlyGround';
 
   @action incrementQty() {
     this.qty += 1;
   }
+
   @action decrementQty() {
     this.qty <= 1 ? (this.qty = 1) : (this.qty -= 1);
   }
-
-  @action handleGroundChange(value) {
-    this.ground = value;
-    console.log(value);
+  @action handleGroundChange(e) {
+    this.selectedGround = e.target.value;
   }
 
-  @action addToCart(items) {
-    console.log(items);
+  @action addToCart(price) {
+    console.log(price);
   }
 }
