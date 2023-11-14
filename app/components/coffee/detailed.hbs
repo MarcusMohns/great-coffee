@@ -26,7 +26,7 @@
       {{on "change" this.handleGroundChange}}
     >
       <option value="wholeBean">Whole Bean</option>
-      <option value="freshlyGround">Freshly Ground</option>
+      <option value="freshlyGround" selected>Freshly Ground</option>
     </select>
     <p class="qty">
       <label for="qty">Quantity:</label>
@@ -50,7 +50,7 @@
         {{on "click" this.incrementQty}}
       >&plus;</div>
     </p>
-    <button {{on "click" (fn this.addToCart @coffee.price)}}>Add to cart</button>
+    <button {{on "click" (fn this.addToCart @coffee.price @coffee.name)}}>Add to cart</button>
     <div class="detail reviews">
       <span>reviews:</span>
       {{@coffee.reviews}}

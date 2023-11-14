@@ -21,9 +21,14 @@
     <a href="#" class="">Link 1</a>
     <a href="#" class="">Link 2</a>
     <a href="#" class="">Link 3</a>
-
     <div class="summary">Summary</div>
   </div>
+ {{#each this.shoppingCart.items as |item|}}
+    <li>
+      {{item.name}}
+      <button type="button" {{on "click" (fn this.removeItem item)}}>Remove</button>
+    </li>
+  {{/each}}
 
 </div>
 
