@@ -23,15 +23,19 @@
     <a href="#" class="">Link 3</a>
     <div class="summary">Summary</div>
   </div>
- {{#each this.shoppingCart.items as |item|}}
+  {{#each this.shoppingCart.items as |item|}}
     <li>
       {{item.name}}
       {{item.ground}}
       {{item.quantity}}
       €{{item.price}}
-      <button type="button" {{on "click" (fn this.removeItem item)}}>Remove</button>
+      <button
+        type="button"
+        {{on "click" (fn this.removeItem item)}}
+      >Remove</button>
     </li>
   {{/each}}
+  <div>Total:{{this.shoppingCart.total}}</div>
 
 </div>
 

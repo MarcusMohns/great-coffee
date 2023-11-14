@@ -5,16 +5,30 @@ import { action } from '@ember/object';
 
 export default class ShoppingCartDataService extends Service {
   items = A([]);
+  @tracked total = 0;
 
-  add(item) {
-    this.items.pushObject(item);
+  calcTotal(quantity) {
+    this.total = this.items.reduce(
+      (accumulator, currentValue) =>
+        accumulator + currentValue.price * quantity,
+      0,
+    );
+
+    console.log(this.total);
   }
 
-  remove(item) {
+  add(item, quantity) {
+    this.items.pushObject(item);
+    this.calcTotal(quantity);
+  }
+
+  remove(item, quantity) {
     this.items.removeObject(item);
+    this.calcTotal(quantity);
   }
 
   empty() {
     this.items.clear();
+    this.total = 0;
   }
 }

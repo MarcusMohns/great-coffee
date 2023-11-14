@@ -22,12 +22,14 @@ export default class CoffeeImageComponent extends Component {
   }
 
   @action addToCart(price, name) {
-    this.shoppingCart.add({
-      name: name,
-      quantity: this.qty,
-      ground: this.selectedGround,
-      price: price,
-    });
-    console.log(this.shoppingCart.items);
+    this.shoppingCart.add(
+      {
+        name: name,
+        quantity: this.qty,
+        ground: this.selectedGround,
+        price: price,
+      },
+      this.qty,
+    );
   }
 }
