@@ -13,18 +13,15 @@ export default class ShoppingCartDataService extends Service {
         accumulator + currentValue.price * quantity,
       0,
     );
-
-    console.log(this.total);
   }
 
-  add(item, quantity) {
+  add(item) {
     this.items.pushObject(item);
-    this.calcTotal(quantity);
+    this.calcTotal(item.quantity);
   }
-
-  remove(item, quantity) {
+  remove(item) {
     this.items.removeObject(item);
-    this.calcTotal(quantity);
+    this.calcTotal(item.quantity);
   }
 
   empty() {

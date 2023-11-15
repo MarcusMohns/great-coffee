@@ -11,6 +11,6 @@ export default class ShoppingCartComponent extends Component {
   }
 
   @action removeItem(item) {
-    this.shoppingCart.remove(item, quantity);
+    this.shoppingCart.remove(item);
   }
 }
