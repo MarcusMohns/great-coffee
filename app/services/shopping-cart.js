@@ -22,19 +22,19 @@ export default class ShoppingCartDataService extends Service {
           ? { ...coffee, quantity: coffee.quantity + item.quantity }
           : coffee,
       );
-      // If the user wants more of the same product don't add a new product, increase quantity.
+      // If the product exists - Add quantity.
       if (
-        this.items.find(
+        !this.items.find(
           (coffee) =>
             coffee.name === item.name && coffee.ground === item.ground,
         )
       ) {
-        // do nothing
-      } else {
         stackedItems.push(item);
       }
+      // If the product doesn't exist yet - Add it.
 
       this.items = A(stackedItems);
+      // Add to state
     } else {
       this.items.pushObject(item);
     }
