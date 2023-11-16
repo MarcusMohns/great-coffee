@@ -2,7 +2,7 @@
   class={{if
     this.open.isOpen
     "shopping-cart shopping-cart-open"
-    "shopping-cart shopping-cart-closed"
+    "shopping-cart shopping-cart-open"
   }}
   id="rightMenu"
 >
@@ -15,13 +15,8 @@
   <div class="shopping-cart-content">
     <div class="shopping-cart-header">
       <h2>Shopping Cart</h2>
-      <small>x items</small>
+      <small>{{this.shoppingCart.items.length}} items</small>
     </div>
-
-    <a href="#" class="">Link 1</a>
-    <a href="#" class="">Link 2</a>
-    <a href="#" class="">Link 3</a>
-    <div class="summary">Summary</div>
   </div>
   {{#each this.shoppingCart.items as |item|}}
     <div>
@@ -36,7 +31,11 @@
       >Remove</button>
     </div>
   {{/each}}
-  <div>Total:{{this.shoppingCart.total}}</div>
+  <div class="summary">Summary
+    <div class="subtotal">Subtotal ({{this.shoppingCart.items.length}}) item(s)
+      <p class="price">{{this.shoppingCart.total}}</p>
+    </div>
+  </div>
 
 </div>
 
