@@ -17,24 +17,42 @@
       <h2>Shopping Cart</h2>
       <small>{{this.shoppingCart.items.length}} items</small>
     </div>
+    {{#each this.shoppingCart.items as |item|}}
+      <div class="shopping-cart-item">
+        <div class="sc-item-image-and-info">
+          <img src={{item.image}} alt={{item.name}} class="coffee-icon" />
+          <div class="sc-info">
+            <p>
+              <span>Name:</span>{{item.name}}
+            </p>
+            <p>
+              <span>Ground:</span>{{item.ground}}
+            </p>
+            <p>
+              <span>Weight:</span>100g
+            </p>
+            <p>
+              <span>€{{item.price}}</span>
+            </p>
+          </div>
+          <button
+            type="button"
+            {{on "click" (fn this.removeItem item)}}
+            class="remove-item-btn"
+          >Quantity {{item.quantity}}</button>
+        </div>
+
+      </div>
+    {{/each}}
   </div>
-  {{#each this.shoppingCart.items as |item|}}
-    <div>
-      <img src={{item.image}} alt={{item.name}} class="coffee-icon" />
-      {{item.name}}
-      {{item.ground}}
-      {{item.quantity}}
-      €{{item.price}}
-      <button
-        type="button"
-        {{on "click" (fn this.removeItem item)}}
-      >Remove</button>
-    </div>
-  {{/each}}
+
   <div class="summary">Summary
-    <div class="subtotal">Subtotal ({{this.shoppingCart.items.length}}) item(s)
-      <p class="price">{{this.shoppingCart.total}}</p>
+    <div class="subtotal">Subtotal
+      {{this.shoppingCart.items.length}}
+      item(s)
+      <p class="price">€{{this.shoppingCart.total}}</p>
     </div>
+    <button class="checkout-btn">CHECKOUT</button>
   </div>
 
 </div>
