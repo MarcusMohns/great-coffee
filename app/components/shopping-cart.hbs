@@ -24,7 +24,8 @@
     <div class="summary">Summary</div>
   </div>
   {{#each this.shoppingCart.items as |item|}}
-    <li>
+    <div>
+      <img src={{item.image}} alt={{item.name}} class="coffee-icon" />
       {{item.name}}
       {{item.ground}}
       {{item.quantity}}
@@ -33,7 +34,7 @@
         type="button"
         {{on "click" (fn this.removeItem item)}}
       >Remove</button>
-    </li>
+    </div>
   {{/each}}
   <div>Total:{{this.shoppingCart.total}}</div>
 

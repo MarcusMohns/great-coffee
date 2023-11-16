@@ -21,12 +21,13 @@ export default class CoffeeImageComponent extends Component {
     this.selectedGround = e.target.value;
   }
 
-  @action addToCart(price, name) {
+  @action addToCart(price, name, image) {
     this.shoppingCart.add({
       name: name,
       quantity: this.qty,
       ground: this.selectedGround,
       price: price,
+      image: image,
     });
   }
 }

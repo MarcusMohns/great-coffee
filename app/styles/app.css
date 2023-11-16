@@ -149,6 +149,11 @@ p {
   width: 100%;
 }
 
+.coffee-icon {
+  width:36px;
+  height:36px;
+}
+
 .close-shopping-cart {
   font-size: 1.5rem;
   background: transparent;

@@ -50,7 +50,12 @@
         {{on "click" this.incrementQty}}
       >&plus;</div>
     </p>
-    <button {{on "click" (fn this.addToCart @coffee.price @coffee.name)}}>Add to cart</button>
+    <button
+      {{on
+        "click"
+        (fn this.addToCart @coffee.price @coffee.name @coffee.image)
+      }}
+    >Add to cart</button>
     <div class="detail reviews">
       <span>reviews:</span>
       {{@coffee.reviews}}
