@@ -35,11 +35,28 @@
               <span>€{{multiply item.price item.quantity}}</span>
             </p>
           </div>
-          <button
-            type="button"
-            {{on "click" (fn this.removeItem item)}}
-            class="remove-item-btn"
-          >Quantity {{item.quantity}}</button>
+          <p class="sc-qty">
+            <div
+              class="sc-qtybtn"
+              aria-hidden="true"
+              {{on "click" (fn this.decrementQty item)}}
+            >&minus;</div>
+            <input
+              type="number"
+              name="qty"
+              id="qty"
+              min="1"
+              max="100"
+              step="1"
+              value={{item.quantity}}
+              {{on "change" this.handleQtyChange}}
+            />
+            <div
+              class="sc-qtybtn"
+              aria-hidden="true"
+              {{on "click" (fn this.incrementQty item)}}
+            >&plus;</div>
+          </p>
         </div>
 
       </div>

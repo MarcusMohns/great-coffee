@@ -15,6 +15,26 @@ export default class ShoppingCartDataService extends Service {
     );
   }
 
+  addQty(item) {
+    this.items.forEach(
+      (coffee) =>
+        coffee.name === item.name &&
+        coffee.ground === item.ground &&
+        (coffee.quantity += 1),
+    );
+    this.calcTotal();
+  }
+  removeQty(item) {
+    this.items.forEach(
+      (coffee) =>
+        coffee.name === item.name &&
+        coffee.ground === item.ground &&
+        coffee.quantity > 1 &&
+        (coffee.quantity -= 1),
+    );
+    this.calcTotal();
+  }
+
   add(item) {
     if (this.items.length) {
       const stackedItems = this.items.map((coffee) =>
