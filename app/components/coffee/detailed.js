@@ -15,8 +15,13 @@ export default class CoffeeImageComponent extends Component {
   }
 
   @action decrementQty() {
-    this.qty <= 1 ? (thshoppingCartis.qty = 1) : (this.qty -= 1);
+    this.qty <= 1 ? (this.shoppingCart.qty = 1) : (this.qty -= 1);
   }
+
+  @action handleQtyChange(e) {
+    this.qty = Number(e.target.value);
+  }
+
   @action handleGroundChange(e) {
     this.selectedGround = e.target.value;
   }
