@@ -15,7 +15,7 @@
   <div class="shopping-cart-content">
     <div class="shopping-cart-header">
       <h2>Shopping Cart</h2>
-      <small>{{this.shoppingCart.items.length}} items</small>
+      <small>{{this.items}} item(s)</small>
     </div>
     {{#each this.shoppingCart.items as |item|}}
       <div class="shopping-cart-item">
@@ -46,10 +46,9 @@
               name="qty"
               id="qty"
               min="1"
-              max="100"
               step="1"
               value={{item.quantity}}
-              {{on "change" this.handleQtyChange}}
+              {{on "change" (fn this.handleQtyChange item)}}
             />
             <div
               class="sc-qtybtn"
@@ -65,7 +64,7 @@
 
   <div class="summary">Summary
     <div class="subtotal">Subtotal
-      {{this.shoppingCart.items.length}}
+      {{this.items}}
       item(s)
       <p class="price">€{{this.shoppingCart.total}}</p>
     </div>
