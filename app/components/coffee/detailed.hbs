@@ -1,15 +1,18 @@
-<Jumbo>
-  <h2>{{@coffee.name}}</h2>
-</Jumbo>
-
 <article class="coffee detailed">
   <Coffee::Image src={{@coffee.image}} alt="A picture of {{@coffee.name}}" />
 
   <div class="details">
     <h3>{{@coffee.name}}</h3>
-    <div class="detail">
-      By Great Coffee Co.
+    <div class="detail-container">
+      <div class="detail">
+        By Great Coffee Co.
+      </div>
+      <div>
+        {{repeat "★" @coffee.reviews}}
+        {{repeat "☆" (emptyStars @coffee.reviews 5)}}
+      </div>
     </div>
+
     <div class="detail type">
       <span>Type:</span>
       {{@coffee.type}}
@@ -57,10 +60,7 @@
         (fn this.addToCart @coffee.price @coffee.name @coffee.image)
       }}
     >Add to cart</button>
-    <div class="detail reviews">
-      <span>reviews:</span>
-      {{@coffee.reviews}}
-    </div>
+
     <div class="detail description">
       {{@coffee.description}}
     </div>

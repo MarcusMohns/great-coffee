@@ -598,7 +598,6 @@ button {
 }
 
 .coffee .detail {
-  flex-basis: 50%;
   font-weight: 300;
   font-style: italic;
 }
@@ -606,6 +605,11 @@ button {
 .coffee .detail span {
   font-weight: 400;
   font-style: normal;
+}
+
+.details .reviews span {
+  margin-left:2rem;
+
 }
 
 .coffee.detailed {
@@ -626,6 +630,11 @@ button {
   height: auto;
 }
 
+.detail-container {
+  display:flex;
+  flex-direction: row;
+}
+
 .coffee.detailed h3 {
   font-size: 200%;
   margin-bottom: 10px;
@@ -633,7 +642,6 @@ button {
 
 .coffee.detailed .detail {
   margin: 5px 0;
-  flex-basis: 100%;
   flex-shrink: 2;
 }
 
