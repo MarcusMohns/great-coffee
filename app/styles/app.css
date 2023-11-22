@@ -301,7 +301,7 @@ button {
   margin-left: auto;
   margin-right: 20px;
   cursor: pointer;
-  background: linear-gradient(currentcolor 0 0) 0 100% / var(--d, 0) 3px
+  background: linear-gradient(white 0 0) 0 100% / var(--d, 0) 3px
     no-repeat;
   padding: 0.5rem 0;
   transition: 0.1s;
@@ -659,7 +659,6 @@ button {
   height:50px;
   color:white;
   background-color: #e46855;
-
   border: none;
   cursor:pointer; 
 }
