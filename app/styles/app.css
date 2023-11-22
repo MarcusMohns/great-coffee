@@ -651,6 +651,28 @@ button {
   flex-shrink: 1;
 }
 
+.coffee.detailed .addToCartBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:200px;
+  height:50px;
+  color:white;
+  background-color: #e46855;
+
+  border: none;
+  cursor:pointer; 
+}
+
+.coffee.detailed .addToCartBtn:hover {
+  background-color: #d46554;
+}
+
+.coffee.detailed .add-to-shopping-cart-icon {
+  margin-right:10px;
+  
+}
+
 .coffee.detailed .map {
   flex-basis: 100%;
   margin: 50px 25px 25px;
