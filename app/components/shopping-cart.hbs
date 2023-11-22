@@ -37,27 +37,31 @@
               <span>€{{multiply item.price item.quantity}}</span>
             </p>
           </div>
-          <p class="sc-qty">
-            <div
-              class="sc-qtybtn"
-              aria-hidden="true"
-              {{on "click" (fn this.decrementQty item)}}
-            >&minus;</div>
-            <input
-              type="number"
-              name="qty"
-              id="qty"
-              min="1"
-              step="1"
-              value={{item.quantity}}
-              {{on "change" (fn this.handleQtyChange item)}}
-            />
-            <div
-              class="sc-qtybtn"
-              aria-hidden="true"
-              {{on "click" (fn this.incrementQty item)}}
-            >&plus;</div>
-          </p>
+          <div class="column-container">
+            Quantity:
+            <p class="sc-qty">
+              <div
+                class="sc-qtybtn"
+                aria-hidden="true"
+                {{on "click" (fn this.decrementQty item)}}
+              >&minus;</div>
+              <input
+                type="number"
+                name="qty"
+                id="qty"
+                min="1"
+                step="1"
+                value={{item.quantity}}
+                {{on "change" (fn this.handleQtyChange item)}}
+              />
+              <div
+                class="sc-qtybtn"
+                aria-hidden="true"
+                {{on "click" (fn this.incrementQty item)}}
+              >&plus;</div>
+            </p>
+          </div>
+
         </div>
 
       </div>

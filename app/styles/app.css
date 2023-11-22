@@ -40,7 +40,14 @@ button {
 }
 
 
-
+.column-container {
+  display:flex;
+  flex-direction:column;
+}
+.row-container {
+  display:flex;
+  flex-direction:row;
+}
 /**
  * Button
  */
@@ -162,6 +169,7 @@ button {
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  width:100%;
 }
 .shopping-cart .sc-qty input {
   font-size:0.9rem;
