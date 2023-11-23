@@ -10,14 +10,6 @@ export default class CoffeeImageComponent extends Component {
 
   @tracked selectedGround = 'freshlyGround';
 
-  @action incrementQty() {
-    this.qty += 1;
-  }
-
-  @action decrementQty() {
-    this.qty <= 1 ? (this.shoppingCart.qty = 1) : (this.qty -= 1);
-  }
-
   @action handleQtyChange(e) {
     this.qty = Number(e.target.value);
   }

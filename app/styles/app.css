@@ -229,7 +229,6 @@ button {
 }
 
 .price {
-  font-size:1.2rem;
   font-weight:bold;
   margin-left:auto;
 }
@@ -562,40 +561,6 @@ button {
   place-content: space-around space-between;
   flex-direction:column; 
 }
-#ground {
-  font-size: 1.2rem;
-}
-
-.qty {
-  display:flex;
-  height:3rem;
-  box-sizing:border-box;
-}
-
-.qty input {
-  width: 7rem;
-  font-size: 1.3rem;
-  text-align: center;
-  border: 1px solid #575757;
-}
-
-.qtybtn {
-  display:flex;
-  justify-content:center;
-  padding: 0;
-	margin: 0;
-	border-style: none;
-	touch-action: manipulation;
-	border: none;
-	background: none;
-	cursor: pointer;
-  user-select: none;
-  width: 3rem;
-  height:100%;
-  color: #fff;
-  font-size: 2rem;
-  background: #575757;
-}
 
 .coffee h3 {
   flex-basis: 100%;
@@ -619,6 +584,23 @@ button {
   margin-left:2rem;
 
 }
+
+.detail-select {
+  font-size: 1rem;
+  font-weight: normal;
+  border: none;
+  width:min-content;
+  background-color: transparent;
+  padding:3px;
+  color: grey;
+}
+
+.detail-select:active, .detail-select:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+
 
 .coffee.detailed {
   background: none;
