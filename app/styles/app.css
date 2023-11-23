@@ -170,15 +170,24 @@ button {
   align-items: center;
   flex-direction: row;
   width:100%;
+  border:1px solid #575757;
 }
+
 .shopping-cart .sc-qty input {
   font-size:0.9rem;
   height: 27px;
   width: 1.9rem;
   border:none;
-  padding-left: 3px;
-  border:1px solid #575757
+  text-align: center;
+  margin-right:1px;
 }
+
+.shopping-cart .sc-qty input::-webkit-outer-spin-button,
+.shopping-cart .sc-qty input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 
 
 .shopping-cart .sc-qtybtn {
@@ -195,9 +204,9 @@ button {
   user-select: none;
   width: 1.8rem;
   height:1.8rem;
-  color: #fff;
+  color: #575757;
   font-size: 1.5rem;
-  background: #575757;
+
 }
 
 .sc-item-image-and-info {
