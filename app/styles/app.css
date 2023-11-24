@@ -126,7 +126,7 @@ button {
   flex-direction: column;
   align-items: center;
   height: 100%;
-  width: 30%;
+  width: 35%;
   z-index: 5;
   position: absolute;
   right: 0;
@@ -158,10 +158,25 @@ button {
 
 .shopping-cart-item {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 90%;
   justify-content: center;
   margin-bottom:5px;
+}
+.remove-item-btn {
+  align-self: center;
+  margin-right: 1rem;
+  font-size:1.4rem;
+  cursor: pointer;
+}
+.remove-item-btn:hover {
+  transform: scale(1.1);
+}
+
+.sc-item-qty-and-price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .sc-qty {
@@ -170,8 +185,7 @@ button {
   align-items: center;
   flex-direction: row;
   border:1px solid #575757;
-  height: 20px;
-  
+  margin-top:5px;  
 }
 
 .shopping-cart .sc-qty input {
@@ -209,15 +223,10 @@ button {
 
 }
 
-.sc-item-image-and-info {
-  display:flex;
-  flex-direction:row;
-
-}
-
 .sc-info {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width:100%;
   font-size:0.9rem;
 }
@@ -231,6 +240,10 @@ button {
   font-weight:bold;
   font-size:0.9rem;
   margin-right:6px;
+}
+.bold {
+  font-weight:bold;
+  font-size:0.9rem;
 }
 
 .subtotal {

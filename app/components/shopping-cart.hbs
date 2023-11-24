@@ -19,50 +19,52 @@
     </div>
     {{#each this.shoppingCart.items as |item|}}
       <div class="shopping-cart-item">
-        <div class="sc-item-image-and-info">
-          <img src={{item.image}} alt={{item.name}} class="coffee-icon" />
-          <div class="sc-info">
-            <p>
-              <span>{{item.name}}</span>
-            </p>
-            <p>
-              <span>Ground:</span>
-              {{displayGround item.ground}}
+        <div
+          class="remove-item-btn"
+          {{on "click" (fn this.removeItem item)}}
+        >X</div>
+        <img src={{item.image}} alt={{item.name}} class="coffee-icon" />
+        <div class="sc-info">
+          <p>
+            <span>{{item.name}}</span>
+          </p>
+          <p>
+            <span>Ground:</span>
+            {{displayGround item.ground}}
 
-            </p>
-            <p>
-              <span>Weight:</span>100g
-            </p>
-            <div class="row-container">
-              <span>
-                Quantity:
-              </span>
-              <p class="sc-qty">
-                <div
-                  class="sc-qtybtn"
-                  aria-hidden="true"
-                  {{on "click" (fn this.decrementQty item)}}
-                >&minus;</div>
-                <input
-                  type="number"
-                  name="qty"
-                  id="qty"
-                  min="1"
-                  step="1"
-                  value={{item.quantity}}
-                  {{on "change" (fn this.handleQtyChange item)}}
-                />
-                <div
-                  class="sc-qtybtn"
-                  aria-hidden="true"
-                  {{on "click" (fn this.incrementQty item)}}
-                >&plus;</div>
-              </p>
-            </div>
-            <p>
-              <span>€{{multiply item.price item.quantity}}</span>
+          </p>
+          <p>
+            <span>Weight:</span>100g
+          </p>
+        </div>
+        <div class="column-container sc-item-qty-and-price">
+          <p>
+            <span class="bold">€{{multiply item.price item.quantity}}</span>
+          </p>
+          <div class="row-container">
+            <p class="sc-qty">
+              <div
+                class="sc-qtybtn"
+                aria-hidden="true"
+                {{on "click" (fn this.decrementQty item)}}
+              >&minus;</div>
+              <input
+                type="number"
+                name="qty"
+                id="qty"
+                min="1"
+                step="1"
+                value={{item.quantity}}
+                {{on "change" (fn this.handleQtyChange item)}}
+              />
+              <div
+                class="sc-qtybtn"
+                aria-hidden="true"
+                {{on "click" (fn this.incrementQty item)}}
+              >&plus;</div>
             </p>
           </div>
+
         </div>
 
       </div>
