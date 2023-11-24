@@ -23,7 +23,7 @@
           <img src={{item.image}} alt={{item.name}} class="coffee-icon" />
           <div class="sc-info">
             <p>
-              <span>Name:</span>{{item.name}}
+              <span>{{item.name}}</span>
             </p>
             <p>
               <span>Ground:</span>
@@ -33,35 +33,36 @@
             <p>
               <span>Weight:</span>100g
             </p>
+            <div class="row-container">
+              <span>
+                Quantity:
+              </span>
+              <p class="sc-qty">
+                <div
+                  class="sc-qtybtn"
+                  aria-hidden="true"
+                  {{on "click" (fn this.decrementQty item)}}
+                >&minus;</div>
+                <input
+                  type="number"
+                  name="qty"
+                  id="qty"
+                  min="1"
+                  step="1"
+                  value={{item.quantity}}
+                  {{on "change" (fn this.handleQtyChange item)}}
+                />
+                <div
+                  class="sc-qtybtn"
+                  aria-hidden="true"
+                  {{on "click" (fn this.incrementQty item)}}
+                >&plus;</div>
+              </p>
+            </div>
             <p>
               <span>€{{multiply item.price item.quantity}}</span>
             </p>
           </div>
-          <div class="column-container">
-            Quantity:
-            <p class="sc-qty">
-              <div
-                class="sc-qtybtn"
-                aria-hidden="true"
-                {{on "click" (fn this.decrementQty item)}}
-              >&minus;</div>
-              <input
-                type="number"
-                name="qty"
-                id="qty"
-                min="1"
-                step="1"
-                value={{item.quantity}}
-                {{on "change" (fn this.handleQtyChange item)}}
-              />
-              <div
-                class="sc-qtybtn"
-                aria-hidden="true"
-                {{on "click" (fn this.incrementQty item)}}
-              >&plus;</div>
-            </p>
-          </div>
-
         </div>
 
       </div>

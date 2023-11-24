@@ -169,13 +169,13 @@ button {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  width:100%;
   border:1px solid #575757;
+  height: 20px;
+  
 }
 
 .shopping-cart .sc-qty input {
   font-size:0.9rem;
-  height: 27px;
   width: 1.9rem;
   border:none;
   text-align: center;
@@ -218,16 +218,19 @@ button {
 .sc-info {
   display: flex;
   flex-direction: column;
-  width:min-content;
+  width:100%;
   font-size:0.9rem;
 }
-.sc-info p{
+.sc-info p {
+  display: flex;
   padding:2px;
 }
-.sc-info p span {
+.sc-info span {
+  display:flex;
+  align-items: center;
   font-weight:bold;
   font-size:0.9rem;
-  margin-right:2px;
+  margin-right:6px;
 }
 
 .subtotal {
@@ -261,8 +264,8 @@ button {
 }
 
 .coffee-icon {
-  height:100px;
-  width:120px;
+  height:121px;
+  width:176px;
   border-radius:5px;
   margin:auto 0;
   margin-right: 5px;
