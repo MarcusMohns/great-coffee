@@ -5,13 +5,17 @@ import { action } from '@ember/object';
 
 export default class CoffeeImageComponent extends Component {
   @service shoppingCart;
+  @service alert;
 
   @tracked qty = 1;
-
   @tracked selectedGround = 'freshlyGround';
 
   @action handleQtyChange(e) {
     this.qty = Number(e.target.value);
+  }
+
+  @action showAlert() {
+    this.alert.displayAlert();
   }
 
   @action handleGroundChange(e) {
