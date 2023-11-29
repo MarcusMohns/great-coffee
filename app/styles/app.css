@@ -764,13 +764,20 @@ button {
 
 .alert {
   position:sticky;
-  bottom:20px;
+  bottom:0px;
   padding: 20px;
   background-color: #f44336; /* Red */
   color: white;
   margin-bottom: 15px;
+  z-index:10;
+  animation-name: bounceIn;
+  animation-duration: 0.2s;
 }
 
+@keyframes bounceIn {
+  from  { transform:translateY(100%)}
+  to  { transform:translateY(0%)}
+}
 /* The close button */
 .closebtn {
   margin-left: 15px;
