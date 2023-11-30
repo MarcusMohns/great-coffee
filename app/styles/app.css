@@ -775,13 +775,15 @@ button {
   color: white;
   z-index:10;
   animation-name: bounceIn;
-  animation-duration: 0.3s;
+  animation-duration: 3.1s;
   overflow:visible
 }
 
 @keyframes bounceIn {
-  from  { transform:translateY(100%)}
-  to  { transform:translateY(0%)}
+  0%  { transform:translateY(100%)}
+  5%  { transform:translateY(0%)}
+  90%  { transform:translateY(0%)}
+  100%  { transform:translateY(200%)}
 }
 /* The close button */
 .closebtn {

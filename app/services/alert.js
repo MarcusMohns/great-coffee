@@ -7,6 +7,10 @@ export default class ShoppingCartDataService extends Service {
 
   @action displayAlert() {
     this.alertDisplayed = true;
+
+    setTimeout(() => {
+      this.alertDisplayed = false;
+    }, '3000');
   }
 
   @action hideAlert() {
