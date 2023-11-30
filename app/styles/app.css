@@ -675,6 +675,7 @@ button {
   align-items: center;
   width:200px;
   height:50px;
+  margin:5px;
   color:white;
   background-color: #e46855;
   border: none;

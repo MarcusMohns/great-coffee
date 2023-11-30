@@ -6,12 +6,18 @@ import { action } from '@ember/object';
 export default class CoffeeImageComponent extends Component {
   @service shoppingCart;
   @service alert;
+  @service shoppingCartState;
 
   @tracked qty = 1;
   @tracked selectedGround = 'freshlyGround';
 
   @action handleQtyChange(e) {
     this.qty = Number(e.target.value);
+  }
+
+  @action openShoppingCart() {
+    this.shoppingCartState.isOpen = true;
+    console.log('Heeey');
   }
 
   @action showAlert() {
