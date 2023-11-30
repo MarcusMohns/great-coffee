@@ -12,7 +12,10 @@
 html {
   background-color: #f9f9f9;
   overflow-x: hidden;
+  overflow-y: scroll;
 }
+
+
 
 body,
 h1,
@@ -764,14 +767,16 @@ button {
 
 .alert {
   position:sticky;
-  bottom:0px;
+  width: 50%;
+  bottom:1rem;
+  margin: 0 auto;
   padding: 20px;
   background-color: #f44336; /* Red */
   color: white;
-  margin-bottom: 15px;
   z-index:10;
   animation-name: bounceIn;
-  animation-duration: 0.2s;
+  animation-duration: 0.3s;
+  overflow:visible
 }
 
 @keyframes bounceIn {
