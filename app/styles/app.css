@@ -15,8 +15,6 @@ html {
   overflow-y: scroll;
 }
 
-
-
 body,
 h1,
 h2,
@@ -42,14 +40,13 @@ button {
   font-size: 100%;
 }
 
-
 .column-container {
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
 }
 .row-container {
-  display:flex;
-  flex-direction:row;
+  display: flex;
+  flex-direction: row;
 }
 /**
  * Button
@@ -148,7 +145,7 @@ button {
   width: 90%;
   align-items: center;
   justify-content: space-between;
-  margin-bottom:5%;
+  margin-bottom: 5%;
 }
 
 .shopping-cart-content {
@@ -164,12 +161,12 @@ button {
   flex-direction: row;
   width: 90%;
   justify-content: center;
-  margin-bottom:5px;
+  margin-bottom: 5px;
 }
 .remove-item-btn {
   align-self: center;
   margin-right: 1rem;
-  font-size:1.4rem;
+  font-size: 1.4rem;
   cursor: pointer;
 }
 .remove-item-btn:hover {
@@ -187,16 +184,16 @@ button {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  border:1px solid #575757;
-  margin-top:5px;  
+  border: 1px solid #575757;
+  margin-top: 5px;
 }
 
 .shopping-cart .sc-qty input {
-  font-size:0.9rem;
+  font-size: 0.9rem;
   width: 1.9rem;
-  border:none;
+  border: none;
   text-align: center;
-  margin-right:1px;
+  margin-right: 1px;
 }
 
 .shopping-cart .sc-qty input::-webkit-outer-spin-button,
@@ -204,8 +201,6 @@ button {
   -webkit-appearance: none;
   margin: 0;
 }
-
-
 
 .shopping-cart .sc-qtybtn {
   display: flex;
@@ -220,75 +215,73 @@ button {
   cursor: pointer;
   user-select: none;
   width: 1.8rem;
-  height:1.8rem;
+  height: 1.8rem;
   color: #575757;
   font-size: 1.5rem;
-
 }
 
 .sc-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width:100%;
-  font-size:0.9rem;
+  width: 100%;
+  font-size: 0.9rem;
 }
 .sc-info p {
   display: flex;
-  padding:2px;
+  padding: 2px;
 }
 .sc-info span {
-  display:flex;
+  display: flex;
   align-items: center;
-  font-weight:bold;
-  font-size:0.9rem;
-  margin-right:6px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-right: 6px;
 }
 .bold {
-  font-weight:bold;
-  font-size:0.9rem;
+  font-weight: bold;
+  font-size: 0.9rem;
 }
 
 .subtotal {
-  font-weight:bold;
+  font-weight: bold;
   display: flex;
-  width:100%;
-  margin-top:10px; 
+  width: 100%;
+  margin-top: 10px;
 }
 
 .price {
-  font-weight:bold;
-  margin-left:auto;
+  font-weight: bold;
+  margin-left: auto;
 }
 
 .checkout-btn {
-  width:100%;
-  height:50px;
-  margin-top:10px;
+  width: 100%;
+  height: 50px;
+  margin-top: 10px;
   background-color: #262626;
-  color:white;
+  color: white;
 }
 .checkout-btn:hover {
   background-color: #575757;
 }
 
-
 .remove-item-btn {
-  margin-left:auto;
-  border:0;
-  padding:0;
+  margin-left: auto;
+  border: 0;
+  padding: 0;
 }
 
 .coffee-icon {
-  height:121px;
-  width:176px;
-  border-radius:5px;
-  margin:auto 0;
+  height: 121px;
+  width: 176px;
+  border-radius: 5px;
+  margin: auto 0;
   margin-right: 5px;
 }
 
 .close-shopping-cart {
-  align-self:flex-start;
+  align-self: flex-start;
   font-size: 1.5rem;
   background: transparent;
   border: none;
@@ -326,8 +319,8 @@ button {
 }
 
 .summary {
-  border-top:1px solid black;
-  padding:5px;
+  border-top: 1px solid black;
+  padding: 5px;
   height: 200px;
   width: 90%;
 }
@@ -336,8 +329,7 @@ button {
   margin-left: auto;
   margin-right: 20px;
   cursor: pointer;
-  background: linear-gradient(white 0 0) 0 100% / var(--d, 0) 3px
-    no-repeat;
+  background: linear-gradient(white 0 0) 0 100% / var(--d, 0) 3px no-repeat;
   padding: 0.5rem 0;
   transition: 0.1s;
 }
@@ -346,7 +338,6 @@ button {
   --d: 100%;
 }
 
-/* Footer */
 
 .footer {
   display: flex;
@@ -391,20 +382,43 @@ button {
 
 .coffees label span {
   font-size: 140%;
-  margin: 50px auto 20px;
   display: block;
   text-align: center;
   font-style: italic;
 }
 
+.coffees .search {
+  align-items: center;
+  justify-content: center;
+}
+
 .coffees input {
-  padding: 11px;
-  font-size: 18px;
-  width: 500px;
-  margin: 20px auto 50px;
-  background-color: rgb(255 255 255 / 75%);
-  border: solid 1px lightgray;
-  display: block;
+  width: 50%;
+  padding: 12px 24px;
+  background-color: transparent;
+  transition: transform 250ms ease-in-out;
+  font-size: 14px;
+  line-height: 18px;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  background-position: 95% center;
+
+  border-radius: 50px;
+  border: 1px solid #575756;
+  transition: all 250ms ease-in-out;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+
+}
+.coffees input:hover,
+.coffees input:focus
+{
+  padding: 12px 0;
+  outline: 0;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #575756;
+  border-radius: 0;
 }
 
 .menu input:focus {
@@ -441,14 +455,14 @@ button {
 }
 
 .results {
-  display:flex;
-  flex-direction:row;
-  flex-wrap:wrap;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   margin-top: -10px;
 }
 
 .results {
-  display:flex;
+  display: flex;
   justify-content: center;
   padding: 10px 15px;
 }
@@ -587,7 +601,7 @@ button {
   display: flex;
   margin: 20px 25px;
   place-content: space-around space-between;
-  flex-direction:column; 
+  flex-direction: column;
 }
 
 .coffee h3 {
@@ -609,26 +623,24 @@ button {
 }
 
 .details .reviews span {
-  margin-left:2rem;
-
+  margin-left: 2rem;
 }
 
 .detail-select {
   font-size: 1rem;
   font-weight: normal;
   border: none;
-  width:min-content;
+  width: min-content;
   background-color: transparent;
-  padding:3px;
+  padding: 3px;
   color: grey;
 }
 
-.detail-select:active, .detail-select:focus {
+.detail-select:active,
+.detail-select:focus {
   outline: none;
   box-shadow: none;
 }
-
-
 
 .coffee.detailed {
   background: none;
@@ -649,7 +661,7 @@ button {
 }
 
 .detail-container {
-  display:flex;
+  display: flex;
   flex-direction: row;
 }
 
@@ -673,13 +685,13 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width:200px;
-  height:50px;
-  margin:5px;
-  color:white;
+  width: 200px;
+  height: 50px;
+  margin: 5px;
+  color: white;
   background-color: #e46855;
   border: none;
-  cursor:pointer; 
+  cursor: pointer;
 }
 
 .coffee.detailed .addToCartBtn:hover {
@@ -687,8 +699,7 @@ button {
 }
 
 .coffee.detailed .add-to-shopping-cart-icon {
-  margin-right:10px;
-  
+  margin-right: 10px;
 }
 
 .coffee.detailed .map {
@@ -767,24 +778,32 @@ button {
 }
 
 .alert {
-  position:sticky;
+  position: sticky;
   width: 50%;
-  bottom:1rem;
+  bottom: 1rem;
   margin: 0 auto;
   padding: 20px;
   background-color: #f44336; /* Red */
   color: white;
-  z-index:10;
+  z-index: 10;
   animation-name: bounceIn;
   animation-duration: 3.1s;
-  overflow:visible
+  overflow: visible;
 }
 
 @keyframes bounceIn {
-  0%  { transform:translateY(100%)}
-  5%  { transform:translateY(0%)}
-  90%  { transform:translateY(0%)}
-  100%  { transform:translateY(200%)}
+  0% {
+    transform: translateY(100%);
+  }
+  5% {
+    transform: translateY(0%);
+  }
+  90% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(200%);
+  }
 }
 /* The close button */
 .closebtn {

@@ -1,7 +1,14 @@
 <div class="coffees">
   <label>
     <span>Where would you like to stay?</span>
-    <Input @value={{this.query}} class="light" />
+    <div class="search row-container">
+      <Input
+        @value={{this.query}}
+        class="light"
+        placeholder="Search"
+        autocomplete="off"
+      />
+    </div>
   </label>
 
   <div class="results">
