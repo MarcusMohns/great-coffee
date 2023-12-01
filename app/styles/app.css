@@ -393,7 +393,7 @@ button {
 }
 
 .coffees input {
-  width: 50%;
+  width: 25%;
   padding: 12px 24px;
   background-color: transparent;
   transition: transform 250ms ease-in-out;
@@ -414,7 +414,7 @@ button {
 .coffees input:hover,
 .coffees input:focus
 {
-  padding: 12px 0;
+  padding: 12px 24px;
   outline: 0;
   border: 1px solid transparent;
   border-bottom: 1px solid #575756;
@@ -783,7 +783,7 @@ button {
   bottom: 1rem;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f44336; /* Red */
+  background-color: #02b902; /* Red */
   color: white;
   z-index: 10;
   animation-name: bounceIn;
