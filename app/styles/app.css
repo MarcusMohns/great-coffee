@@ -26,6 +26,7 @@ p,
 div,
 span,
 a,
+select,
 button {
   font-family: Lato, "Open Sans", "Helvetica Neue", "Segoe UI", Helvetica, Arial,
     sans-serif;
@@ -51,6 +52,18 @@ button {
 /**
  * Button
  */
+
+.front-page {
+  display:flex;
+  flex-direction:row;
+}
+
+.front-page-header {
+  background-image: url("https://images.unsplash.com/photo-1442512595331-e89e73853f31?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  height:500px;
+  width:100%;
+}
+
 
 .button {
   padding: 10px 30px;
@@ -475,10 +488,6 @@ button {
  * Content Area
  */
 
-.body {
-  padding: 15px;
-}
-
 /**
  * Similar to Jumbotron
  */
@@ -783,7 +792,7 @@ button {
   bottom: 1rem;
   margin: 0 auto;
   padding: 20px;
-  background-color: #02b902; /* Red */
+  background-color: #e46855; /* Red */
   color: white;
   z-index: 10;
   animation-name: bounceIn;
