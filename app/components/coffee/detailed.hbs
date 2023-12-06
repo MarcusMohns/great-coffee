@@ -66,12 +66,11 @@
     </div>
     <div class="row-container">
       <button
-        {{on
+        class="addToCartBtn" type="button" {{on
           "click"
           (fn this.addToCart @coffee.price @coffee.name @coffee.image)
         }}
         {{on "click" this.showAlert}}
-        class="addToCartBtn"
       >
 
         <svg
@@ -90,7 +89,7 @@
         Add to cart
 
       </button>
-      <button {{on "click" this.openShoppingCart}} class="addToCartBtn">
+      <button class="addToCartBtn" type="button" {{on "click" this.openShoppingCart}}>
         View Cart
       </button>
     </div>

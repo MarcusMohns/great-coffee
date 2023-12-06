@@ -6,11 +6,10 @@ export default modifier((element) => {
       document.body.scrollTop > 80 ||
       document.documentElement.scrollTop > 80
     ) {
-      element.style.background = 'red';
+      element.style.background = '#e46855';
     } else {
       element.style.background = 'transparent';
     }
   };
-
   document.addEventListener('scroll', styleOnScroll);
 });
