@@ -69,7 +69,17 @@ button {
   height: 500px;
   width: 100%;
   position: absolute;
-  top: 0px;
+  top: -1px;
+  left: -1px;
+}
+
+.page-header-image {
+  background-image: url("https://images.unsplash.com/photo-1442512595331-e89e73853f31?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  height: 4em;
+  width: 100%;
+  position: absolute;
+  top: -1px;
+  left: -1px;
 }
 
 .button {
@@ -502,27 +512,6 @@ button {
 .jumbo {
   padding: 50px;
   background: #f6f6f6;
-}
-
-.jumbo:hover {
-  background-color: #f3f3f3;
-}
-
-.jumbo h2 {
-  font-size: 3.2em;
-  margin-top: -25px;
-}
-
-.jumbo p,
-.jumbo address {
-  margin-bottom: 25px;
-}
-
-.jumbo img {
-  height: 200px;
-  position: relative;
-  top: -25px;
-  right: -20px;
 }
 
 /**
