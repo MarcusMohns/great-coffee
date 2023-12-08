@@ -1,94 +1,97 @@
-<div
-  class={{if
-    this.open.isOpen
-    "shopping-cart shopping-cart-open"
-    "shopping-cart shopping-cart-closed"
-  }}
-  id="rightMenu"
->
-  <button
-    onclick={{this.toggleOpen}}
-    class="close-shopping-cart"
-    type="button"
-  >&times;</button>
+<div class="wrapper">
 
-  <div class="shopping-cart-content">
-    <div class="shopping-cart-header">
-      <h2>Shopping Cart</h2>
-      <small>{{this.items}} item(s)</small>
-    </div>
-    {{#each this.shoppingCart.items as |item|}}
-      <div class="shopping-cart-item">
-        <div
-          class="remove-item-btn"
-          {{on "click" (fn this.removeItem item)}}
-        >X</div>
-        <img src={{item.image}} alt={{item.name}} class="coffee-icon" />
-        <div class="sc-info">
-          <p>
-            <span>{{item.name}}</span>
-          </p>
-          <p>
-            <span>Ground:</span>
-            {{displayGround item.ground}}
+  <div
+    class={{if
+      this.open.isOpen
+      "shopping-cart shopping-cart-open"
+      "shopping-cart shopping-cart-closed"
+    }}
+    id="rightMenu"
+  >
+    <button
+      onclick={{this.toggleOpen}}
+      class="close-shopping-cart"
+      type="button"
+    >&times;</button>
 
-          </p>
-          <p>
-            <span>Weight:</span>100g
-          </p>
-        </div>
-        <div class="column-container sc-item-qty-and-price">
-          <p>
-            <span class="bold">€{{multiply item.price item.quantity}}</span>
-          </p>
-          <div class="row-container">
-            <p class="sc-qty">
-              <div
-                class="sc-qtybtn"
-                aria-hidden="true"
-                {{on "click" (fn this.decrementQty item)}}
-              >&minus;</div>
-              <input
-                type="number"
-                name="qty"
-                id="qty"
-                min="1"
-                step="1"
-                value={{item.quantity}}
-                {{on "change" (fn this.handleQtyChange item)}}
-              />
-              <div
-                class="sc-qtybtn"
-                aria-hidden="true"
-                {{on "click" (fn this.incrementQty item)}}
-              >&plus;</div>
+    <div class="shopping-cart-content">
+      <div class="shopping-cart-header">
+        <h2>Shopping Cart</h2>
+        <small>{{this.items}} item(s)</small>
+      </div>
+      {{#each this.shoppingCart.items as |item|}}
+        <div class="shopping-cart-item">
+          <div
+            class="remove-item-btn"
+            {{on "click" (fn this.removeItem item)}}
+          >X</div>
+          <img src={{item.image}} alt={{item.name}} class="coffee-icon" />
+          <div class="sc-info">
+            <p>
+              <span>{{item.name}}</span>
             </p>
+            <p>
+              <span>Ground:</span>
+              {{displayGround item.ground}}
+
+            </p>
+            <p>
+              <span>Weight:</span>100g
+            </p>
+          </div>
+          <div class="column-container sc-item-qty-and-price">
+            <p>
+              <span class="bold">€{{multiply item.price item.quantity}}</span>
+            </p>
+            <div class="row-container">
+              <p class="sc-qty">
+                <div
+                  class="sc-qtybtn"
+                  aria-hidden="true"
+                  {{on "click" (fn this.decrementQty item)}}
+                >&minus;</div>
+                <input
+                  type="number"
+                  name="qty"
+                  id="qty"
+                  min="1"
+                  step="1"
+                  value={{item.quantity}}
+                  {{on "change" (fn this.handleQtyChange item)}}
+                />
+                <div
+                  class="sc-qtybtn"
+                  aria-hidden="true"
+                  {{on "click" (fn this.incrementQty item)}}
+                >&plus;</div>
+              </p>
+            </div>
+
           </div>
 
         </div>
-
-      </div>
-    {{/each}}
-  </div>
-
-  <div class="summary">Summary
-    <div class="subtotal">Subtotal
-      {{this.items}}
-      item(s)
-      <p class="price">€{{this.shoppingCart.total}}</p>
+      {{/each}}
     </div>
-    <button class="checkout-btn" type="button">CHECKOUT</button>
+
+    <div class="summary">Summary
+      <div class="subtotal">Subtotal
+        {{this.items}}
+        item(s)
+        <p class="price">€{{this.shoppingCart.total}}</p>
+      </div>
+      <button class="checkout-btn" type="button">CHECKOUT</button>
+    </div>
+
   </div>
 
+  <div
+    class={{if
+      this.open.isOpen
+      "shopping-cart-overlay shopping-cart-overlay-open"
+      "shopping-cart-overlay-closed"
+    }}
+    onclick={{this.toggleOpen}}
+    style="cursor:pointer"
+    id="shopping-cart-overlay"
+  ></div>
 </div>
-
-<div
-  class={{if
-    this.open.isOpen
-    "shopping-cart-overlay shopping-cart-overlay-open"
-    "shopping-cart-overlay-closed"
-  }}
-  onclick={{this.toggleOpen}}
-  style="cursor:pointer"
-  id="shopping-cart-overlay"
-></div>
