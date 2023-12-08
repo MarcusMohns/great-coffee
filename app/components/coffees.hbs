@@ -9,7 +9,13 @@
       />
     </div>
   </label>
-
+  <LinkTo @route="index" class="menu-coffees">
+    Home
+  </LinkTo>
+  >
+  <LinkTo @route="coffees" class="menu-coffees">
+    Coffees
+  </LinkTo>
   <div class="results">
     <Coffees::Filter @coffees={{@coffees}} @query={{this.query}} as |results|>
       {{#each results as |coffee|}}

@@ -1,7 +1,16 @@
 <Jumbo>
+
+  <LinkTo @route="index" class="menu-coffees">
+    Home
+  </LinkTo>
+  >
+  <LinkTo @route="coffees" class="menu-coffees">
+    Coffees
+  </LinkTo>
+  >
+  {{@coffee.name}}
   <article class="coffee detailed">
     <Coffee::Image src={{@coffee.image}} alt="A picture of {{@coffee.name}}" />
-
     <div class="details">
       <h3>{{@coffee.name}}</h3>
       <div class="detail-container">
