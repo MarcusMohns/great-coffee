@@ -158,8 +158,7 @@ button {
 .wrapper {
   height:0px;
   position: sticky;
-  top:0px;
-  right:0px;
+  top:80px;
   z-index: 12;
 }
 
@@ -172,8 +171,7 @@ button {
   overflow:visible;
   min-height:500px;
   z-index: 12;
-  top:0px;
-  right:0px;
+  top:80px;
 
   margin-left:auto;
   transform: translate(200px);
