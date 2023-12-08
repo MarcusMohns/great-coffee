@@ -1,20 +1,22 @@
-<div class="coffees">
-  <label>
-    <div class="search row-container">
-      <Input
-        @value={{this.query}}
-        class="light"
-        placeholder="Search for some Coffee!"
-        autocomplete="off"
-      />
-    </div>
-  </label>
+<Jumbo>
+  <div class="coffees">
+    <label>
+      <div class="search row-container">
+        <Input
+          @value={{this.query}}
+          class="light"
+          placeholder="Search for some Coffee!"
+          autocomplete="off"
+        />
+      </div>
+    </label>
 
-  <div class="results">
-    <Coffees::Filter @coffees={{@coffees}} @query={{this.query}} as |results|>
-      {{#each results as |coffee|}}
-        <Coffee @coffee={{coffee}} />
-      {{/each}}
-    </Coffees::Filter>
+    <div class="results">
+      <Coffees::Filter @coffees={{@coffees}} @query={{this.query}} as |results|>
+        {{#each results as |coffee|}}
+          <Coffee @coffee={{coffee}} />
+        {{/each}}
+      </Coffees::Filter>
+    </div>
   </div>
-</div>
+</Jumbo>
