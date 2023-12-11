@@ -84,14 +84,50 @@ button {
 .little-message-thing {
   display: flex;
   flex-direction:column;
-  margin-bottom:300px;
   margin-top:30px;
-  color:white;
+  color:#f3f3f3;
   font-weight: 800;
   line-height: 1.5;
   font-size:1.3rem;
   background-color: rgba(97, 97, 97, 0.5);
   padding:5px;
+}
+
+.browse-coffee-btn {
+  font-size: 1.2rem;
+  background-color: #e46855;
+  color: #f3f3f3;
+  padding:20px 25px;
+  cursor: pointer;
+  margin-bottom:200px;
+  margin-top: 30px;
+  border-radius: 4px;
+}
+
+.coffee-info-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  width: 80%;
+}
+
+.coffee-info-header {
+  font-size:1.9rem;
+}
+
+
+.front-page-coffee-info {
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.browse-coffee-btn:hover {
+  background-color: #e4553f;
 }
 
 .images-with-text-container {
@@ -207,13 +243,14 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 35%;
+  min-width: 35%;
+  max-width: fit-content;
   position: sticky;
   overflow:visible;
   min-height:500px;
   z-index: 12;
   top:80px;
-
+  user-select: none;
   margin-left:auto;
   transform: translate(200px);
   transition-duration: 0.3s;
@@ -249,7 +286,7 @@ button {
 .remove-item-btn {
   align-self: center;
   margin-right: 1rem;
-  font-size: 1.4rem;
+  font-size: 2.3rem;
   cursor: pointer;
 }
 .remove-item-btn:hover {
@@ -878,4 +915,18 @@ button {
 /* When moving the mouse over the close button */
 .closebtn:hover {
   color: black;
+}
+
+/* The fady slidy part */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20vh);
+  visibility: hidden;
+  transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+  will-change: opacity, visibility;
+}
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
 }
