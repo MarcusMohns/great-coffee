@@ -77,7 +77,7 @@ button {
   background-color: #ffffff;
   border: 1px solid rgb(136, 136, 136);
   padding:12px;
-  transform: rotate(0.12turn);
+  transform: rotate(0.125turn);
   margin-top:100px;
 }
 
@@ -110,6 +110,7 @@ button {
   align-items: center;
   justify-content: center;
   margin-top: 30px;
+  margin-bottom:130px;
   width: 80%;
 }
 
@@ -144,6 +145,21 @@ button {
   align-items: center;
   text-align: center;
   margin:0 3rem;
+}
+.cool-coffee-bean {
+  position: relative;
+  top: 46px;
+  background-color: #88276A;
+  border: 1px solid white;
+  padding:12px;
+  transform: rotate(0.125turn);
+  margin-top:100px;
+}
+.membership {
+  padding-top:100px;
+  background: #88276A;
+  color:white;
+  min-height:600px;
 }
 
 .small-header {
