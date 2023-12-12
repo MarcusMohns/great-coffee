@@ -99,7 +99,7 @@ button {
   color: #f3f3f3;
   padding:20px 25px;
   cursor: pointer;
-  margin-bottom:200px;
+  margin-bottom:110px;
   margin-top: 30px;
   border-radius: 4px;
 }
@@ -115,6 +115,7 @@ button {
 
 .coffee-info-header {
   font-size:1.9rem;
+  margin-top: 100px;
 }
 
 
@@ -134,7 +135,6 @@ button {
   display: flex;
   padding:2rem;
   margin: 0 3rem;
-  border-top: 2px solid #a0a0a0;
   margin-top:20px;
 }
 
@@ -148,8 +148,10 @@ button {
 .cool-coffee-bean {
   position: relative;
   top: 46px;
-  background-color: #612310;
+  background-color: #3f190e;
   border: 1px solid white;
+  border-top:1px solid #3f190e;
+  border-left:1px solid #3f190e;
   padding:12px;
   transform: rotate(0.125turn);
   margin-top:50px;
@@ -159,8 +161,9 @@ button {
   flex-direction:row;
   box-sizing: border-box;
   padding:200px;
+  padding-bottom: 160px;
   background: #4e1c0d;
-  background: linear-gradient(#4e1c0d, #863117);
+  background: linear-gradient(#290a01, #661f09);
   color:white;
   min-height:600px;
   width: 100%;
