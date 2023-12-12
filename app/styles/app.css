@@ -135,7 +135,7 @@ button {
   padding:2rem;
   margin: 0 3rem;
   border-top: 2px solid #a0a0a0;
-  margin-top:100px;
+  margin-top:20px;
 }
 
 .image-text-container {
@@ -148,17 +148,34 @@ button {
 .cool-coffee-bean {
   position: relative;
   top: 46px;
-  background-color: #88276A;
+  background-color: #612310;
   border: 1px solid white;
   padding:12px;
   transform: rotate(0.125turn);
-  margin-top:100px;
+  margin-top:50px;
 }
 .membership {
-  padding-top:100px;
-  background: #88276A;
+  display: flex;
+  flex-direction:row;
+  box-sizing: border-box;
+  padding:200px;
+  background: #4e1c0d;
+  background: linear-gradient(#4e1c0d, #863117);
   color:white;
   min-height:600px;
+  width: 100%;
+}
+
+.membership p {
+  height: 480px;
+  font-size: 1.4rem;
+  margin-left:3rem;
+}
+
+.cozy-coffee {
+  height: 480px;
+  width: 320px;
+  border-radius:5px;
 }
 
 .small-header {
