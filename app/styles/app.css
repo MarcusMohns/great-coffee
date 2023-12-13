@@ -124,6 +124,16 @@ button {
   background-color:#6d251a;
 }
 
+.coffee-info-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f5ae28;
+  padding:100px;
+
+}
+
 .coffee-info-container {
   display: flex;
   flex-direction: row;
@@ -135,7 +145,6 @@ button {
 
 .coffee-info-header {
   font-size:1.9rem;
-  margin-top: 100px;
 }
 
 
@@ -147,7 +156,7 @@ button {
   width: 100%;
 }
 
-.images-with-text-container {
+.images-with-text-section {
   display: flex;
   padding:2rem;
   margin: 0 3rem;
@@ -161,6 +170,15 @@ button {
   text-align: center;
   margin:0 3rem;
 }
+
+.image-text-container img {
+  border-radius: 5px;
+  height: 213px;
+  width: 320px;
+  box-shadow: 2px 2px 8px black;
+  margin-bottom: 15px;
+}
+
 .cool-coffee-bean {
   position: relative;
   top: 46px;
@@ -172,7 +190,7 @@ button {
   transform: rotate(0.125turn);
   margin-top:50px;
 }
-.membership {
+.membership-section {
   display: flex;
   flex-direction:row;
   box-sizing: border-box;
@@ -216,6 +234,31 @@ button {
 
 .small-header {
   font-size:1.2rem;
+}
+
+.explore-coffee-section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  padding:2rem;
+  align-items: center;
+  border-top:2px solid grey;
+  font-size:1.2rem;
+}
+
+.explore-coffee-section h3 {
+  font-size:1.8rem;
+  text-align: center;
+}
+
+.explore-coffee-btns {
+  display: flex;
+  flex-direction: row;
+  padding:1rem;
+}
+
+.explore-coffee-btns a {
+  margin:1rem;
 }
 
 .page-header-image {
