@@ -104,6 +104,26 @@ button {
   border-radius: 4px;
 }
 
+.browse-coffee-btn:hover {
+  background-color: #e4553f;
+}
+
+.get-started-btn {
+  font-size: 1.2rem;
+  background-color: #943223;
+  color: #f3f3f3;
+  padding:20px 25px;
+  cursor: pointer;
+  margin-bottom:110px;
+  margin-top: 30px;
+  border-radius: 4px;
+  width: fit-content;
+}
+
+.get-started-btn:hover {
+  background-color:#6d251a;
+}
+
 .coffee-info-container {
   display: flex;
   flex-direction: row;
@@ -125,10 +145,6 @@ button {
   align-items: center;
   justify-content: center;
   width: 100%;
-}
-
-.browse-coffee-btn:hover {
-  background-color: #e4553f;
 }
 
 .images-with-text-container {
@@ -169,16 +185,33 @@ button {
   width: 100%;
 }
 
-.membership p {
+.points-container {
+  display: flex;
+  flex-direction:column;
   height: 480px;
   font-size: 1.4rem;
   margin-left:3rem;
+}
+
+.points-container h3 {
+  font-size:2.8rem;
+  font-weight:800;
+  margin-bottom:12px;
+}
+
+.points-container li {
+  padding:1rem;
+}
+
+.points-container ul {
+  list-style-type: square;
 }
 
 .cozy-coffee {
   height: 480px;
   width: 320px;
   border-radius:5px;
+  box-shadow: 3px 3px 15px black;
 }
 
 .small-header {
