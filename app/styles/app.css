@@ -140,7 +140,7 @@ button {
   align-items: center;
   justify-content: center;
   margin-top: 30px;
-  width: 80%;
+  width:100%;
 }
 
 .coffee-info-header {
@@ -153,13 +153,15 @@ button {
   flex-direction:column;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 80%;
+  text-align: center;
 }
 
 .images-with-text-section {
   display: flex;
+  flex-direction: column;
   padding:2rem;
-  margin: 0 3rem;
+  margin: 1.7rem;
   margin-top:20px;
 }
 
@@ -168,7 +170,7 @@ button {
   flex-direction:column;
   align-items: center;
   text-align: center;
-  margin:0 3rem;
+  margin: 1.8rem;
 }
 
 .image-text-container img {
@@ -193,13 +195,12 @@ button {
 .membership-section {
   display: flex;
   flex-direction:row;
-  box-sizing: border-box;
+  box-sizing:content-box;
   padding:200px;
   padding-bottom: 160px;
   background: #4e1c0d;
   background: linear-gradient(#290a01, #661f09);
   color:white;
-  min-height:600px;
   width: 100%;
 }
 
@@ -226,6 +227,7 @@ button {
 }
 
 .cozy-coffee {
+  display: none;
   height: 480px;
   width: 320px;
   border-radius:5px;
@@ -242,13 +244,14 @@ button {
   margin-top: 100px;
   padding:2rem;
   align-items: center;
-  border-top:2px solid grey;
+  border:none;
   font-size:1.2rem;
+  text-align: center;
 }
 
 .explore-coffee-section h3 {
   font-size:1.8rem;
-  text-align: center;
+  margin:0.5rem;
 }
 
 .explore-coffee-btns {
@@ -590,13 +593,13 @@ button {
 
 .footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   text-decoration: none;
-  padding: 2rem 10rem;
-  margin-top: 5rem;
-  margin-left: 5rem;
-  margin-right:5rem;
+  padding: 1rem;
+  margin-top: 0rem;
+  margin-left: 0rem;
+  margin-right:0rem;
   border-top: 2px solid #e6e6e6;
   background-color: #f9f9f9;
 }
@@ -1058,4 +1061,46 @@ button {
   opacity: 1;
   transform: none;
   visibility: visible;
+}
+
+
+
+@media (min-width: 1000px) {
+  .images-with-text-section {
+    flex-direction:row;
+  }
+
+  .image-text-container {
+    margin:0 3rem;
+  }
+  .membership-section {
+    box-sizing: border-box; 
+  }
+
+  .cozy-coffee {
+    display: flex;
+  }
+
+  .coffee-info-container {
+    width:80%;
+  }
+
+  .explore-coffee-section {
+    border-top:2px solid grey;
+
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 2rem 10rem;
+    margin-top: 5rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    border-top: 2px solid #e6e6e6;
+    background-color: #f9f9f9;
+    justify-content: space-between;
+  }
+
 }
