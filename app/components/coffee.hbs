@@ -1,20 +1,20 @@
 <article class="coffee">
   <Coffee::Image src={{@coffee.image}} alt={{@coffee.name}} />
-  <div class="details">
+  <div class="coffee-details">
     <h3>
       <LinkTo @route="coffee" @model={{@coffee}}>
         {{@coffee.name}}
       </LinkTo>
     </h3>
-    <div class="detail owner">
+    <div class="coffee-owner">
       <span>Name:</span>
       {{@coffee.name}}
     </div>
-    <div class="detail type">
+    <div class="coffee-type">
       <span>Type:</span>
       {{@coffee.type}}
     </div>
-    <div class="detail description">
+    <div class="coffee-description">
       <span>Description:</span>
       {{@coffee.description}}
     </div>

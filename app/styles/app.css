@@ -822,6 +822,37 @@ button {
   font-size: 110%;
 }
 
+.coffee .coffee-details {
+  font-size: 1.1rem;
+  flex-basis: 50%;
+  flex-grow: 2;
+  display: flex;
+  margin: 20px 25px;
+  place-content: space-around space-between;
+  flex-direction: column;
+}
+
+.coffee-owner,
+.coffee-description,
+.coffee-type {
+  font-weight: 300;
+  font-style: italic;
+}
+
+.coffee-owner span,
+.coffee-description span,
+.coffee-type span {
+  font-weight: 400;
+  font-style: normal;
+}
+
+.coffee-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+
 .coffee .details {
   flex-basis: 50%;
   flex-grow: 2;
@@ -1103,4 +1134,10 @@ button {
     justify-content: space-between;
   }
 
+  .coffee-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+  }
 }
