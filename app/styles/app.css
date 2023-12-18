@@ -733,7 +733,8 @@ button {
  */
 
 .jumbo {
-  padding: 50px;
+  padding: 10px;
+  padding-top:50px;
 }
 
 
@@ -902,8 +903,11 @@ button {
 }
 
 .coffee.detailed {
+  display: flex;
+  flex-direction: column;
   background: none;
   align-items: flex-start;
+  
 }
 
 .coffee.detailed .image {
@@ -1144,5 +1148,13 @@ button {
 
   .coffees input {
     width:25%;
+  }
+  .jumbo {
+    padding: 50px;
+    padding-top:50px;
+  }
+
+  .coffee.detailed {
+    flex-direction: row;    
   }
 }
