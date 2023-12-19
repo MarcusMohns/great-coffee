@@ -345,7 +345,11 @@ button {
 }
 
 .menu .links {
+  display: flex;
   padding: 0 21px;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .wrapper {
   height:0px;
