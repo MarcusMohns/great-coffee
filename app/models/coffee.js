@@ -10,7 +10,7 @@ export default class RentalModel extends Model {
   @attr image;
   @attr description;
   @attr reviews;
-  //   @attr bedrooms;
+  @attr bean;
 
   get type() {
     if (COMMUNITY_CATEGORIES.includes(this.category)) {
