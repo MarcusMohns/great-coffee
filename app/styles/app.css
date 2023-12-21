@@ -721,7 +721,7 @@ button {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: -10px;
+  margin-top: 10px;
 }
 
 .results {
@@ -835,7 +835,6 @@ button {
 }
 
 .coffee .coffee-details {
-  font-size: 1.1rem;
   flex-basis: 50%;
   flex-grow: 2;
   display: flex;
@@ -1180,5 +1179,19 @@ button {
 
   .shopping-cart {
     min-width: 35%;
+  }
+
+  .results {
+    display: flex;
+    justify-content: center;
+    padding: 10px 15px;
+  }
+
+  .results .coffee {
+    flex-basis: 25%;
+  }
+
+  .coffee-description {
+    display: none;
   }
 }
