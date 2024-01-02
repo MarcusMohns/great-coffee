@@ -373,9 +373,20 @@ button {
   font-style: italic;
 }
 
+.small-nav-container {
+  position: absolute;
+  top:0px;
+  display: flex;
+  background-color: rgba(97, 97, 97, 0.5);
+  height: 550%;
+  width:100%;
+  z-index: 11;
+}
+
 .small-menu-index {
   margin: 0 auto;
 }
+
 
 .menu-svg {
   cursor: pointer;
