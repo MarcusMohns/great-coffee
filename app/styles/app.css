@@ -314,7 +314,7 @@ button {
  */
 
 .menu {
-  display: flex;
+  display: none;
   align-items: center;
   position: sticky;
   top: 0px;
@@ -376,7 +376,7 @@ button {
 .small-nav-container {
   position: absolute;
   top:0px;
-  display: flex;
+  display: none;
   background-color: rgba(97, 97, 97, 0.5);
   height: 550%;
   width:100%;
@@ -1147,6 +1147,14 @@ button {
 
 
 @media (min-width: 1000px) {
+  .menu {
+    display: flex;
+  }
+
+  .small-menu {
+    display:none;
+  }
+
   .images-with-text-section {
     flex-direction:row;
   }
