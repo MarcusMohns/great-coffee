@@ -357,6 +357,31 @@ button {
   flex-wrap: wrap;
   justify-content: center;
 }
+
+.small-menu {
+  display: flex;
+  align-items: center;
+  z-index: 10;
+  height: 79px;
+  padding: 0 20px;
+  position: relative;
+  font-size: 1.5em;
+}
+.small-menu h1 {
+  position: relative;
+  color: #f9f9f9;
+  font-style: italic;
+}
+
+.small-menu-index {
+  margin: 0 auto;
+}
+
+.menu-svg {
+  cursor: pointer;
+}
+
+
 .wrapper {
   height:0px;
   position: sticky;
