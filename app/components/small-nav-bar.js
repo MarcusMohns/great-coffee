@@ -15,10 +15,9 @@ export default class NavBarComponent extends Component {
     this.menuOpen = !this.menuOpen;
 
     const smallNav = document.getElementById('small-nav-container');
-    if (smallNav) {
-      this.menuOpen
-        ? (smallNav.style.display = 'flex')
-        : (smallNav.style.display = 'none');
-    }
+
+    this.menuOpen
+      ? (smallNav.style.display = 'flex')
+      : (smallNav.style.display = 'none');
   }
 }

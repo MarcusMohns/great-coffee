@@ -3,15 +3,21 @@
   id="small-nav-container"
   {{on "click" this.toggleMenuOpen}}
 >
-  <LinkTo @route="about" class="menu-about">
-    About
-  </LinkTo>
-  <LinkTo @route="contact" class="menu-contact">
-    Contact
-  </LinkTo>
-  <LinkTo @route="coffees" class="menu-coffees">
-    Coffees
-  </LinkTo>
+  <button class="small-closebtn">&times;</button>
+  <div class="small-links-container">
+    <LinkTo @route="index" class="menu-home">
+      Home
+    </LinkTo>
+    <LinkTo @route="about" class="menu-about">
+      About
+    </LinkTo>
+    <LinkTo @route="contact" class="menu-contact">
+      Contact
+    </LinkTo>
+    <LinkTo @route="coffees" class="menu-coffees">
+      Coffees
+    </LinkTo>
+  </div>
 </div>
 
 <nav class="small-menu">
