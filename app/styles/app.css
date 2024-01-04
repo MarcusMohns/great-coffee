@@ -366,6 +366,7 @@ button {
   padding: 0 20px;
   position: relative;
   font-size: 1.5em;
+  background-color:rgb(228, 104, 85);
 }
 .small-menu h1 {
   position: relative;
@@ -446,7 +447,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 75%;
+  min-width: 90%;
   max-width: fit-content;
   position: sticky;
   overflow:visible;
@@ -454,7 +455,7 @@ button {
   z-index: 12;
   top:80px;
   user-select: none;
-  margin-left:auto;
+  margin:0 auto;
   transform: translate(200px);
   transition-duration: 0.3s;
   transition-delay: 0s;
@@ -789,7 +790,10 @@ button {
  */
 
 .jumbo {
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 20px;
   padding-top:50px;
 }
 
@@ -1233,6 +1237,8 @@ button {
 
   .shopping-cart {
     min-width: 35%;
+    margin:0;
+    margin-left:auto;
   }
 
   .results {
@@ -1242,7 +1248,7 @@ button {
   }
 
   .results .coffee {
-    flex-basis: 25%;
+    flex-basis: 28%;
   }
 
   .coffee-description {
