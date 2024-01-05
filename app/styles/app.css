@@ -834,7 +834,9 @@ button {
 
 
 .coffee .image img {
-  max-width: 100%;
+  max-height:100%;
+  max-width:100%;
+  max-height:450px;
 }
 
 .coffee .image {
@@ -929,10 +931,6 @@ button {
 
 .coffee.detailed .image {
   flex-basis: 320px;
-}
-
-.coffee.detailed .image.large {
-  margin: 30px 25px 50px;
   flex-basis: 100%;
 }
 
