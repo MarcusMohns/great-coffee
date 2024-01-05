@@ -19,14 +19,10 @@ export default class ShoppingCartComponent extends Component {
     this.open.isOpen = !this.open.isOpen;
   }
   @action decrementQty(item) {
-    this.shoppingCart.remove(item);
-
-    if (item.quantity > 1) {
-      this.shoppingCart.add({ ...item, quantity: item.quantity - 1 });
-    }
+    this.shoppingCart.handleQuantityChange(item, item.quantity - 1);
   }
   @action incrementQty(item) {
-    this.shoppingCart.add({ ...item, quantity: 1 });
+    this.shoppingCart.handleQuantityChange(item, item.quantity + 1);
   }
 
   @action handleQtyChange(item, e) {

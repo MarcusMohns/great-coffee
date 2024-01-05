@@ -52,8 +52,13 @@ export default class ShoppingCartDataService extends Service {
   }
 
   handleQuantityChange(item, newQuantity) {
-    this.items.removeObject(item);
-    this.items.pushObject({ ...item, quantity: Number(newQuantity) });
+    if (newQuantity < 1) {
+      this.remove(item);
+    } else {
+      const index = this.items.indexOf(item);
+      const newItem = { ...item, quantity: Number(newQuantity) };
+      this.items.replace(index, 1, [newItem]);
+    }
     this.calcTotal();
   }
 }
