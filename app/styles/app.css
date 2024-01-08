@@ -596,6 +596,7 @@ button {
   padding: 0;
 }
 
+
 .coffee-icon {
   height: 121px;
   width: 176px;
@@ -645,7 +646,6 @@ button {
 .summary {
   border-top: 1px solid black;
   padding: 5px;
-  height: 400px;
   width: 90%;
 }
 
