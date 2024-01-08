@@ -849,7 +849,6 @@ button {
   flex-grow: 2;
   display: flex;
   margin: 20px 25px;
-  place-content: space-around space-between;
   flex-direction: column;
 }
 
@@ -879,7 +878,6 @@ button {
   flex-grow: 2;
   display: flex;
   margin: 20px 25px;
-  place-content: space-around space-between;
   flex-direction: column;
 }
 
@@ -1195,9 +1193,10 @@ button {
 
   .results .coffee {
     flex-basis: 33%;
+    flex-wrap:wrap;
   }
 
   .coffee-description {
-    display: none;
+    -webkit-line-clamp: 4;
   }
 }
