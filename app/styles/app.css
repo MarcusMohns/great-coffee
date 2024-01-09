@@ -883,6 +883,7 @@ button {
 
 .coffee h3 {
   flex-basis: 100%;
+  margin-bottom:5px;
 }
 
 .coffee h3 a {
