@@ -1,6 +1,6 @@
 import Model, { attr } from '@ember-data/model';
 
-const COMMUNITY_CATEGORIES = ['Condo', 'Townhouse', 'Apartment'];
+const BEAN_CATEGORIES = ['Arabica'];
 
 export default class RentalModel extends Model {
   @attr name;
@@ -13,10 +13,11 @@ export default class RentalModel extends Model {
   @attr bean;
 
   get type() {
-    if (COMMUNITY_CATEGORIES.includes(this.category)) {
-      return 'Coffee';
-    } else {
+    if (BEAN_CATEGORIES.includes(this.bean)) {
       return 'Espresso';
+    } else {
+      console.log(this);
+      return 'Coffee';
     }
   }
 }
