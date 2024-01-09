@@ -16,7 +16,6 @@ export default class RentalModel extends Model {
     if (BEAN_CATEGORIES.includes(this.bean)) {
       return 'Espresso';
     } else {
-      console.log(this);
       return 'Coffee';
     }
   }
