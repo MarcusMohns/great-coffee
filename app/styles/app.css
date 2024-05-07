@@ -343,6 +343,17 @@ button {
   color: #fff;
   font-size: 20px;
   font-weight: bold;
+  cursor: pointer;
+  background: linear-gradient(white 0 0) 0 100% / var(--d, 0) 3px no-repeat;
+  padding: 0.5rem 0;
+  transition: 0.1s;
+  color:white;
+  margin: 0px 10px;
+}
+
+
+.menu a:hover {
+  --d: 100%;
 }
 
 .menu a:hover,
