@@ -321,7 +321,7 @@ button {
   z-index: 10;
   height: 79px;
   background-color: transparent;
-  transition: all 0.1s ease;
+  transition: all 0.2s ease;
   padding: 0 20px;
   font-size: 1.8em;
 }
