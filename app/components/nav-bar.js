@@ -14,10 +14,10 @@ export default class NavBarComponent extends Component {
         0,
       );
     }
+    return 0;
   }
 
   @action toggleOpen() {
     this.open.isOpen = !this.open.isOpen;
-    console.log(this.shoppingCart.total);
   }
 }

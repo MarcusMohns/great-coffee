@@ -435,6 +435,10 @@ button {
   height: 100vh;
 }
 
+.navbar-product-qty {
+  font-size: 1rem;
+  color:white;
+}
 
 
 .small-menu-index {
