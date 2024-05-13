@@ -7,7 +7,7 @@ export default modifier((element) => {
       document.documentElement.scrollTop > 30
     ) {
       element.style.background = '#e46855';
-      element.style.height = '79px';
+      element.style.height = '45px';
       element.style.padding = '0px 80px';
       element.style.fontSize = '1.5em';
     } else {
