@@ -13,12 +13,12 @@
       class="close-shopping-cart"
       type="button"
     >&times;</button>
-
+    <div class="shopping-cart-header">
+      <h2>Shopping Cart</h2>
+      <small>{{this.items}} item(s)</small>
+    </div>
     <div class="shopping-cart-content">
-      <div class="shopping-cart-header">
-        <h2>Shopping Cart</h2>
-        <small>{{this.items}} item(s)</small>
-      </div>
+
       {{#each this.shoppingCart.items as |item|}}
         <div class="shopping-cart-item">
           <div

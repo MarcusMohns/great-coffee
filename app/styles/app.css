@@ -14,6 +14,10 @@ html {
   overflow-y: scroll;
 }
 
+.container {
+  overflow-x: hidden;
+}
+
 body,
 h1,
 h2,
@@ -467,15 +471,17 @@ button {
   position: sticky;
   overflow:visible;
   min-height:500px;
+  max-height:650px;
   z-index: 12;
   top:80px;
+  right:5px;
   user-select: none;
   margin:0 auto;
   transform: translate(200px);
   transition-duration: 0.3s;
   transition-delay: 0s;
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 7px;
 }
 
 .shopping-cart-header {
@@ -491,8 +497,9 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   width: 100%;
+  overflow-y: scroll;
+
 }
 
 .shopping-cart-item {
@@ -613,8 +620,8 @@ button {
 
 
 .coffee-icon {
-  height: 121px;
-  width: 176px;
+  height: 60px;
+  width: 88px;
   border-radius: 5px;
   margin: auto 0;
   margin-right: 5px;
@@ -1151,6 +1158,12 @@ button {
     width:80%;
   }
 
+  .coffee-icon {
+
+    height: 121px;
+    width: 176px;
+  }
+
   .explore-coffee-section {
     border-top:2px solid grey;
 
@@ -1199,6 +1212,7 @@ button {
     min-width: 35%;
     margin:0;
     margin-left:auto;
+    max-height:0px;
   }
 
   .results {
