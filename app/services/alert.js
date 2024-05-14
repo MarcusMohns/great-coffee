@@ -6,11 +6,13 @@ export default class ShoppingCartDataService extends Service {
   @tracked alertDisplayed = false;
 
   @action displayAlert() {
-    this.alertDisplayed = true;
+    if (this.alertDisplayed == false) {
+      this.alertDisplayed = true;
 
-    setTimeout(() => {
-      this.alertDisplayed = false;
-    }, '3000');
+      setTimeout(() => {
+        this.alertDisplayed = false;
+      }, '3000');
+    }
   }
 
   @action hideAlert() {

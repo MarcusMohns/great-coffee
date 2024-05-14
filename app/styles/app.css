@@ -1075,7 +1075,7 @@ button {
   bottom: 1rem;
   margin: 0 auto;
   padding: 20px;
-  background-color: #e46855; /* Red */
+  background-color: #e46855; 
   color: white;
   z-index: 10;
   animation-name: bounceIn;
@@ -1131,6 +1131,11 @@ button {
 
 
 @media (min-width: 1000px) {
+  
+  .container {
+    overflow-x: inherit;
+  }
+
   .menu {
     display: flex;
   }
