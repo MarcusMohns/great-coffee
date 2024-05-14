@@ -17,7 +17,6 @@ export default class CoffeeImageComponent extends Component {
 
   @action openShoppingCart() {
     this.shoppingCartState.isOpen = true;
-    console.log('Heeey');
   }
 
   @action showAlert() {
