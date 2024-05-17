@@ -31,5 +31,5 @@ export default modifier((element) => {
 
   const eventOptions = { once: true };
 
-  window.addEventListener('load', createObserver, eventOptions);
+  window.addEventListener('scroll', createObserver, eventOptions);
 });
