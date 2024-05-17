@@ -29,5 +29,7 @@ export default modifier((element) => {
     });
   };
 
-  window.addEventListener('click', createObserver);
+  const eventOptions = { once: true };
+
+  window.addEventListener('load', createObserver, eventOptions);
 });
