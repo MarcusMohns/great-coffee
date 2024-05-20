@@ -11,13 +11,12 @@ export default modifier((element) => {
 
     observer = new IntersectionObserver(intersectionCallback, options);
     observer.observe(element);
-    console.log(observer);
   };
 
   const intersectionCallback = (entries) => {
     const htmlImageTextContainers = [...entries[0].target.children];
     htmlImageTextContainers.forEach((child, index) => {
-      child.classList.add(`animated-image-text-container${'-index'}`);
+      child.classList.add(`animated-image-text-container-${index}`);
     });
   };
 

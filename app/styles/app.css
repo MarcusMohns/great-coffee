@@ -1167,10 +1167,15 @@ button {
     margin:0 3rem;
   }
 
-  .animated-image-text-container {
+  .animated-image-text-container-0 {
     opacity:50%;
   }
-
+  .animated-image-text-container-1 {
+    opacity:50%;
+  }
+  .animated-image-text-container-2 {
+    opacity:50%;
+  }
   .membership-section {
     box-sizing: border-box; 
   }
