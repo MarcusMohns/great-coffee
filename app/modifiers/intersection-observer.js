@@ -15,21 +15,12 @@ export default modifier((element) => {
   };
 
   const intersectionCallback = (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        console.log(entry, 'intersecting');
-        entry.target.style.padding = '50px';
-
-        // if (entry.intersectionRatio >= 0.75) {
-        //   intersectionCounter++;
-        // }
-      } else {
-        entry.target.style.padding = '5px';
-      }
+    const htmlImageTextContainers = [...entries[0].target.children];
+    htmlImageTextContainers.forEach((child, index) => {
+      child.classList.add(`animated-image-text-container${'-index'}`);
     });
   };
 
   const eventOptions = { once: true };
-
   window.addEventListener('scroll', createObserver, eventOptions);
 });
