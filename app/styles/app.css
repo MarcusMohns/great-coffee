@@ -81,7 +81,7 @@ button {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-bottom:350px;
+  margin-bottom:200px;
 
 
 }
@@ -1142,6 +1142,10 @@ button {
 
 
 @media (min-width: 1000px) {
+
+  .front-page-header {
+    margin-bottom:350px;
+  }
   
   .container {
     overflow-x: inherit;
