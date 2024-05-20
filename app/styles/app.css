@@ -1144,7 +1144,7 @@ button {
 @media (min-width: 1000px) {
 
   .front-page-header {
-    margin-bottom:350px;
+    margin-bottom:450px;
   }
   
   .container {
@@ -1166,6 +1166,11 @@ button {
   .image-text-container {
     margin:0 3rem;
   }
+
+  .animated-image-text-container {
+    opacity:50%;
+  }
+
   .membership-section {
     box-sizing: border-box; 
   }
