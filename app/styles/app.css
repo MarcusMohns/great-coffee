@@ -83,7 +83,7 @@ button {
   flex-direction: column;
   margin-bottom:200px;
 
-
+  
 }
 
 .front-page-header-image {
@@ -1165,17 +1165,26 @@ button {
 
   .image-text-container {
     margin:0 3rem;
-  }
+    opacity:0%;
+    transition: transform 0.4s, opacity 1s;
+}
 
   .animated-image-text-container-0 {
-    opacity:50%;
+    opacity:100%;
+    transition-delay:0.3s;
+    transform: translateY(-100px);
   }
   .animated-image-text-container-1 {
-    opacity:50%;
+    opacity:100%;
+    transition-delay:0.5s;
+    transform: translateY(-100px);
   }
   .animated-image-text-container-2 {
-    opacity:50%;
+    opacity:100%;
+    transition-delay:0.7s;
+    transform: translateY(-100px);
   }
+
   .membership-section {
     box-sizing: border-box; 
   }
