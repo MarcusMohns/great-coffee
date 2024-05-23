@@ -16,7 +16,7 @@ export default modifier((element) => {
   const intersectionCallback = (entries) => {
     const htmlImageTextContainers = [...entries[0].target.children];
     htmlImageTextContainers.forEach((child, index) => {
-      child.classList.add(`animated-image-text-container-${index}`);
+      child.classList.add(`animated-${child.classList[0]}-${index}`);
     });
   };
 
