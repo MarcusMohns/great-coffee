@@ -182,9 +182,11 @@ button {
 .images-with-text-section {
   display: flex;
   flex-direction: column;
-  padding:2rem;
-  margin: 0 1.7rem;
-  min-height: 500px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 4.7rem;
+  min-height: 700px;
+
 }
 
 .image-text-container {
@@ -212,7 +214,6 @@ button {
   border-left:1px solid #3f190e;
   padding:12px;
   transform: rotate(0.125turn);
-  margin-top:50px;
 }
 .membership-section {
   display: flex;
