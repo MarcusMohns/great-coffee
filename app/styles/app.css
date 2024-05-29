@@ -153,7 +153,7 @@ button {
   align-items: center;
   background-color: #f5ae28;
   padding:100px;
-
+  
 }
 
 .coffee-info-container {
@@ -184,8 +184,8 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 4.7rem;
-  min-height: 700px;
+  min-height: 70%;
+  margin-top:50px;
 
 }
 
@@ -226,6 +226,7 @@ button {
   color:white;
   width: 100%;
 }
+
 
 .points-container {
   display: flex;
