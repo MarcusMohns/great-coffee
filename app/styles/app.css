@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300,300italic,400,700,700italic");
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Kay+Pho+Du:wght@400;500;600;700&display=swap');
 
 /**
  * Base Elements
@@ -33,6 +34,11 @@ select,
 button {
   font-family: Lato, "Open Sans", "Helvetica Neue", "Segoe UI", Helvetica, Arial,
     sans-serif;
+}
+
+p {
+  font-family: "Hind", sans-serif;
+  font-weight:300;
 }
 
 a {
@@ -186,7 +192,13 @@ button {
   align-items: center;
   min-height: 70%;
   margin-top:50px;
+}
 
+.images-with-text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .image-text-container {
@@ -202,7 +214,6 @@ button {
   height: 213px;
   width: 320px;
   box-shadow: 2px 2px 8px black;
-  margin-bottom: 15px;
 }
 
 .cool-coffee-bean {
@@ -259,7 +270,21 @@ button {
 }
 
 .small-header {
-  font-size:1.2rem;
+  width: 100%;
+  font-size: 2.5rem;
+  font-family: "Kay Pho Du", sans-serif;
+  font-weight: 700;
+  letter-spacing: -.02em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bread-text {
+  font-size: 1.3rem;
+  margin-top: 30px;
+  padding: 1rem;
+  padding-bottom: 0px;
 }
 
 .explore-coffee-section {
@@ -1161,9 +1186,16 @@ button {
   .small-menu {
     display:none;
   }
-
-  .images-with-text-section {
+  .images-with-text-content {
     flex-direction:row;
+    width:90%;
+  }
+
+  .small-header {
+    width:90%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
   }
 
   .image-text-container {
@@ -1202,9 +1234,8 @@ button {
   }
 
   .coffee-icon {
-
-    height: 121px;
-    width: 176px;
+    height:121px;
+    width:176px;
   }
 
   .explore-coffee-section {
