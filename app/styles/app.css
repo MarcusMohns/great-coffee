@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300,300italic,400,700,700italic");
-@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Kay+Pho+Du:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kay+Pho+Du:wght@400;500;600;700&display=swap');
 
 /**
  * Base Elements
@@ -36,10 +36,7 @@ button {
     sans-serif;
 }
 
-p {
-  font-family: "Hind", sans-serif;
-  font-weight:300;
-}
+
 
 a {
   color: #016aba;
@@ -285,6 +282,7 @@ button {
   margin-top: 30px;
   padding: 1rem;
   padding-bottom: 0px;
+  font-weight:400;
 }
 
 .explore-coffee-section {
