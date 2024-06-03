@@ -4,9 +4,9 @@ export default modifier((element) => {
   const createObserver = () => {
     let observer;
     let options = {
-      root: null,
+      root: element,
       rootMargin: '0px',
-      threshold: [0.25, 0.5, 0.75, 1],
+      threshold: 1,
     };
 
     observer = new IntersectionObserver(intersectionCallback, options);
