@@ -208,8 +208,8 @@ button {
 
 .image-text-container img {
   border-radius: 5px;
-  height: 213px;
-  width: 320px;
+  width: 300px;
+  height: 450px;
   box-shadow: 2px 2px 8px black;
 }
 
@@ -257,7 +257,30 @@ button {
 .points-container ul {
   list-style-type: square;
 }
-
+.points {
+  opacity:0%;
+  transition: transform 0.4s, opacity 1s;
+}
+.animated-points-0 {
+  opacity:100%;
+  transition-delay:0.3s;
+  transform: translateX(-300px);
+} 
+.animated-points-1 {
+  opacity:100%;
+  transition-delay:0.3s;
+  transform: translateX(-300px);
+} 
+.animated-points-2 {
+  opacity:100%;
+  transition-delay:0.5s;
+  transform: translateX(-300px);
+} 
+.animated-points-3 {
+  opacity:100%;
+  transition-delay:0.7s;
+  transform: translateX(-300px);
+} 
 .cozy-coffee {
   display: none;
   height: 480px;
@@ -269,8 +292,8 @@ button {
 .small-header {
   width: 100%;
   font-size: 2.5rem;
-  font-family: "Kay Pho Du", sans-serif;
-  font-weight: 700;
+  /* font-family: "Kay Pho Du", sans-serif; */
+  font-weight: 500;
   letter-spacing: -.02em;
   display: flex;
   justify-content: center;
