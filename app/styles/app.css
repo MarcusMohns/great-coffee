@@ -84,7 +84,7 @@ button {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-bottom:200px;
+  margin-bottom:450px;
 
   
 }
@@ -291,7 +291,7 @@ button {
 
 .small-header {
   width: 100%;
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   /* font-family: "Kay Pho Du", sans-serif; */
   font-weight: 500;
   letter-spacing: -.02em;
@@ -1192,9 +1192,7 @@ button {
 
 @media (min-width: 1000px) {
 
-  .front-page-header {
-    margin-bottom:450px;
-  }
+
   
   .container {
     overflow-x: inherit;
