@@ -263,7 +263,7 @@ button {
 }
 .animated-points-0 {
   opacity:100%;
-  transition-delay:0.3s;
+  transition-delay:0.1s;
   transform: translateX(-300px);
 } 
 .animated-points-1 {
@@ -1226,17 +1226,17 @@ button {
 
   .animated-image-text-container-0 {
     opacity:100%;
-    transition-delay:0.3s;
+    transition-delay:0.1s;
     transform: translateY(-100px);
   }
   .animated-image-text-container-1 {
     opacity:100%;
-    transition-delay:0.5s;
+    transition-delay:0.3s;
     transform: translateY(-100px);
   }
   .animated-image-text-container-2 {
     opacity:100%;
-    transition-delay:0.7s;
+    transition-delay:0.5s;
     transform: translateY(-100px);
   }
 
