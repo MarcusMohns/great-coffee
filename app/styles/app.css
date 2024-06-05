@@ -260,6 +260,7 @@ button {
 .points {
   opacity:0%;
   transition: transform 0.4s, opacity 1s;
+  margin-left:300px;
 }
 .animated-points-0 {
   opacity:100%;
