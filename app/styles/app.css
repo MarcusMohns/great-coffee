@@ -185,10 +185,9 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url('/images/frontpage/coffe-cup-illustration.png');
+  background: linear-gradient(rgb(249, 249, 249,0.5), rgb(249, 249, 249,0.5)), url('/images/frontpage/coffe-cup-illustration.png'), url('/images/frontpage/abstract-filter.png');
+  background-position: bottom, top;
   background-repeat: no-repeat;
-  background-position-x: right;
-  background-position-y: -50px;
   width:100%;
   min-height: 70%;
   margin-top:50px;
@@ -1193,6 +1192,12 @@ button {
   .small-menu {
     display:none;
   }
+
+  .images-with-text-section {
+    background-position: 20%, 80%;
+  }
+
+
   .images-with-text-content {
     flex-direction:row;
     width:90%;
