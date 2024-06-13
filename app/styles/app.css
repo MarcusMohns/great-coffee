@@ -185,6 +185,10 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: url('/images/frontpage/coffe-cup-illustration.png');
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: -50px;
   width:100%;
   min-height: 70%;
   margin-top:50px;
@@ -312,6 +316,7 @@ button {
   padding: 1rem;
   padding-bottom: 0px;
   font-weight:400;
+  text-shadow: -1px -1px 0 #f9f9f9, 1px -1px 0 #f9f9f9, -1px 1px 0 #f9f9f9, 1px 1px 0 #f9f9f9;
 }
 
 .explore-coffee-section {
