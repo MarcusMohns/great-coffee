@@ -87,12 +87,12 @@ button {
 }
 
 .front-page-header-image {
-  background-image: url("https://images.unsplash.com/photo-1442512595331-e89e73853f31?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-  height: 101%;
-  width: 100%;
+  height: 100%;
   position: absolute;
   top: -1px;
   left: -1px;
+  object-fit: cover;
+  overflow: hidden;
 }
 
 .coffee-bean {
@@ -210,8 +210,8 @@ button {
 
 .image-text-container img {
   border-radius: 5px;
-  width: 225px;
-  height: 338px;
+  width: 250px;
+  height: 250px;
   box-shadow: 2px 2px 8px black;
 }
 
@@ -342,16 +342,6 @@ button {
 
 .explore-coffee-btns a {
   margin:1rem;
-}
-
-.page-header-image {
-  background-image: url("https://images.unsplash.com/photo-1442512595331-e89e73853f31?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-  background-color: black;
-  height: 70px;
-  width: 100%;
-  position: absolute;
-  top: -1px;
-  left: -1px;
 }
 
 .button {
