@@ -15,11 +15,11 @@ export default modifier((element) => {
 
   const intersectionCallback = (entries) => {
     if (entries[0].isIntersecting) {
-      const htmlImageTextContainers = [
-        ...entries[0].target.children[0].children,
-      ];
-      htmlImageTextContainers.forEach((child, index) => {
+      const elementContainers = [...entries[0].target.children[1].children];
+      // Children that will recieve the class
+      elementContainers.forEach((child, index) => {
         child.classList.add(`animated-${child.classList[0]}-${index}`);
+        // Add a new class named like the first class from classList with added 'animated-' in front of it to animate in css.
       });
     }
   };
