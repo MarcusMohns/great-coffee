@@ -297,17 +297,7 @@ button {
   margin-right:3rem;
 }
 
-.small-header {
-  width: 100%;
-  font-size: 2rem;
-  font-family: Helvetica, Arial,
-  sans-serif;
-  font-weight: 300;
-  letter-spacing: -.02em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 
 .bread-text {
   font-size: 1.3rem;
@@ -1191,13 +1181,6 @@ button {
   .images-with-text-content {
     flex-direction:row;
     width:90%;
-  }
-
-  .small-header {
-    width:90%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
   }
 
   .image-text-container {

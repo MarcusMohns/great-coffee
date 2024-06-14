@@ -16,7 +16,7 @@ export default modifier((element) => {
   const intersectionCallback = (entries) => {
     if (entries[0].isIntersecting) {
       const htmlImageTextContainers = [
-        ...entries[0].target.children[1].children,
+        ...entries[0].target.children[0].children,
       ];
       htmlImageTextContainers.forEach((child, index) => {
         child.classList.add(`animated-${child.classList[0]}-${index}`);
