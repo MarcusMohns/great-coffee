@@ -185,9 +185,9 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(rgb(249, 249, 249,0.5), rgb(249, 249, 249,0.5)), url('/images/frontpage/coffe-cup-illustration.png'), url('/images/frontpage/abstract-filter.png');
+  /* background: linear-gradient(rgb(249, 249, 249,0.5), rgb(249, 249, 249,0.5)), url('/images/frontpage/coffe-cup-illustration.png'), url('/images/frontpage/abstract-filter.png');
   background-position: bottom, top;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   width:100%;
   min-height: 70%;
   margin-top:50px;
@@ -209,10 +209,8 @@ button {
 }
 
 .image-text-container img {
-  border-radius: 5px;
   width: 250px;
   height: 250px;
-  box-shadow: 2px 2px 8px black;
 }
 
 .cool-coffee-bean {
