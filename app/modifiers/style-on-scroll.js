@@ -6,12 +6,10 @@ export default modifier((element) => {
       element.style.background = '#e46855';
       element.style.height = '45px';
       element.style.padding = '0px 80px';
-      element.style.fontSize = '1.5em';
     } else {
       element.style.background = 'transparent';
-      element.style.padding = '0px';
-      element.style.fontSize = '1.8em';
       element.style.height = '70px';
+      element.style.padding = '0px';
     }
   };
   document.addEventListener('scroll', styleOnScroll);

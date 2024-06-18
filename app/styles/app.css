@@ -36,7 +36,6 @@ button {
 }
 
 
-
 a {
   color: #016aba;
   text-decoration: none;
@@ -45,6 +44,8 @@ a {
 button {
   font-size: 100%;
 }
+
+
 
 .column-container {
   display: flex;
@@ -86,12 +87,23 @@ button {
   margin-bottom:25%;
 }
 
-.front-page-header-image {
+.jumbo-header-image {
+  max-height: 70px;
   height: 100%;
   width: 100%;
   position: absolute;
   top: -1px;
   left: -1px;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.front-page-header-image {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
   object-fit: cover;
   overflow: hidden;
 }
@@ -372,11 +384,12 @@ button {
   position: sticky;
   top: 0px;
   z-index: 10;
-  height: 79px;
+  height: 70px;
   background-color: transparent;
-  transition: all 0.2s ease;
-  padding: 0 20px;
+  transition: all 0.2s ease-in-out;
+  padding: 0px;
   font-size: 1.8em;
+  box-sizing: border-box;
 }
 
 .menu h1 {
@@ -856,22 +869,14 @@ button {
  * Content Area
  */
 
-/**
- * Similar to Jumbotron
- */
-
-.jumbo {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  padding: 20px;
-  padding-top:50px;
-}
 
 
 /**
  * Individual Coffees
  */
+ .coffees {
+  padding:50px;
+ }
 
 .coffee {
   margin-top: 15px;
@@ -1259,10 +1264,8 @@ button {
   .coffees input {
     width:25%;
   }
-  .jumbo {
-    padding: 50px;
-    padding-top:50px;
-  }
+  
+  
 
   .coffee.detailed {
     flex-direction: row;    
