@@ -84,7 +84,7 @@ button {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-bottom:25%;
+  margin-bottom:15%;
 }
 
 .jumbo-header-image {
@@ -1300,16 +1300,12 @@ button {
   }
 }
 
-@media (max-width: 910px) {
 
-  .front-page-header {
-    margin-bottom: 50%;
-  }
-}
 
 @media (max-width: 475px) {
-
   .front-page-header {
-    margin-bottom: 75%;
+    margin-bottom: 0%;
   }
+
+
 }
