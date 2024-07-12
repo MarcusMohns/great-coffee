@@ -130,7 +130,6 @@ button {
 
 .sample-products {
   margin:0 3rem;
-  margin-top:150px;
   animation-name: fadeIn;
   animation-duration: 1s;
 }
