@@ -134,6 +134,18 @@ button {
   animation-duration: 1s;
 }
 
+.sample-product-0,
+.sample-product-1,
+.sample-product-2 {
+  transition: transform .35s ease-in-out;
+}
+
+.sample-product-0:hover,
+.sample-product-1:hover,
+.sample-product-2:hover  {
+  transform: scale(1.1);
+}
+
 .browse-coffee-btn {
   font-size: 1.2rem;
   background-color: #e46855;
