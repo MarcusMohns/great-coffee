@@ -113,7 +113,7 @@ button {
   border: 1px solid rgb(136, 136, 136);
   padding:12px;
   transform: rotate(0.125turn);
-  margin-top:100px;
+  margin-top:50px;
 }
 
 .little-message-thing {
@@ -134,6 +134,7 @@ button {
   margin:0 3rem;
   animation-name: fadeIn;
   animation-duration: 1s;
+  margin-top:50px;
 }
 
 .sample-product {
@@ -169,7 +170,6 @@ button {
   color: #f3f3f3;
   padding:20px 25px;
   cursor: pointer;
-  margin-bottom:110px;
   margin-top: 30px;
   border-radius: 4px;
 }
@@ -862,7 +862,6 @@ button {
   background-repeat: no-repeat;
   background-size: 18px 18px;
   background-position: 99% center;
-
   border-radius: 50px;
   border: 1px solid #575756;
   transition: all 250ms ease-in-out;
