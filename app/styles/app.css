@@ -126,6 +126,7 @@ button {
   font-size:1.3rem;
   background-color: rgba(97, 97, 97, 0.5);
   padding:5px;
+  text-align: center;
 }
 
 .sample-products {
@@ -137,6 +138,11 @@ button {
   margin-top:50px;
 }
 
+.sample-product:nth-child(2n) {
+  background-color: #FFCB97;
+}
+
+
 .sample-product {
   display: flex;
   flex-direction: column;
@@ -144,7 +150,10 @@ button {
   justify-content: center;
   width: 250px;
   height:250px;
-
+  background-color: #FAE588;
+  
+  margin: 0 20px;
+  border-radius: 5px;
 }
 
 .sample-product-image {
@@ -155,13 +164,24 @@ button {
   transition-timing-function: ease-out;
 }
 
-.sample-product-image:hover {
-  width: 200px;
-  height:202px;
+.sample-product:hover {
+  color: black;
 }
 
-.sample-product:hover  {
-  
+.sample-product p {
+  color: black;
+  width: 50%;
+  height: 15%;
+  border-radius: 2px;
+}
+.sample-product:hover p {
+  visibility: visible;
+  color: black;
+}
+
+.sample-product:hover .sample-product-image  {
+  width: 200px;
+  height:202px;
 }
 
 .browse-coffee-btn {
