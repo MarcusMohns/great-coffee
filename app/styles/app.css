@@ -169,6 +169,9 @@ button {
   padding-bottom: 1rem;
   border-radius: 2px;
   text-align: center;
+  transition-property: color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
 }
 
 .sample-overlay {
@@ -191,7 +194,7 @@ button {
  
 .sample-product:hover .sample-product-text  {
   color: white;
-  z-index: 10;
+  z-index: 2;
   transform: translateY(5px);
 }
 
