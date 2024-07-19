@@ -190,7 +190,9 @@ button {
 }
  
 .sample-product:hover .sample-product-text  {
-  display: none;
+  color: white;
+  z-index: 10;
+  transform: translateY(5px);
 }
 
 .sample-product:hover .sample-overlay-image, 
@@ -199,8 +201,8 @@ button {
 }
 
 .sample-product:hover .sample-product-image {
-  width: 200px;
-  height:201px;
+  width: 150px;
+  height:150px;
 }
 
 .browse-coffee-btn {
@@ -290,6 +292,18 @@ button {
   align-items: center;
   text-align: center;
   margin: 1.8rem;
+  padding:4rem 1rem;
+}
+
+.image-text-container:nth-child(1) {
+  background-color:#8C9579;
+}
+
+.image-text-container:nth-child(2) {
+  background-color:#EACFA5;
+}
+.image-text-container:nth-child(3) {
+  background-color:#E6BB96;
 }
 
 .image-text-container img {
@@ -386,7 +400,7 @@ button {
   padding: 1rem;
   padding-bottom: 0px;
   font-weight:400;
-  text-shadow: -1px -1px 0 #f9f9f9, 1px -1px 0 #f9f9f9, -1px 1px 0 #f9f9f9, 1px 1px 0 #f9f9f9;
+  /* text-shadow: -1px -1px 0 #f9f9f9, 1px -1px 0 #f9f9f9, -1px 1px 0 #f9f9f9, 1px 1px 0 #f9f9f9; */
 }
 
 .explore-coffee-section {
