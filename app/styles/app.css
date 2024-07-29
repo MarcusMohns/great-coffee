@@ -176,10 +176,12 @@ button {
 
 .sample-overlay {
   display: none;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size:1.2rem;
   position:absolute;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.80);
   width: 200px;
-  height: 200px;
+  height: 200px;  
 }
 
 .sample-overlay p {
@@ -190,6 +192,13 @@ button {
   height: 100%;
   justify-content: center;
   align-items: center;
+}
+
+.sample-product-btn {
+  background-color: black;
+  color:white;
+  width: 100%;
+  padding:1rem;
 }
  
 .sample-product:hover .sample-product-text  {
