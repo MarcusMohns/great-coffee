@@ -176,7 +176,6 @@ button {
 
 .sample-overlay {
   display: none;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size:1.2rem;
   position:absolute;
   background-color: rgba(0, 0, 0, 0.80);
@@ -191,14 +190,18 @@ button {
   width: 100%;
   height: 100%;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .sample-product-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: black;
   color:white;
   width: 100%;
   padding:1rem;
+  height:25%;
 }
  
 .sample-product:hover .sample-product-text  {
@@ -225,6 +228,7 @@ button {
   cursor: pointer;
   margin-top: 30px;
   border-radius: 4px;
+  text-align: center;
 }
 
 .browse-coffee-btn:hover {
