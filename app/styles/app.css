@@ -257,7 +257,6 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f5ae28;
   padding:100px;
   
 }
