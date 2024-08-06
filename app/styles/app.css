@@ -240,12 +240,17 @@ button {
   flex-direction: row-reverse;
 }
 
-.big-image-container p {
+.big-image-text {
   font-size: 1.5rem;
   padding: 5rem;
   text-align: center;
+  opacity:0%;
+  transition:opacity 1s;
 }
-
+.animated-big-image-text-0 {
+  opacity:100%;
+  transition-delay:0.1s;
+} 
 .front-page-big-image {
   display: flex;
   width:640px;
