@@ -377,7 +377,8 @@ button {
 .points {
   opacity:0%;
   transition: transform 0.4s, opacity 1s;
-  margin-left:330px;
+  margin-left:302px;
+  list-style-type: none;
   word-break: break-word;
   width: 90%;
 }
@@ -1362,7 +1363,7 @@ button {
   }
 
   .points {
-    margin-left:300px;
+    list-style-type: square;
   }
 
   .points-container h3 {
