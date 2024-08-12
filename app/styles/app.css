@@ -459,6 +459,20 @@ button {
   font-weight:900;
 }
 
+.bread-text .button {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  background-color: #000;
+  border: 1px solid black;
+  border-radius: 1px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.bread-text .button:hover {
+  border: 1px solid white;
+}
+
 .hide-bread-text {
   visibility: hidden;
 }
