@@ -297,6 +297,15 @@ button {
   min-height: 70%;
 }
 
+.images-with-text-section h2 {
+    width: 80%;
+    letter-spacing: 1px;
+    font-size: 2rem;
+    border-bottom: 1px solid black;
+    padding: 1rem;
+    font-weight: 300;
+}
+
 .image-text-overlay {
   display: none;
   font-size:1.2rem;
@@ -323,12 +332,11 @@ button {
   align-items: center;
   text-align: center;
   margin: 1.8rem;
-  padding:4rem 1rem;
+  padding: 3rem 1rem;
 }
 
 .image-text-container:hover .image-text-img {
-  transform: scale(1.5);
-  z-index: 0;
+  /* z-index: 2; */
 }
 .image-text-container:hover .image-text-overlay {
   display: block;
@@ -338,6 +346,10 @@ button {
   display: block;
   background-color: transparent;
   color: white;
+}
+
+.image-text-container:hover .hide-bread-text {
+  visibility: visible;
 }
 
 .image-text-container:nth-child(1) {
@@ -438,13 +450,17 @@ button {
 }
 
 .bread-text {
-  font-size: 1.3rem;
-  margin-top: 30px;
-  padding: 1rem;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  padding: 0.8rem;
   background-color: white;
   border-radius: 5px;
-  font-weight:400;
-  /* text-shadow: -1px -1px 0 #f9f9f9, 1px -1px 0 #f9f9f9, -1px 1px 0 #f9f9f9, 1px 1px 0 #f9f9f9; */
+  font-weight:900;
+}
+
+.hide-bread-text {
+  visibility: hidden;
 }
 
 .explore-coffee-section {
@@ -1076,6 +1092,7 @@ button {
 .coffee-description {
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp:3;
   -webkit-box-orient: vertical;  
   overflow: hidden;
 }
@@ -1319,10 +1336,6 @@ button {
     display:none;
   }
 
-  .images-with-text-section {
-    background-position: 20%, 80%;
-  }
-
 
   .images-with-text-content {
     flex-direction:row;
@@ -1337,6 +1350,7 @@ button {
     flex-direction:row;
     margin-bottom:3rem;
     max-height: 427px;
+    max-width:80vw;
     overflow: hidden;
 
   }
@@ -1426,6 +1440,7 @@ button {
   .coffee-description {
     display: -webkit-box;
     -webkit-line-clamp: 10;
+    line-clamp:10;
     -webkit-box-orient: vertical;  
     overflow: hidden;
   }
@@ -1467,6 +1482,7 @@ button {
 
   .coffee-description {
     -webkit-line-clamp: 4;
+    line-clamp:4;
   }
 }
 
