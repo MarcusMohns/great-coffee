@@ -569,7 +569,7 @@ button {
   padding: 0.5rem 0;
   transition: 0.1s;
   color: white;
-  margin: 0px 10px;
+  margin: 0 10px;
 }
 
 .menu a:hover {
@@ -670,7 +670,7 @@ button {
 }
 
 .wrapper {
-  height: 0px;
+  height: 0;
   position: sticky;
   top: 80px;
   z-index: 12;
@@ -911,7 +911,7 @@ button {
   padding: 0.5rem 0;
   transition: 0.1s;
   color: white;
-  margin: 0px 10px;
+  margin: 0 10px;
 }
 
 .coffee-cup-icon:hover {
@@ -1032,7 +1032,7 @@ button {
 .coffee {
   margin-top: 15px;
   background-color: #f3f3f2;
-  padding: 0px;
+  padding: 0;
   display: flex;
   align-items: center;
 }
@@ -1270,7 +1270,7 @@ button {
   }
   to {
     opacity: 100%;
-    transform: translateY(0px);
+    transform: translateY(0);
   }
 }
 
@@ -1462,7 +1462,7 @@ button {
   }
 
   .btn-container {
-    margin-top: 0px;
+    margin-top: 0;
     display: flex;
     flex-direction: row;
   }
@@ -1471,7 +1471,7 @@ button {
     min-width: 35%;
     margin: 0;
     margin-left: auto;
-    max-height: 0px;
+    max-height: 0;
   }
 
   .results {
