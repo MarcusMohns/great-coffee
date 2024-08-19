@@ -2,11 +2,9 @@ import Model, { attr } from '@ember-data/model';
 
 const BEAN_CATEGORIES = ['Arabica'];
 
-export default class RentalModel extends Model {
+export default class CoffeeModel extends Model {
   @attr name;
   @attr price;
-  //   @attr location;
-  //   @attr category;
   @attr image;
   @attr description;
   @attr reviews;
