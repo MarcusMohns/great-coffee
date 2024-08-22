@@ -12,7 +12,15 @@
     {{@coffee.name}}
   </div>
   <article class="coffee detailed">
-    <Coffee::Image src={{@coffee.image}} alt="A picture of {{@coffee.name}}" />
+    <div class="image img-magnifier-container" {{magnify}}>
+      <div class="img-magnifier-glass" />
+      <Coffee::Image
+        src={{@coffee.image}}
+        alt="A picture of {{@coffee.name}}"
+        class="magnify-image"
+      />
+    </div>
+
     <div class="details">
       <h3>{{@coffee.name}}</h3>
       <div class="detail-container">
