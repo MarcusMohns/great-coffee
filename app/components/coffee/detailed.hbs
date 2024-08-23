@@ -27,12 +27,12 @@
         <div class="detail">
           By Great Coffee Co.
         </div>
-        <div>
-          {{repeat "★" @coffee.reviews}}
-          {{repeat "☆" (emptyStars @coffee.reviews 5)}}
-        </div>
       </div>
-
+      <div class="detail type">
+        <span>Reviews:</span>
+        {{repeat "★" @coffee.reviews}}
+        {{repeat "☆" (emptyStars @coffee.reviews 5)}}
+      </div>
       <div class="detail type">
         <span>Type:</span>
         {{@coffee.type}}
