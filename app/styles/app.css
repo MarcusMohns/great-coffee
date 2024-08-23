@@ -224,10 +224,6 @@ button {
   height: 100%;
 }
 
-.overlay-image {
-  
-}
-
 .images-with-text-content {
   display: flex;
   flex-direction: column;
@@ -1063,7 +1059,7 @@ button {
   flex-direction: column;
   background: none;
   align-items: flex-start;
-  margin: 100px;
+  margin: 0px;
 }
 
 .img-magnifier-container {
@@ -1385,6 +1381,7 @@ button {
 
   .coffee.detailed {
     flex-direction: row;
+    margin: 100px;
   }
 
   .btn-container {
