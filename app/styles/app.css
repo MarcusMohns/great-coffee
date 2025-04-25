@@ -258,11 +258,7 @@ button {
 }
 
 .image-text-container:hover .image-text-img {
-  /*************  ✨ Windsurf Command 🌟  *************/
-  /*************  ✨ Windsurf Command 🌟  *************/
   transform: scale(1.15);
-  /*******  c307c089-cbb0-4ca6-aa8a-6421a8957e56  *******/
-  /*******  b6998a72-1041-4ac0-a7dd-8fcb2d297eaa  *******/
 }
 
 .image-text-container:hover .hide-bread-text {
