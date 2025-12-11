@@ -1,7 +1,6 @@
 <div class="front-page-header-image">
   <img src="/images/frontpage/front-page-header.png" />
 </div>
-
 <div class="front-page">
   <section class="front-page-header">
     <img
@@ -71,60 +70,6 @@
       </div>
     </div>
   </section>
-  <section class="images-with-text-section" {{intersection-observer}}>
-    <h2 class="images-with-text-section-header">News</h2>
-    <div class="images-with-text-content">
-      <div class="image-text-container">
-        <p class="bread-text">
-          French Roast Coffee
-        </p>
-        <img
-          src="/images/frontpage/front-page-coffee-03.png"
-          class="image-text-img"
-          alt="Let us be your guide"
-        />
-        <div class="image-text-price hide-bread-text">€15.95/kg</div>
-        <p class="bread-text hide-bread-text">
-          <LinkTo class="button" @route="coffees">
-            Browse Coffees ⭢
-          </LinkTo>
-        </p>
-
-      </div>
-      <div class="image-text-container">
-        <p class="bread-text">
-          Colombia Narino Dark Roast
-        </p>
-        <img
-          src="/images/frontpage/front-page-coffee-03.png"
-          class="image-text-img"
-          alt="Let us be your guide"
-        />
-        <div class="image-text-price hide-bread-text">€14.99/kg</div>
-        <p class="bread-text hide-bread-text">
-          <LinkTo class="button" @route="coffees">
-            Browse Coffees ⭢
-          </LinkTo>
-        </p>
-      </div>
-      <div class="image-text-container">
-        <p class="bread-text">
-          Hazelnut Coffee
-        </p>
-        <img
-          src="/images/frontpage/front-page-coffee-03.png"
-          class="image-text-img"
-          alt="Let us be your guide"
-        />
-        <div class="image-text-price hide-bread-text">€13.99/kg</div>
-        <p class="bread-text hide-bread-text">
-          <LinkTo class="button" @route="coffees">
-            Browse Coffees ⭢
-          </LinkTo>
-        </p>
-      </div>
-    </div>
-  </section>
   <svg
     class="cool-coffee-bean"
     stroke-width="2"
@@ -156,6 +101,50 @@
       <LinkTo @route="coffees" class="get-started-btn">Get Started!</LinkTo>
     </div>
 
+  </section>
+  <section class="images-with-text-section" {{intersection-observer}}>
+    <h2 class="images-with-text-section-header">News</h2>
+    <div class="images-with-text-content">
+      <div class="image-text-container">
+        <h3 class="image-text-header">
+          French Roast Coffee
+        </h3>
+        <img
+          src="/images/frontpage/front-page-coffee-03.png"
+          class="image-text-img"
+          alt="Fresh Roast Coffee"
+        />
+        <LinkTo class="image-text-button" @route="coffees">
+          Go to Coffees ⭢
+        </LinkTo>
+      </div>
+      <div class="image-text-container">
+        <h3 class="image-text-header">
+          Colombia Narino Dark Roast
+        </h3>
+        <img
+          src="/images/frontpage/front-page-coffee-03.png"
+          class="image-text-img"
+          alt="Fresh Roast Coffee"
+        />
+        <LinkTo class="image-text-button" @route="coffees">
+          Go to Coffees ⭢
+        </LinkTo>
+      </div>
+      <div class="image-text-container">
+        <h3 class="image-text-header">
+          Hazelnut Coffee
+        </h3>
+        <img
+          src="/images/frontpage/front-page-coffee-03.png"
+          class="image-text-img"
+          alt="Fresh Roast Coffee"
+        />
+        <LinkTo class="image-text-button" @route="coffees">
+          Go to Coffees ⭢
+        </LinkTo>
+      </div>
+    </div>
   </section>
   <section class="explore-coffee-section">
     <h3 class="explore-coffee-section-h3">EXPLORE THE WORLD OF COFFEE</h3>
