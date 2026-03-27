@@ -1,22 +1,21 @@
 <div class="coffees">
-  <label>
-    <div class="search row-container">
+  <div class="coffees-header">
+    <div class="coffees-search-container">
       <Input
         @value={{this.query}}
-        class="light"
+        class="coffees-search-input"
         placeholder="Search for some Coffee!"
         autocomplete="off"
       />
     </div>
-  </label>
-  <LinkTo @route="index" class="menu-coffees">
-    Home
-  </LinkTo>
-  >
-  <LinkTo @route="coffees" class="menu-coffees">
-    Coffees
-  </LinkTo>
-  <div class="results">
+    <div class="coffees-breadcrumbs">
+      <LinkTo @route="index" class="coffees-breadcrumb-link">Home</LinkTo>
+      <span class="coffees-breadcrumb-separator">></span>
+      <LinkTo @route="coffees" class="coffees-breadcrumb-link">Coffees</LinkTo>
+    </div>
+  </div>
+
+  <div class="coffees-results-grid">
     <Coffees::Filter @coffees={{@coffees}} @query={{this.query}} as |results|>
       {{#each results as |coffee|}}
         <Coffee @coffee={{coffee}} />

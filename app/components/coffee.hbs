@@ -1,26 +1,30 @@
 <article class="coffee">
   <Coffee::Image src={{@coffee.image}} alt={{@coffee.name}} />
   <div class="coffee-details">
-    <h3>
+    <h3 class="coffee-name">
       <LinkTo @route="coffee" @model={{@coffee}}>
         {{@coffee.name}}
       </LinkTo>
     </h3>
-    <div class="coffee-owner">
-      <span>Name:</span>
-      {{@coffee.name}}
+    <div class="coffee-meta">
+      <p class="coffee-owner">
+        <span>Origin:</span>
+        Great Coffee Co.
+      </p>
+      <p class="coffee-type">
+        <span>Type:</span>
+        {{@coffee.type}}
+      </p>
+      <p class="coffee-bean">
+        <span>Bean:</span>
+        {{@coffee.bean}}
+      </p>
     </div>
-    <div class="coffee-type">
-      <span>Type:</span>
-      {{@coffee.type}}
-    </div>
-    <div class="coffee-type">
-      <span>Bean:</span>
-      {{@coffee.bean}}
-    </div>
-    <div class="coffee-description">
-      <span>Description:</span>
+    <p class="coffee-description">
       {{@coffee.description}}
-    </div>
+    </p>
+    <div class="coffee-price">€{{@coffee.price}}</div>
+    <LinkTo @route="coffee" @model={{@coffee}} class="view-coffee-btn">View
+      Details</LinkTo>
   </div>
 </article>

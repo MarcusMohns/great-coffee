@@ -9,9 +9,9 @@
     id="rightMenu"
   >
     <button
-      onclick={{this.toggleOpen}}
-      class="close-shopping-cart"
       type="button"
+      {{on "click" this.toggleOpen}}
+      class="close-shopping-cart"
     >&times;</button>
     <div class="shopping-cart-header">
       <h2>Shopping Cart</h2>
@@ -21,10 +21,11 @@
 
       {{#each this.shoppingCart.items as |item|}}
         <div class="shopping-cart-item">
-          <div
+          <button
+            type="button"
             class="remove-item-btn"
             {{on "click" (fn this.removeItem item)}}
-          >&times;</div>
+          >&times;</button>
           <img src={{item.image}} alt={{item.name}} class="coffee-icon" />
           <div class="sc-info">
             <p>
