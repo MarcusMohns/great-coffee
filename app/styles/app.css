@@ -1313,6 +1313,10 @@ h3 {
   transition: opacity 0.2s;
 }
 
+.alert.is-closing {
+  animation: alert-slide-out 0.4s cubic-bezier(0.175, 0.885, 0.32, 1) forwards;
+}
+
 .alert-close:hover {
   opacity: 1;
 }
@@ -1325,5 +1329,16 @@ h3 {
   to {
     opacity: 1;
     transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes alert-slide-out {
+  from {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%) scale(0.9);
   }
 }

@@ -1,5 +1,8 @@
 {{#if this.alert.alertDisplayed}}
-  <div class="alert alert-{{this.alert.type}}">
+  <div
+    class="alert alert-{{this.alert.type}}
+      {{if this.alert.isClosing 'is-closing'}}"
+  >
     <div class="alert-icon">
       {{this.icon}}
     </div>
