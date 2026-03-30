@@ -19,8 +19,8 @@ export default class CoffeeImageComponent extends Component {
     this.shoppingCartState.isOpen = true;
   }
 
-  @action showAlert() {
-    this.alert.displayAlert();
+  @action showAlert(message, type) {
+    this.alert.displayAlert(message, type);
   }
 
   @action handleGroundChange(e) {

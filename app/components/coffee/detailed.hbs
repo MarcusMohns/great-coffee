@@ -104,9 +104,8 @@
             "click"
             (fn this.addToCart @coffee.price @coffee.name @coffee.image)
           }}
-          {{on "click" this.showAlert}}
+          {{on "click" (fn this.showAlert "Added to cart!" "success")}}
         >
-
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
