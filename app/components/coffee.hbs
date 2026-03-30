@@ -1,5 +1,7 @@
 <article class="coffee">
-  <Coffee::Image src={{@coffee.image}} alt={{@coffee.name}} />
+  <div class="coffee-image-container">
+    <Coffee::Image src={{@coffee.image}} alt={{@coffee.name}} />
+  </div>
   <div class="coffee-details">
     <h3 class="coffee-name">
       <LinkTo @route="coffee" @model={{@coffee}}>

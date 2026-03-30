@@ -635,8 +635,12 @@ h3 {
 
 /* --- Coffees Page --- */
 .coffees {
-  padding: 4rem 10%;
+  padding: 15% 10%;
   background-color: var(--cream);
+
+  @media (max-width: 900px) {
+    padding: 30% 5%;
+  }
 }
 
 .coffees-header {
@@ -675,27 +679,6 @@ h3 {
   box-shadow: 0 0 0 3px rgba(188, 103, 51, 0.2);
 }
 
-.coffees-breadcrumbs {
-  display: flex;
-  align-items: center;
-  font-size: 0.9rem;
-  color: var(--coffee-medium);
-}
-
-.coffees-breadcrumb-link {
-  text-decoration: none;
-  color: var(--coffee-medium);
-  transition: color 0.2s;
-}
-
-.coffees-breadcrumb-link:hover {
-  color: var(--coffee-accent);
-}
-
-.coffees-breadcrumb-separator {
-  margin: 0 0.5rem;
-}
-
 .coffees-results-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -712,6 +695,7 @@ h3 {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  transition: all;
   transition:
     transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
     box-shadow 0.4s ease;
@@ -721,18 +705,36 @@ h3 {
   box-shadow: var(--shadow-lg);
 }
 
-.coffee .image img {
+.coffee-image-container {
+  width: 100%;
+  height: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 1.5rem;
+  background: radial-gradient(
+    circle,
+    rgba(188, 103, 51, 0.08) 0%,
+    transparent 70%
+  );
+  border-radius: 8px;
+  overflow: visible;
+}
+
+.coffee-image-container img {
   width: 100%;
   max-width: 200px;
-  height: 200px;
+  height: auto;
+  max-height: 200px;
   object-fit: contain;
-  margin-bottom: 1.5rem;
-  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.12));
   transition: transform 0.3s ease;
 }
 
-.coffee:hover .image img {
-  transform: scale(1.05) rotate(-2deg);
+.coffee:hover .coffee-image-container img {
+  transform: translateY(-10px) scale(1.1) rotate(-3deg);
+  filter: drop-shadow(0 30px 40px rgba(0, 0, 0, 0.18));
 }
 
 .coffee-name {
@@ -842,7 +844,7 @@ h3 {
   transform: rotate(0.125turn);
 
   @media screen and (max-width: 900px) {
-    left: 40%;
+    left: 42%;
   }
 }
 
@@ -866,7 +868,6 @@ h3 {
 
 /* --- Detailed Coffee View --- */
 .navigation-text {
-  margin-bottom: 3rem;
   font-size: 0.75rem;
   color: var(--coffee-medium);
   font-weight: 700;
@@ -893,13 +894,32 @@ h3 {
   color: var(--coffee-accent);
 }
 
+.detailed-coffee-page {
+  padding: 10% 10%;
+}
+
 .coffee.detailed {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: row;
   gap: 4rem;
   align-items: start;
+  justify-content: space-between;
   max-width: 1100px;
+  width: fit-content;
   margin: 0 auto;
+  margin-top: 3rem;
+}
+
+.image-and-description {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 450px;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 .img-magnifier-container {
@@ -930,6 +950,12 @@ h3 {
   max-height: 500px;
   width: 100%;
   object-fit: contain;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .detailed-coffee-name {
@@ -963,6 +989,7 @@ h3 {
 .detail.type {
   margin-bottom: 1rem;
   font-size: 1.1rem;
+  text-align: start;
 }
 
 .detail.type span {
@@ -975,6 +1002,7 @@ h3 {
 .detail.price {
   margin: 3rem 0;
   padding: 2rem 0;
+  text-align: start;
   border-top: 1px solid rgba(0, 0, 0, 0.08);
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
@@ -995,6 +1023,7 @@ h3 {
 .selection-row {
   display: flex;
   align-items: center;
+  text-align: start;
   margin-bottom: 2rem;
   gap: 3rem;
 }
@@ -1024,6 +1053,11 @@ h3 {
   border-color: var(--coffee-accent);
 }
 
+.btn-container {
+  display: flex;
+  gap: 1rem;
+}
+
 .addToCartBtn {
   display: flex;
   align-items: center;
@@ -1031,12 +1065,13 @@ h3 {
   gap: 1rem;
   background: var(--coffee-accent);
   color: var(--white);
-  padding: 1rem 3rem;
   border: none;
+  padding: 1rem 1.2rem;
   border-radius: 4px;
   font-weight: 800;
   font-size: 1.1rem;
   cursor: pointer;
+  width: max-content;
   transition: var(--transition-smooth);
 }
 
@@ -1055,6 +1090,7 @@ h3 {
   border-radius: 4px;
   font-weight: 800;
   font-size: 1.1rem;
+  width: max-content;
   transition: var(--transition-smooth);
   cursor: pointer;
 }

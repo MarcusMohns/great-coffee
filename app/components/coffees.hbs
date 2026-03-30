@@ -4,14 +4,18 @@
       <Input
         @value={{this.query}}
         class="coffees-search-input"
-        placeholder="Search for some Coffee!"
+        placeholder="Search for some Coffee! ☕"
         autocomplete="off"
       />
     </div>
-    <div class="coffees-breadcrumbs">
-      <LinkTo @route="index" class="coffees-breadcrumb-link">Home</LinkTo>
-      <span class="coffees-breadcrumb-separator">></span>
-      <LinkTo @route="coffees" class="coffees-breadcrumb-link">Coffees</LinkTo>
+    <div class="navigation-text">
+      <LinkTo @route="index">
+        Home
+      </LinkTo>
+      <span class="breadcrumb-sep">/</span>
+      <LinkTo @route="coffees">
+        Coffees
+      </LinkTo>
     </div>
   </div>
 
