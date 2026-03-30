@@ -42,6 +42,11 @@ h3 {
   flex-direction: column;
 }
 
+.front-page {
+  /* Prevents the light body color from flashing behind the dark hero during animation */
+  background-color: var(--coffee-dark);
+}
+
 /* --- 1r --- */
 .menu {
   display: flex;
@@ -179,6 +184,8 @@ h3 {
   box-sizing: border-box;
   position: relative;
   z-index: 10;
+  background-color: var(--coffee-dark);
+  animation: hero-fade-in 1.5s cubic-bezier(0.32, 0.69, 0.44, 1) forwards;
 }
 
 .header-content-wrapper {
@@ -252,12 +259,14 @@ h3 {
 /* --- Big Image Sections --- */
 .big-image-section {
   padding: 8rem 10%;
+  background-color: var(--cream);
 }
 .big-image-container {
   display: flex;
   gap: 4rem;
   align-items: center;
   margin-bottom: 10rem;
+  border-radius: 12px;
 
   @media (max-width: 900px) {
     flex-direction: column;
@@ -276,15 +285,16 @@ h3 {
   width: 50%;
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  transition: transform 0.5s ease;
 
   @media (max-width: 900px) {
     width: 100%;
   }
 }
 
-.big-image-container:hover .front-page-big-image {
-  transform: scale(1.02);
+.front-page-big-image:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 .big-image-content {
@@ -887,7 +897,7 @@ h3 {
 .cool-coffee-bean {
   position: relative;
   left: 50%;
-  top: 55px;
+  top: -45px;
   background-color: var(--coffee-dark);
   border-top: 1px solid var(--coffee-dark);
   border-left: 1px solid var(--coffee-dark);
@@ -1492,4 +1502,71 @@ h3 {
     text-align: center;
     gap: 3rem;
   }
+}
+
+@keyframes hero-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* --- Image Loading Logic --- */
+.front-page-big-image,
+.about-img,
+.magnify-image,
+.image-text-img {
+  opacity: 0;
+  transition: opacity 0.8s ease-out;
+  will-change: opacity;
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+    box-shadow 0.4s ease;
+  will-change: opacity, transform, box-shadow;
+}
+
+.img-loaded {
+  opacity: 1 !important;
+}
+
+/* Placeholder color for components that wrap the image */
+.coffee-image-container,
+.image-text-img-wrapper,
+.about-image-wrapper {
+  background-color: rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+@keyframes reveal-image {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Cleanup redundant transitions & improve performance */
+.coffee,
+.view-coffee-btn,
+.image-text-button,
+.feature-card {
+.feature-card,
+.front-page-big-image {
+  will-change: transform, box-shadow;
+}
+
+/* Improved Scrollbar for Cart */
+.shopping-cart-content::-webkit-scrollbar {
+  width: 6px;
+}
+.shopping-cart-content::-webkit-scrollbar-track {
+  background: var(--cream);
+}
+.shopping-cart-content::-webkit-scrollbar-thumb {
+  background: var(--coffee-light);
+  border-radius: 10px;
 }

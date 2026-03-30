@@ -38,8 +38,8 @@ export default class ShoppingCartDataService extends Service {
   }
 
   empty() {
-    this.items.clear();
-    this.total = 0;
+    this.items = A([]);
+    this.calcTotal();
   }
 
   calcTotal() {
