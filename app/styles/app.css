@@ -42,7 +42,7 @@ h3 {
   flex-direction: column;
 }
 
-/* --- Navbar --- */
+/* --- 1r --- */
 .menu {
   display: flex;
   justify-content: space-between;
@@ -52,6 +52,7 @@ h3 {
   left: 0;
   right: 0;
   top: 0;
+  width: 100%;
   z-index: 1000;
   transition: var(--transition-smooth);
   background: rgba(31, 20, 16, 0.7); /* Dark tint for visibility on light BGs */
@@ -119,6 +120,38 @@ h3 {
   justify-content: center;
   align-items: center;
 }
+.menu,
+.small-menu a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: medium;
+}
+
+.menu-index {
+  transition: var(--transition-smooth);
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.menu-index:hover {
+  color: var(--coffee-accent);
+  transform: translateY(-2px);
+}
+
+.shopping-cart-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
 
 .small-closebtn {
   position: absolute;
@@ -159,7 +192,6 @@ h3 {
 .coffee-bean-icon {
   width: 60px;
   height: 60px;
-  margin-bottom: 2rem;
   filter: brightness(0) invert(1);
   opacity: 0.8;
 }
@@ -168,7 +200,8 @@ h3 {
   color: var(--white);
   font-size: clamp(2.5rem, 6vw, 4.5rem);
   line-height: 1.1;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
   font-weight: 700;
   text-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
 }
@@ -225,9 +258,18 @@ h3 {
   gap: 4rem;
   align-items: center;
   margin-bottom: 10rem;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 .big-image-container:nth-child(even) {
   flex-direction: row-reverse;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
 }
 
 .front-page-big-image {
@@ -235,6 +277,10 @@ h3 {
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   transition: transform 0.5s ease;
+
+  @media (max-width: 900px) {
+    width: 100%;
+  }
 }
 
 .big-image-container:hover .front-page-big-image {
@@ -243,6 +289,10 @@ h3 {
 
 .big-image-content {
   width: 50%;
+
+  @media (max-width: 900px) {
+    width: 100%;
+  }
 }
 
 .big-image-title {
@@ -408,6 +458,21 @@ h3 {
   color: var(--coffee-dark);
 }
 
+.image-news-card {
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transition: var(--transition-smooth);
+}
+
+.image-news-card:hover {
+  box-shadow: var(--shadow-lg);
+}
+
 .images-with-text-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -415,23 +480,25 @@ h3 {
 }
 
 .image-text-img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
   margin-bottom: 2rem;
   background: var(--cream);
   border-radius: 4px;
-  aspect-ratio: 4 / 5;
 }
 
 .image-text-img {
-  width: 100%;
-  height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.8s ease;
+  transition: transform 0.3s ease;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
 }
 
 .image-news-card:hover .image-text-img {
-  transform: scale(1.08);
+  transform: translate3d(0, -5px, 0) scale(1.05);
 }
 
 .image-text-header {
@@ -479,21 +546,43 @@ h3 {
   padding: 10rem 10%;
   align-items: center;
   gap: 6rem;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+  }
 }
 
 .cozy-coffee {
-  width: 40%;
+  width: 30%;
   border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  @media (max-width: 900px) {
+    width: 70%;
+  }
 }
 
 .points-container {
   width: 60%;
+  padding-bottom: 2rem;
+
+  @media (max-width: 900px) {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .points-container-h3 {
   font-size: 3rem;
   margin-bottom: 2rem;
   color: var(--white);
+}
+
+.points-container ul {
+  padding-left: 1.5rem;
+  text-align: start;
 }
 
 .points {
@@ -518,6 +607,11 @@ h3 {
   border-radius: 50px;
   font-weight: 800;
   transition: var(--transition-smooth);
+  margin-top: 4rem;
+}
+
+.get-started-btn:hover {
+  background: var(--coffee-accent);
 }
 
 /* --- Explore Section --- */
@@ -672,6 +766,24 @@ h3 {
   font-weight: 800;
   color: var(--coffee-accent);
   margin-bottom: 1.5rem;
+}
+
+.cool-coffee-bean {
+  position: relative;
+  left: 50%;
+  top: 55px;
+  background-color: var(--coffee-dark);
+  border-top: 1px solid var(--coffee-dark);
+  border-left: 1px solid var(--coffee-dark);
+  border-bottom: 2px solid var(--coffee-light);
+  border-right: 2px solid var(--coffee-light);
+  padding: 12px;
+  border-radius: 8px;
+  transform: rotate(0.125turn);
+
+  @media screen and (max-width: 900px) {
+    left: 40%;
+  }
 }
 
 .view-coffee-btn {
@@ -958,6 +1070,10 @@ h3 {
   fill: currentColor;
 }
 
+.screen-reader {
+  opacity: 0;
+}
+
 /* --- Animations (Triggered by intersection-observer) --- */
 @keyframes fadeInUp {
   from {
@@ -981,7 +1097,7 @@ h3 {
   }
 }
 
-/* These classes are added by your modifier */
+/* These classes are added by modifier */
 [class*="animated-"] {
   animation: fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
   opacity: 0;
