@@ -4,7 +4,7 @@
     class={{if
       this.open.isOpen
       "shopping-cart shopping-cart-open"
-      "shopping-cart shopping-cart-closed"
+      "shopping-cart"
     }}
     id="rightMenu"
   >
@@ -42,7 +42,10 @@
           </div>
           <div class="column-container sc-item-qty-and-price">
             <p>
-              <span class="bold">€{{multiply item.price item.quantity}}</span>
+              <span class="sc-price-total">€{{multiply
+                  item.price
+                  item.quantity
+                }}</span>
             </p>
             <div class="row-container">
               <p class="sc-qty">
@@ -74,13 +77,15 @@
       {{/each}}
     </div>
 
-    <div class="summary column-container">Summary
-      <div class="subtotal">Subtotal
-        {{this.items}}
-        item(s)
-        <p class="price">€{{this.shoppingCart.total}}</p>
+    <div class="summary column-container">
+      <h3 class="summary-title">Summary</h3>
+      <div class="subtotal-row">
+        <span>Subtotal ({{this.items}} items)</span>
+        <span class="price">€{{this.shoppingCart.total}}</span>
       </div>
-      <button class="checkout-btn" type="button">CHECKOUT</button>
+      <button class="checkout-btn" type="button" {{on "click" this.checkout}}>
+        PROCEED TO CHECKOUT
+      </button>
     </div>
 
   </div>

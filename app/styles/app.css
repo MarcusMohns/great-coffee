@@ -320,7 +320,7 @@ h3 {
   position: fixed;
   top: 0;
   z-index: 2; /* Ensure sidebar is above its overlay */
-  right: -450px;
+  right: -100%;
   width: 400px;
   height: 100vh;
   background: var(--white);
@@ -385,17 +385,44 @@ h3 {
   display: flex;
   gap: 1rem;
   align-items: center;
-  margin-bottom: 1.5rem;
-  padding: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
   border-radius: 8px;
-  background: var(--cream);
+  background: #fafafa;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  position: relative;
+  transition: var(--transition-smooth);
 }
 
 .coffee-icon {
   width: 60px;
   height: 60px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 4px;
+  background: white;
+  padding: 5px;
+}
+
+.remove-item-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: transparent;
+  border: none;
+  color: #ccc;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.remove-item-btn:hover {
+  color: var(--coffee-accent);
+}
+
+.sc-price-total {
+  font-weight: 800;
+  color: var(--coffee-dark);
+  font-size: 1.1rem;
 }
 
 .sc-info {
@@ -419,6 +446,7 @@ h3 {
   padding: 0.2rem 0.6rem;
   cursor: pointer;
   font-weight: bold;
+  user-select: none;
 }
 
 .sc-qty input {
@@ -429,20 +457,46 @@ h3 {
 }
 
 .summary {
-  border-top: 2px solid var(--coffee-dark);
-  padding-top: 1.5rem;
+  border-top: 1px solid #eee;
+  padding: 1.5rem 0;
   margin-top: 1rem;
+  gap: 1rem;
+}
+
+.summary-title {
+  font-size: 1.2rem;
+  margin: 0;
+  color: var(--coffee-dark);
+}
+
+.subtotal-row {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  color: var(--coffee-medium);
+}
+
+.subtotal-row .price {
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: var(--coffee-accent);
 }
 
 .checkout-btn {
-  background: var(--coffee-dark);
+  background: var(--coffee-accent);
   color: var(--white);
   border: none;
-  padding: 1rem;
-  border-radius: 4px;
-  font-weight: bold;
+  padding: 1.2rem;
+  border-radius: 50px;
+  font-weight: 800;
+  letter-spacing: 1px;
   cursor: pointer;
-  margin-top: 1rem;
+  transition: var(--transition-smooth);
+}
+
+.checkout-btn:hover {
+  background: var(--coffee-dark);
+  transform: translateY(-2px);
 }
 
 /* --- News Cards --- */

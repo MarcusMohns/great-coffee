@@ -26,16 +26,15 @@ export default class ShoppingCartDataService extends Service {
       // If the product doesn't exist yet - Add it.
 
       this.items = A(stackedItems);
-      // Add to state
     } else {
-      this.items.pushObject(item);
+      this.items = A([...this.items, item]);
     }
 
     this.calcTotal();
   }
-  remove(item) {
-    this.items.removeObject(item);
-    this.calcTotal(item.quantity);
+  @action remove(item) {
+    this.items = A(this.items.filter((i) => i !== item));
+    this.calcTotal();
   }
 
   empty() {
@@ -56,8 +55,11 @@ export default class ShoppingCartDataService extends Service {
       this.remove(item);
     } else {
       const index = this.items.indexOf(item);
-      const newItem = { ...item, quantity: Number(newQuantity) };
-      this.items.replace(index, 1, [newItem]);
+      if (index !== -1) {
+        const newItems = [...this.items];
+        newItems[index] = { ...item, quantity: Number(newQuantity) };
+        this.items = A(newItems);
+      }
     }
     this.calcTotal();
   }
