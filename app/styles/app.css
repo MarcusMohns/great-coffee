@@ -712,19 +712,27 @@ h3 {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  transition: var(--transition-smooth);
+  transition:
+    transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+    box-shadow 0.4s ease;
 }
 
 .coffee:hover {
-  transform: translateY(-5px);
   box-shadow: var(--shadow-lg);
 }
 
 .coffee .image img {
-  max-width: 180px;
-  height: auto;
+  width: 100%;
+  max-width: 200px;
+  height: 200px;
   object-fit: contain;
   margin-bottom: 1.5rem;
+  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.1));
+  transition: transform 0.3s ease;
+}
+
+.coffee:hover .image img {
+  transform: scale(1.05) rotate(-2deg);
 }
 
 .coffee-name {
@@ -739,26 +747,78 @@ h3 {
 }
 
 .coffee-meta {
-  font-size: 0.9rem;
-  color: var(--coffee-medium);
-  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .coffee-meta p {
-  margin: 0.3rem 0;
+  margin: 0;
+  font-size: 0.75rem;
+  background: var(--cream);
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  color: var(--coffee-medium);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .coffee-meta span {
-  font-weight: 600;
-  color: var(--coffee-dark);
-  margin-right: 0.5rem;
+  display: none; /* Hide labels like "Origin:" to keep it clean */
 }
 
 .coffee-description {
   font-size: 1rem;
   color: var(--text-main);
+  margin: 0;
+  text-align: left;
+  max-height: 4.5em; /* Approximately 3 lines of text */
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.coffee-description-drawer {
+  width: 100%;
   margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   flex-grow: 1;
+}
+
+.drawer-toggle {
+  display: none;
+}
+
+.drawer-label {
+  cursor: pointer;
+  color: var(--coffee-accent);
+  font-weight: 700;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: var(--transition-smooth);
+}
+
+.drawer-label:hover {
+  color: var(--coffee-dark);
+}
+
+.drawer-label::before {
+  content: "Read More +";
+}
+
+.drawer-toggle:checked + .coffee-description {
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.drawer-toggle:checked ~ .drawer-label::before {
+  content: "Read Less -";
 }
 
 .coffee-price {
@@ -791,9 +851,11 @@ h3 {
   background: var(--coffee-accent);
   color: white;
   text-decoration: none;
-  padding: 0.8rem 1.5rem;
+  padding: 0.8rem 2rem;
   border-radius: 50px;
-  font-weight: 700;
+  font-weight: 800;
+  width: 100%;
+  box-sizing: border-box;
   transition: var(--transition-smooth);
 }
 

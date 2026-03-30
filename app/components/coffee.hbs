@@ -20,9 +20,17 @@
         {{@coffee.bean}}
       </p>
     </div>
-    <p class="coffee-description">
-      {{@coffee.description}}
-    </p>
+    <div class="coffee-description-drawer">
+      <input
+        type="checkbox"
+        id="desc-toggle-{{@coffee.name}}"
+        class="drawer-toggle"
+      />
+      <p class="coffee-description">
+        {{@coffee.description}}
+      </p>
+      <label for="desc-toggle-{{@coffee.name}}" class="drawer-label"></label>
+    </div>
     <div class="coffee-price">€{{@coffee.price}}</div>
     <LinkTo @route="coffee" @model={{@coffee}} class="view-coffee-btn">View
       Details</LinkTo>
