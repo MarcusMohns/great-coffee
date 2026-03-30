@@ -2,17 +2,24 @@ import Service from '@ember/service';
 import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 
-export default class ShoppingCartDataService extends Service {
+export default class AlertService extends Service {
   @tracked alertDisplayed = false;
+  @tracked message = '';
+  @tracked type = 'info';
 
-  @action displayAlert() {
-    if (this.alertDisplayed == false) {
-      this.alertDisplayed = true;
+  timeout = null;
 
-      setTimeout(() => {
-        this.alertDisplayed = false;
-      }, '3000');
-    }
+  @action displayAlert(message, type = 'info') {
+    this.message = message;
+    this.type = type;
+    this.alertDisplayed = true;
+
+    if (this.timeout) clearTimeout(this.timeout);
+
+    this.timeout = setTimeout(() => {
+      this.alertDisplayed = false;
+      this.timeout = null;
+    }, 3000);
   }
 
   @action hideAlert() {
