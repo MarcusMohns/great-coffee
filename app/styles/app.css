@@ -135,6 +135,27 @@ h3 {
   font-size: medium;
 }
 
+.small-links-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.small-links-container a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: large;
+}
+
+.navbar-product-qty {
+  color: var(--white);
+}
+
 .menu-index {
   transition: var(--transition-smooth);
   text-decoration: none;
@@ -267,16 +288,18 @@ h3 {
   align-items: center;
   margin-bottom: 10rem;
   border-radius: 12px;
-
-  @media (max-width: 900px) {
+}
+@media (max-width: 900px) {
+  .big-image-container {
     flex-direction: column;
     text-align: center;
   }
 }
 .big-image-container:nth-child(even) {
   flex-direction: row-reverse;
-
-  @media (max-width: 900px) {
+}
+@media (max-width: 900px) {
+  .big-image-container:nth-child(even) {
     flex-direction: column;
   }
 }
@@ -285,8 +308,9 @@ h3 {
   width: 50%;
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-
-  @media (max-width: 900px) {
+}
+@media (max-width: 900px) {
+  .front-page-big-image {
     width: 100%;
   }
 }
@@ -299,8 +323,9 @@ h3 {
 
 .big-image-content {
   width: 50%;
-
-  @media (max-width: 900px) {
+}
+@media (max-width: 900px) {
+  .big-image-content {
     width: 100%;
   }
 }
@@ -515,6 +540,13 @@ h3 {
   padding: 12rem 10%;
 }
 
+@media (max-width: 900px) {
+  .images-with-text-section {
+    padding: 4rem 5%;
+    overflow: hidden;
+  }
+}
+
 .images-with-text-section-header {
   text-align: center;
   margin-bottom: 4rem;
@@ -610,8 +642,9 @@ h3 {
   padding: 10rem 10%;
   align-items: center;
   gap: 6rem;
-
-  @media (max-width: 900px) {
+}
+@media (max-width: 900px) {
+  .membership-section {
     flex-direction: column;
     text-align: center;
     gap: 3rem;
@@ -623,7 +656,9 @@ h3 {
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
-  @media (max-width: 900px) {
+}
+@media (max-width: 900px) {
+  .cozy-coffee {
     width: 70%;
   }
 }
@@ -709,11 +744,19 @@ h3 {
 
 .coffees-header {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 3rem;
+
   flex-wrap: wrap;
   gap: 1.5rem;
+
+  @media (max-width: 900px) {
+    align-items: flex-start;
+    margin-top: 2rem;
+    flex-direction: column-reverse;
+  }
 }
 
 .coffees-search-container {
@@ -1553,7 +1596,6 @@ h3 {
 .coffee,
 .view-coffee-btn,
 .image-text-button,
-.feature-card {
 .feature-card,
 .front-page-big-image {
   will-change: transform, box-shadow;
