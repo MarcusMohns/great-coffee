@@ -8,8 +8,8 @@ export default modifier((element) => {
     return;
   }
 
-  const zoom = 3;
-  let bw = 0;
+  const zoom = 2;
+  let bw = 2;
   let w = glass.offsetWidth / 2;
   let h = glass.offsetHeight / 2;
 
@@ -27,6 +27,10 @@ export default modifier((element) => {
   };
 
   const moveMagnifier = (e) => {
+    if (window.innerWidth <= 900) {
+      return;
+    }
+
     let pos, x, y;
     e.preventDefault();
     pos = getCursorPos(e);
