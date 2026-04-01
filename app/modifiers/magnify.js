@@ -2,7 +2,11 @@ import { modifier } from 'ember-modifier';
 
 export default modifier((element) => {
   const glass = element.children[0];
-  const img = element.children[1].children[0];
+  const img = element.children[1];
+
+  if (!glass || !img) {
+    return;
+  }
 
   const zoom = 3;
   let bw = 0;
@@ -59,5 +63,12 @@ export default modifier((element) => {
     return { x: x, y: y };
   }
 
-  magnify(element);
+  magnify();
+
+  return () => {
+    glass.removeEventListener('mousemove', moveMagnifier);
+    img.removeEventListener('mousemove', moveMagnifier);
+    glass.removeEventListener('touchmove', moveMagnifier);
+    img.removeEventListener('touchmove', moveMagnifier);
+  };
 });

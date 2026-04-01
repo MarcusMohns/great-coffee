@@ -9,4 +9,6 @@ export default modifier((element) => {
     }
   };
   document.addEventListener('scroll', styleOnScroll);
+
+  return () => document.removeEventListener('scroll', styleOnScroll);
 });

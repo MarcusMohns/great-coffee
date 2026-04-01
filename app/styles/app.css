@@ -105,6 +105,7 @@ h3 {
 .small-menu {
   display: none; /* Hidden by default on desktop */
   justify-content: space-between;
+  flex-direction: row;
   align-items: center;
   padding: 1rem 5%;
   background: var(--coffee-dark);
@@ -113,6 +114,22 @@ h3 {
   left: 0;
   right: 0;
   z-index: 1000;
+}
+
+.small-nav-shopping-cart-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.small-nav-coffee-bean-icon {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+  opacity: 0.8;
 }
 
 .small-nav-container {
@@ -135,12 +152,24 @@ h3 {
   font-size: medium;
 }
 
-.small-links-container {
+small-menu-index .small-links-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 2rem;
+}
+
+.small-menu-index {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.small-menu-index h1 {
+  font-size: 1.6rem;
+  margin: 0;
+  letter-spacing: -0.03em;
 }
 
 .small-links-container a {
@@ -160,14 +189,23 @@ h3 {
   transition: var(--transition-smooth);
   text-decoration: none;
   color: var(--white);
+  display: inline-flex;
+  align-items: center;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  min-width: 20%;
 }
 
 .menu-index:hover {
   color: var(--coffee-accent);
   transform: translateY(-2px);
+}
+
+.menu-index .coffee-bean-icon {
+  width: 28px;
+  height: 28px;
+  margin-right: 12px;
 }
 
 .shopping-cart-button {
@@ -177,6 +215,7 @@ h3 {
   align-items: center;
   gap: 0.5rem;
   cursor: pointer;
+  min-width: 20%;
 }
 
 .small-closebtn {
@@ -193,8 +232,9 @@ h3 {
 /* --- Re-imagined Typographic Hero --- */
 .front-page-header {
   min-height: 85vh;
-  background: linear-gradient(rgba(31, 20, 16, 0.75), rgba(31, 20, 16, 0.9)),
-    url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80");
+  background:
+    linear-gradient(rgba(31, 20, 16, 0.75), rgba(31, 20, 16, 0.9)),
+    url("/images/frontpage/hero-bg.png") no-repeat;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -831,17 +871,16 @@ h3 {
 
 .coffee-image-container img {
   width: 100%;
-  max-width: 200px;
+  max-width: 90%;
   height: auto;
   max-height: 200px;
   object-fit: contain;
-  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.12));
+  border-radius: 8px;
   transition: transform 0.3s ease;
 }
 
 .coffee:hover .coffee-image-container img {
-  transform: translateY(-10px) scale(1.1) rotate(-3deg);
-  filter: drop-shadow(0 30px 40px rgba(0, 0, 0, 0.18));
+  transform: translateY(-7px) scale(1.05) rotate(-1deg);
 }
 
 .coffee-name {
@@ -944,8 +983,8 @@ h3 {
   background-color: var(--coffee-dark);
   border-top: 1px solid var(--coffee-dark);
   border-left: 1px solid var(--coffee-dark);
-  border-bottom: 2px solid var(--coffee-light);
-  border-right: 2px solid var(--coffee-light);
+  border-bottom: 2px solid var(--cream);
+  border-right: 2px solid var(--cream);
   padding: 12px;
   border-radius: 8px;
   transform: rotate(0.125turn);
@@ -1005,6 +1044,14 @@ h3 {
   padding: 10% 10%;
 }
 
+.detailed-coffee-page {
+  @media (max-width: 900px) {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 15% 0%;
+  }
+}
+
 .coffee.detailed {
   display: flex;
   flex-direction: row;
@@ -1017,15 +1064,22 @@ h3 {
   margin-top: 3rem;
 }
 
+.coffee.detailed {
+  @media (max-width: 900px) {
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 100%;
+  }
+}
+
 .image-and-description {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   max-width: 450px;
-
   @media (max-width: 900px) {
-    flex-direction: column;
-    text-align: center;
+    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -1063,6 +1117,11 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+@media (max-width: 900px) {
+  .details {
+    width: 100%;
+  }
 }
 
 .detailed-coffee-name {
@@ -1498,7 +1557,6 @@ h3 {
 }
 
 .about-img {
-  width: 100%;
   border-radius: 20px;
   box-shadow: var(--shadow-lg);
 }
@@ -1579,7 +1637,7 @@ h3 {
 .coffee-image-container,
 .image-text-img-wrapper,
 .about-image-wrapper {
-  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: 16px;
   overflow: hidden;
 }
 

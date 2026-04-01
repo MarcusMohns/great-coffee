@@ -18,7 +18,6 @@
 </div>
 
 <nav class="small-menu">
-
   <svg
     xmlns="http://www.w3.org/2000/svg"
     x="0px"
@@ -35,9 +34,14 @@
     ></path>
   </svg>
   <LinkTo @route="index" class="small-menu-index">
+    <img
+      src="/images/coffee-bean.svg"
+      class="small-nav-coffee-bean-icon"
+      alt="header coffee bean"
+    />
     <h1>Great Coffee</h1>
   </LinkTo>
-  <div class="shopping-cart-button" {{on "click" this.toggleOpen}}>
+  <div class="small-nav-shopping-cart-button" {{on "click" this.toggleOpen}}>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="24"
