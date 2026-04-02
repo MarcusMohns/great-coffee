@@ -1,71 +1,71 @@
-<div class="front-page-header-image">
-  <img src="/images/frontpage/front-page-header.png" />
-</div>
 <div class="front-page">
   <section class="front-page-header">
-    <img
-      class="coffee-bean"
-      src="https://www.svgrepo.com/show/493661/coffee-bean-roast-brew.svg"
-      alt="Coffee Bean"
-      height="44px"
-      width="44px"
-    />
-    <div class="little-message-thing">
-      Delicious Coffee | Excellent Quality
+    <div class="header-content-wrapper hero-entrance-animation">
+      <img
+        src="/images/coffee-bean.svg"
+        class="coffee-bean-icon"
+        alt="hero coffee bean"
+      />
+      <h1 class="hero-main-title">The Perfect Roast,
+        <br />
+        Delivered to Your Door.</h1>
+      <div class="little-message-thing">
+        Ethically Sourced • Artisan Quality • Roasted Daily
+      </div>
+      <div class="header-actions">
+        <LinkTo @route="coffees" class="browse-coffee-btn">Explore Our Roasts</LinkTo>
+      </div>
     </div>
-    <LinkTo @route="coffees" class="browse-coffee-btn">Browse some Coffees!</LinkTo>
-
   </section>
   <section class="big-image-section">
     <div class="big-image-container" {{intersection-observer}}>
-      <img
+      <Coffee::Image
         src="/images/frontpage/big-image-3.jpg"
         alt=""
         class="front-page-big-image"
       />
-      <div>
-        <p class="big-image-text">
-          <h2>Single Origin</h2>
-          <p>
-            Coffee by Place: A world tour of coffees from over 20 countries,
-            featuring nearly 40 different regions, estates, co-ops, and
-            certifications. Whether you prefer bold Indonesian, lively African
-            or sweet, rich American coffee, this page is for you!
-          </p>
+      <div class="big-image-content">
+        <h2 class="big-image-title">Single Origin</h2>
+        <p class="big-image-description">
+          Coffee by Place: A world tour of coffees from over 20 countries,
+          featuring nearly 40 different regions, estates, co-ops, and
+          certifications. Whether you prefer bold Indonesian, lively African or
+          sweet, rich American coffee, this page is for you!
         </p>
       </div>
     </div>
     <div class="big-image-container" {{intersection-observer}}>
-      <img
+      <Coffee::Image
         src="/images/frontpage/big-image-2.jpg"
         alt=""
         class="front-page-big-image"
       />
-      <div>
-        <p class="big-image-text">
-          <h2>Sustainably Sourced</h2>All GreatCoffee is 100% Certified Organic,
-          Fair Trade, Shade Grown and we strives to develop and maintain a
-          completely sustainable business model. They offset their daily energy
-          usage with wind power credits through Renewable Choice Energy, which
-          helps subsidize wind farms., and have established partnerships with
-          non-profits such as The Black Warrior Riverkeeper and The Cahaba River
-          Society working to promote sustainability and environmental
-          conservation efforts.
+      <div class="big-image-content">
+        <h2 class="big-image-title">Sustainably Sourced</h2>
+        <p class="big-image-description">
+          All GreatCoffee is 100% Certified Organic, Fair Trade, Shade Grown and
+          we strives to develop and maintain a completely sustainable business
+          model. They offset their daily energy usage with wind power credits
+          through Renewable Choice Energy, which helps subsidize wind farms.,
+          and have established partnerships with non-profits such as The Black
+          Warrior Riverkeeper and The Cahaba River Society working to promote
+          sustainability and environmental conservation efforts.
         </p>
       </div>
     </div>
     <div class="big-image-container" {{intersection-observer}}>
-      <img
+      <Coffee::Image
         src="/images/frontpage/big-image-1.jpg"
         alt=""
         class="front-page-big-image"
       />
-      <div>
-        <p class="big-image-text">
-          <h2>Specialty flavor</h2>Coffee by Creation: Where we make coffee even
-          more special. Whether you seek your own custom blend or a better
-          version of an old favorite, here is where you find custom coffee,
-          flavored coffee, coffee flights, gifts and more!
+      <div class="big-image-content">
+        <h2 class="big-image-title">Specialty flavor</h2>
+        <p class="big-image-description">
+          Coffee by Creation: Where we make coffee even more special. Whether
+          you seek your own custom blend or a better version of an old favorite,
+          here is where you find custom coffee, flavored coffee, coffee flights,
+          gifts and more!
         </p>
       </div>
     </div>
@@ -76,7 +76,7 @@
     viewBox="0 0 24 24"
     height="66px"
     width="66px"
-    fill="white"
+    fill="#f4ece1"
     xmlns="http://www.w3.org/2000/svg"
   ><g id="Coffee_Bean"><path
         d="M19.151,4.868a6.744,6.744,0,0,0-5.96-1.69,12.009,12.009,0,0,0-6.54,3.47,11.988,11.988,0,0,0-3.48,6.55,6.744,6.744,0,0,0,1.69,5.95,6.406,6.406,0,0,0,4.63,1.78,11.511,11.511,0,0,0,7.87-3.56C21.3,13.428,22.1,7.818,19.151,4.868Zm-14.99,8.48a11.041,11.041,0,0,1,3.19-5.99,10.976,10.976,0,0,1,5.99-3.19,8.016,8.016,0,0,1,1.18-.09,5.412,5.412,0,0,1,3.92,1.49.689.689,0,0,1,.11.13,6.542,6.542,0,0,1-2.12,1.23,7.666,7.666,0,0,0-2.96,1.93,7.666,7.666,0,0,0-1.93,2.96,6.589,6.589,0,0,1-1.71,2.63,6.7,6.7,0,0,1-2.63,1.71,7.478,7.478,0,0,0-2.35,1.36A6.18,6.18,0,0,1,4.161,13.348Zm12.49,3.31c-3.55,3.55-8.52,4.35-11.08,1.79a1.538,1.538,0,0,1-.12-.13,6.677,6.677,0,0,1,2.13-1.23,7.862,7.862,0,0,0,2.96-1.93,7.738,7.738,0,0,0,1.93-2.96,6.589,6.589,0,0,1,1.71-2.63,6.589,6.589,0,0,1,2.63-1.71,7.6,7.6,0,0,0,2.34-1.37C20.791,9.2,19.821,13.488,16.651,16.658Z"
@@ -105,44 +105,53 @@
   <section class="images-with-text-section" {{intersection-observer}}>
     <h2 class="images-with-text-section-header">News</h2>
     <div class="images-with-text-content">
-      <div class="image-text-container">
-        <h3 class="image-text-header">
-          French Roast Coffee
-        </h3>
-        <img
-          src="/images/frontpage/front-page-coffee-03.png"
-          class="image-text-img"
-          alt="Fresh Roast Coffee"
-        />
-        <LinkTo class="image-text-button" @route="coffees">
-          Go to Coffees ⭢
-        </LinkTo>
+      <div class="image-news-card">
+        <div class="image-text-img-wrapper">
+          <Coffee::Image
+            src="/images/coffees/coffee-type-1.jpg"
+            class="image-text-img"
+            alt="Fresh Roast Coffee"
+          />
+        </div>
+        <p class="image-text-meta">New Arrival • Dark Roast</p>
+        <h3 class="image-text-header">French Roast Coffee</h3>
+        <div class="image-text-action">
+          <LinkTo class="image-text-button" @route="coffees">
+            Explore ⭢
+          </LinkTo>
+        </div>
       </div>
-      <div class="image-text-container">
-        <h3 class="image-text-header">
-          Colombia Narino Dark Roast
-        </h3>
-        <img
-          src="/images/frontpage/front-page-coffee-03.png"
-          class="image-text-img"
-          alt="Fresh Roast Coffee"
-        />
-        <LinkTo class="image-text-button" @route="coffees">
-          Go to Coffees ⭢
-        </LinkTo>
+      <div class="image-news-card">
+        <div class="image-text-img-wrapper">
+          <Coffee::Image
+            src="/images/coffees/coffee-type-2.jpg"
+            class="image-text-img"
+            alt="Fresh Roast Coffee"
+          />
+        </div>
+        <p class="image-text-meta">Limited Edition • Single Origin</p>
+        <h3 class="image-text-header">Colombia Narino Roast</h3>
+        <div class="image-text-action">
+          <LinkTo class="image-text-button" @route="coffees">
+            Explore ⭢
+          </LinkTo>
+        </div>
       </div>
-      <div class="image-text-container">
-        <h3 class="image-text-header">
-          Hazelnut Coffee
-        </h3>
-        <img
-          src="/images/frontpage/front-page-coffee-03.png"
-          class="image-text-img"
-          alt="Fresh Roast Coffee"
-        />
-        <LinkTo class="image-text-button" @route="coffees">
-          Go to Coffees ⭢
-        </LinkTo>
+      <div class="image-news-card">
+        <div class="image-text-img-wrapper">
+          <Coffee::Image
+            src="/images/coffees/coffee-type-3.jpg"
+            class="image-text-img"
+            alt="Fresh Roast Coffee"
+          />
+        </div>
+        <p class="image-text-meta">Featured Flavor • Aromatic</p>
+        <h3 class="image-text-header">Hazelnut Specialty</h3>
+        <div class="image-text-action">
+          <LinkTo class="image-text-button" @route="coffees">
+            Explore ⭢
+          </LinkTo>
+        </div>
       </div>
     </div>
   </section>

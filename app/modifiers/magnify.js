@@ -2,10 +2,14 @@ import { modifier } from 'ember-modifier';
 
 export default modifier((element) => {
   const glass = element.children[0];
-  const img = element.children[1].children[0];
+  const img = element.children[1];
 
-  const zoom = 3;
-  let bw = 0;
+  if (!glass || !img) {
+    return;
+  }
+
+  const zoom = 2;
+  let bw = 2;
   let w = glass.offsetWidth / 2;
   let h = glass.offsetHeight / 2;
 
@@ -23,6 +27,10 @@ export default modifier((element) => {
   };
 
   const moveMagnifier = (e) => {
+    if (window.innerWidth <= 900) {
+      return;
+    }
+
     let pos, x, y;
     e.preventDefault();
     pos = getCursorPos(e);
@@ -59,5 +67,12 @@ export default modifier((element) => {
     return { x: x, y: y };
   }
 
-  magnify(element);
+  magnify();
+
+  return () => {
+    glass.removeEventListener('mousemove', moveMagnifier);
+    img.removeEventListener('mousemove', moveMagnifier);
+    glass.removeEventListener('touchmove', moveMagnifier);
+    img.removeEventListener('touchmove', moveMagnifier);
+  };
 });

@@ -10,13 +10,11 @@ export default class NavBarComponent extends Component {
   @action toggleOpen() {
     this.open.isOpen = !this.open.isOpen;
   }
-  @action items() {
-    if (this.shoppingCart.items.length) {
-      return this.shoppingCart.items.reduce(
-        (accumulator, currentValue) => accumulator + currentValue.quantity,
-        0,
-      );
-    }
+  get items() {
+    return this.shoppingCart.items.reduce(
+      (accumulator, currentValue) => accumulator + currentValue.quantity,
+      0,
+    );
   }
 
   @tracked menuOpen = false;

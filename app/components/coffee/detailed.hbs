@@ -1,133 +1,182 @@
-<Jumbo>
-  <div class="row-container navigation-text">
-
+<div class="detailed-coffee-page">
+  <div class="navigation-text">
     <LinkTo @route="index">
       Home
     </LinkTo>
-    >
+    <span class="breadcrumb-sep">/</span>
     <LinkTo @route="coffees">
       Coffees
     </LinkTo>
-    >
-    {{@coffee.name}}
+    <span class="breadcrumb-sep">/</span>
+    <span class="breadcrumb-current">{{@coffee.name}}</span>
   </div>
+
   <article class="coffee detailed">
-    <div class="image img-magnifier-container" {{magnify}}>
-      <div class="img-magnifier-glass" />
-      <Coffee::Image
-        src={{@coffee.image}}
-        alt="A picture of {{@coffee.name}}"
-        class="magnify-image"
-      />
+    <div class="detailed-hero">
+      <div class="detailed-image-section">
+        <div class="image img-magnifier-container" {{magnify}}>
+          <div class="img-magnifier-glass" />
+          <Coffee::Image
+            src={{@coffee.image}}
+            alt="A picture of {{@coffee.name}}"
+            class="magnify-image"
+          />
+        </div>
+        <div class="info-block tasting-profile">
+          <h3>Tasting Profile</h3>
+          <div class="radar-container">
+            <svg viewBox="0 0 100 100" class="radar-chart">
+              <polygon
+                points="50,10 88,38 74,82 26,82 12,38"
+                class="radar-grid"
+              />
+              <polygon
+                points="50,20 78,41 68,74 32,74 22,41"
+                class="radar-grid"
+              />
+              <polygon
+                points="50,30 69,44 62,66 38,66 31,44"
+                class="radar-grid"
+              />
+              <line x1="50" y1="50" x2="50" y2="10" class="radar-axis" />
+              <line x1="50" y1="50" x2="88" y2="38" class="radar-axis" />
+              <line x1="50" y1="50" x2="74" y2="82" class="radar-axis" />
+              <line x1="50" y1="50" x2="26" y2="82" class="radar-axis" />
+              <line x1="50" y1="50" x2="12" y2="38" class="radar-axis" />
+              <polygon
+                points="50,20 80,40 65,75 35,70 20,45"
+                class="radar-data"
+              />
+            </svg>
+            <div class="radar-labels">
+              <span class="label aroma">Aroma</span>
+              <span class="label sweetness">Sweetness</span>
+              <span class="label body">Body</span>
+              <span class="label acidity">Acidity</span>
+              <span class="label aftertaste">Aftertaste</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="details">
+        <header class="product-header">
+          <div class="brand-tag">Great Coffee Co.</div>
+          <h2 class="detailed-coffee-name">{{@coffee.name}}</h2>
+          <div class="detail detailed-reviews">
+            <span class="stars">{{repeat "★" @coffee.reviews}}{{repeat
+                "☆"
+                (emptyStars @coffee.reviews 5)
+              }}</span>
+            <span class="review-count">24 verified reviews</span>
+          </div>
+        </header>
+        <div class="detailed-specs">
+          <div class="spec-item">
+            <span class="spec-label">Roast Type</span>
+            <span class="spec-value">{{@coffee.type}}</span>
+          </div>
+          <div class="spec-divider"></div>
+          <div class="spec-item">
+            <span class="spec-label">Bean Variety</span>
+            <span class="spec-value">{{@coffee.bean}}</span>
+          </div>
+          <div class="spec-divider"></div>
+          <div class="spec-item">
+            <span class="spec-label">Price</span>
+            <span class="price-value">€{{@coffee.price}}
+              <span class="price-unit">
+                per 100g
+              </span>
+            </span>
+          </div>
+        </div>
+        <div class="selection-group">
+          <div class="selection-row">
+            <div class="field-group">
+              <label for="ground" class="select-label">Grind Size</label>
+              <select
+                name="ground"
+                id="ground"
+                class="detail-select"
+                value={{this.selectedGround}}
+                {{on "change" this.handleGroundChange}}
+              >
+                <option value="wholeBean">Whole Bean</option>
+                <option value="freshlyGround" selected>Freshly Ground</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label for="qty" class="select-label">Quantity</label>
+              <select
+                name="qty"
+                id="qty"
+                class="detail-select qty-select"
+                value={{this.qty}}
+                {{on "change" this.handleQtyChange}}
+              >
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="btn-group">
+          <button
+            class="addToCartBtn primary-btn"
+            type="button"
+            {{on
+              "click"
+              (fn this.addToCart @coffee.price @coffee.name @coffee.image)
+            }}
+            {{on "click" (fn this.showAlert "Added to cart!" "success")}}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="currentColor"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+              />
+            </svg>
+            Add to cart
+          </button>
+          <button
+            class="viewCartBtn secondary-btn"
+            type="button"
+            {{on "click" this.openShoppingCart}}
+          >
+            View Cart
+          </button>
+        </div>
+      </div>
     </div>
 
-    <div class="details">
-      <h3>{{@coffee.name}}</h3>
-      <div class="detail-container">
-        <div class="detail">
-          By Great Coffee Co.
+    <div class="detailed-info-section">
+      <div class="main-story">
+        <h3>The Story</h3>
+        <div class="detailed-description">
+          {{@coffee.description}}
         </div>
       </div>
-      <div class="detail type">
-        <span>Reviews:</span>
-        {{repeat "★" @coffee.reviews}}
-        {{repeat "☆" (emptyStars @coffee.reviews 5)}}
-      </div>
-      <div class="detail type">
-        <span>Type:</span>
-        {{@coffee.type}}
-
-      </div>
-      <div class="detail type">
-        <span>Bean:</span>
-        {{@coffee.bean}}
-
-      </div>
-      <div class="detail price">
-        <span>Price:</span>
-        €{{@coffee.price}}
-      </div>
-      <div class="row-container">
-        <div class="detail">
-          <span>
-            Ground:
-          </span>
+      <div class="sidebar-notes">
+        <div class="note-item">
+          <h4>Sourcing</h4>
+          <p>Direct trade from sustainable, high-altitude farms.</p>
         </div>
-        <select
-          name="ground"
-          id="ground"
-          class="detail-select"
-          value={{this.selectedGround}}
-          {{on "change" this.handleGroundChange}}
-        >
-          <option value="wholeBean">Whole Bean</option>
-          <option value="freshlyGround" selected>Freshly Ground</option>
-        </select>
-      </div>
-      <div class="row-container">
-        <div class="detail">
-          <span>
-            Quantity:
-          </span>
+        <div class="note-item">
+          <h4>Roasting</h4>
+          <p>Small batch roasted daily in our artisan facility.</p>
         </div>
-        <select
-          name="qty"
-          id="qty"
-          class="detail-select"
-          value={{this.qty}}
-          {{on "change" this.handleQtyChange}}
-        >
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-        </select>
       </div>
-      <div class="row-container btn-container">
-        <button
-          class="addToCartBtn"
-          type="button"
-          {{on
-            "click"
-            (fn this.addToCart @coffee.price @coffee.name @coffee.image)
-          }}
-          {{on "click" this.showAlert}}
-        >
-
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="white"
-            class="add-to-shopping-cart-icon"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
-            />
-          </svg>
-
-          Add to cart
-
-        </button>
-        <button
-          class="addToCartBtn"
-          type="button"
-          {{on "click" this.openShoppingCart}}
-        >
-          View Cart
-        </button>
-      </div>
-      <div class="detail description">
-        {{@coffee.description}}
-      </div>
-
     </div>
   </article>
-</Jumbo>
+</div>

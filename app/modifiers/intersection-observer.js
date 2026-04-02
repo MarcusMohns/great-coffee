@@ -6,7 +6,7 @@ export default modifier((element) => {
     let options = {
       root: null,
       rootMargin: '0px',
-      threshold: 0.7,
+      threshold: 0.15,
     };
 
     observer = new IntersectionObserver(intersectionCallback, options);
@@ -15,7 +15,10 @@ export default modifier((element) => {
 
   const intersectionCallback = (entries) => {
     if (entries[0].isIntersecting) {
-      const elementContainers = [...entries[0].target.children[1].children];
+      const target = entries[0].target;
+      if (!target.children[1]) return;
+
+      const elementContainers = [...target.children[1].children];
       // Children that will recieve the class
       elementContainers.forEach((child, index) => {
         child.classList.add(`animated-${child.classList[0]}-${index}`);
@@ -23,6 +26,5 @@ export default modifier((element) => {
       });
     }
   };
-  const eventOptions = { once: true };
-  window.addEventListener('scroll', createObserver, eventOptions);
+  createObserver();
 });

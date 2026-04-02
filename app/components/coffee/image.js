@@ -4,8 +4,13 @@ import { action } from '@ember/object';
 
 export default class CoffeeImageComponent extends Component {
   @tracked isLarge = false;
+  @tracked isLoaded = false;
 
   @action toggleSize() {
     this.isLarge = !this.isLarge;
+  }
+
+  @action handleLoad() {
+    this.isLoaded = true;
   }
 }

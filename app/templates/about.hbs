@@ -1,9 +1,65 @@
-<Jumbo>
-  <div class="about">
-    <h2>About Great Coffee</h2>
-    <p>
-      A neat little ecommerce project created to explore Ember by Marcus Mohns
-      :)
-    </p>
+<div class="about-page">
+  <div class="navigation-text">
+    <LinkTo @route="index">Home</LinkTo>
+    <span class="breadcrumb-sep">/</span>
+    <span class="breadcrumb-current">About</span>
   </div>
-</Jumbo>
+
+  <section class="about-hero">
+    <h1>Our Story</h1>
+    <p class="subtitle">Crafting the perfect cup, one bean at a time.
+    </p>
+  </section>
+
+  <section class="about-grid">
+    <div class="about-text">
+      <h2>The Mission</h2>
+      <p>
+        Great Coffee Co. was born out of a passion for the craft of roasting and
+        the belief that everyone deserves access to exceptional, specialty-grade
+        coffee. We travel the globe (virtually, for this project!) to source
+        beans that tell a story of their origin.
+      </p>
+      <p>
+        Built by
+        <strong>Marcus Mohns</strong>, this application serves as an exploration
+        of the
+        <strong>Ember.js</strong>
+        framework. It combines a robust data-driven architecture with a high-end
+        visual aesthetic to create a modern e-commerce experience. Hope you like
+        it! :)
+      </p>
+    </div>
+    <div class="about-image-wrapper">
+      <Coffee::Image
+        src="/images/about/coffee-bean-bag.png"
+        alt="Coffee preparation"
+        class="about-img"
+      />
+    </div>
+  </section>
+
+  <section class="about-features">
+    <div class="feature-card">
+      <div class="feature-icon">☕</div>
+      <h3>Specialty Grade</h3>
+      <p>Powered by multiple cups of coffee and a drive for quality.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">💻</div>
+      <h3>Modern Tech</h3>
+      <p>Leveraging Ember's powerful conventions for a lightning-fast and
+        reliable UI.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">✨</div>
+      <h3>Polished UI</h3>
+      <p>Designed with a focus on smooth interactions, animations, and
+        accessibility.</p>
+    </div>
+  </section>
+
+  <div class="about-cta">
+    <LinkTo @route="coffees" class="get-started-btn">Explore Our Collection</LinkTo>
+  </div>
+</div>

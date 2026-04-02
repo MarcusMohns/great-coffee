@@ -7,14 +7,11 @@ export default class NavBarComponent extends Component {
   @service('shopping-cart-state') open;
   @service shoppingCart;
 
-  @action items() {
-    if (this.shoppingCart.items.length) {
-      return this.shoppingCart.items.reduce(
-        (accumulator, currentValue) => accumulator + currentValue.quantity,
-        0,
-      );
-    }
-    return 0;
+  get items() {
+    return this.shoppingCart.items.reduce(
+      (accumulator, currentValue) => accumulator + currentValue.quantity,
+      0,
+    );
   }
 
   @action toggleOpen() {
