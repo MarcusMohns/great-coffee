@@ -206,10 +206,10 @@
     },
     {
       "type": "coffees",
-      "id": "viettitlese-style-coffee",
+      "id": "vietnamese-style-coffee",
       "attributes": {
-        "name": "Viettitlese style coffee",
-        "description": "A drink made by dripping hot water though a metal mesh, with the intense brew then poured over ice and sweetened, condensed milk. This process uses a lot more coffee grounds and is thus a lot slower than most kinds of brewing.this good types of coffee",
+        "name": "Vietnamese style coffee",
+        "description": "A drink made by dripping hot water though a metal mesh, with the intense brew then poured over ice and sweetened, condensed milk. This process uses a lot more coffee grounds and is thus a lot slower than most kinds of brewing.",
         "reviews": 3,
         "image": "/images/coffees/coffee-type-1.jpg",
         "bean": "Robusta",
@@ -434,10 +434,10 @@
     },
     {
       "type": "coffees",
-      "id": "freshly-brewed coffee",
+      "id": "freshly-brewed-coffee",
       "attributes": {
         "name": "Freshly Brewed Coffee",
-        "description": "Brewing in our stores everyday is Starbucks® Pike Place® Roast. With subtle notes of cocoa and toasted nuts, enjoy a smooth, balanced and rich blend of Latin American coffees made perfectly into one.",
+        "description": "Brewed fresh in our roastery every day. With subtle notes of cocoa and toasted nuts, enjoy a smooth, balanced and rich blend of Latin American coffees.",
         "reviews": 3,
         "image": "/images/coffees/coffee-type-2.jpg",
         "bean": "Arabica",
@@ -446,10 +446,10 @@
     },
     {
       "type": "coffees",
-      "id": "cinnamon-dolce latte",
+      "id": "cinnamon-dolce-latte-featured",
       "attributes": {
         "name": "Cinnamon Dolce Latte",
-        "description": "Brewing in our stores everyday is Starbucks® Pike Place® Roast. With subtle notes of cocoa and toasted nuts, enjoy a smooth, balanced and rich blend of Latin American coffees made perfectly into one.",
+        "description": "Warm and inviting, our signature espresso is blended with steamed milk and sweet cinnamon syrup for a comforting classic.",
         "reviews": 3,
         "image": "/images/coffees/coffee-type-4.jpg",
         "bean": "Arabica",
@@ -578,7 +578,7 @@
     },
     {
       "type": "coffees",
-      "id": "toasted-graham-latte ",
+      "id": "toasted-graham-latte",
       "attributes": {
         "name": "Toasted Graham Latte ",
         "description": "Graham and sweet cream meet steamed milk and our signature espresso, then are finished off with a sprinkling of cinnamon graham crumbles for a less sweet perfect treat.",
