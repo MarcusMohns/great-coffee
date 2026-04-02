@@ -2,8 +2,10 @@ import JSONAPIAdapter from '@ember-data/adapter/json-api';
 
 export default class ApplicationAdapter extends JSONAPIAdapter {
   namespace = 'api';
+  host = window.location.origin;
 
   buildURL(...args) {
-    return `${super.buildURL(...args)}.json`;
+    let url = super.buildURL(...args);
+    return url.endsWith('.json') ? url : `${url}.json`;
   }
 }
