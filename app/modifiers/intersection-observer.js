@@ -16,9 +16,12 @@ export default modifier((element) => {
   const intersectionCallback = (entries) => {
     if (entries[0].isIntersecting) {
       const target = entries[0].target;
-      if (!target.children[1]) return;
 
-      const elementContainers = [...target.children[1].children];
+      // Fallback to target if it doesn't have a content container child
+      const container =
+        target.children.length > 1 ? target.children[1] : target;
+      const elementContainers = [...container.children];
+
       // Children that will recieve the class
       elementContainers.forEach((child, index) => {
         child.classList.add(`animated-${child.classList[0]}-${index}`);
