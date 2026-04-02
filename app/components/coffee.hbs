@@ -4,7 +4,7 @@
   </div>
   <div class="coffee-details">
     <h3 class="coffee-name">
-      <LinkTo @route="coffee" @model={{@coffee}}>
+      <LinkTo @route="coffee" @model={{@coffee.id}}>
         {{@coffee.name}}
       </LinkTo>
     </h3>
@@ -34,7 +34,7 @@
       <label for="desc-toggle-{{@coffee.id}}" class="drawer-label"></label>
     </div>
     <div class="coffee-price">€{{@coffee.price}}</div>
-    <LinkTo @route="coffee" @model={{@coffee}} class="view-coffee-btn">View
+    <LinkTo @route="coffee" @model={{@coffee.id}} class="view-coffee-btn">View
       Details</LinkTo>
   </div>
 </article>
