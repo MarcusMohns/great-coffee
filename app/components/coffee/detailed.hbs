@@ -22,6 +22,41 @@
             class="magnify-image"
           />
         </div>
+        <div class="info-block tasting-profile">
+          <h3>Tasting Profile</h3>
+          <div class="radar-container">
+            <svg viewBox="0 0 100 100" class="radar-chart">
+              <polygon
+                points="50,10 88,38 74,82 26,82 12,38"
+                class="radar-grid"
+              />
+              <polygon
+                points="50,20 78,41 68,74 32,74 22,41"
+                class="radar-grid"
+              />
+              <polygon
+                points="50,30 69,44 62,66 38,66 31,44"
+                class="radar-grid"
+              />
+              <line x1="50" y1="50" x2="50" y2="10" class="radar-axis" />
+              <line x1="50" y1="50" x2="88" y2="38" class="radar-axis" />
+              <line x1="50" y1="50" x2="74" y2="82" class="radar-axis" />
+              <line x1="50" y1="50" x2="26" y2="82" class="radar-axis" />
+              <line x1="50" y1="50" x2="12" y2="38" class="radar-axis" />
+              <polygon
+                points="50,20 80,40 65,75 35,70 20,45"
+                class="radar-data"
+              />
+            </svg>
+            <div class="radar-labels">
+              <span class="label aroma">Aroma</span>
+              <span class="label sweetness">Sweetness</span>
+              <span class="label body">Body</span>
+              <span class="label acidity">Acidity</span>
+              <span class="label aftertaste">Aftertaste</span>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="details">
@@ -126,22 +161,20 @@
     </div>
 
     <div class="detailed-info-section">
-      <div class="info-grid">
-        <div class="info-block main-story">
-          <h3>The Story</h3>
-          <div class="detailed-description">
-            {{@coffee.description}}
-          </div>
+      <div class="main-story">
+        <h3>The Story</h3>
+        <div class="detailed-description">
+          {{@coffee.description}}
         </div>
-        <div class="info-block sidebar-notes">
-          <div class="note-item">
-            <h4>Sourcing</h4>
-            <p>Direct trade from sustainable, high-altitude farms.</p>
-          </div>
-          <div class="note-item">
-            <h4>Roasting</h4>
-            <p>Small batch roasted daily in our artisan facility.</p>
-          </div>
+      </div>
+      <div class="sidebar-notes">
+        <div class="note-item">
+          <h4>Sourcing</h4>
+          <p>Direct trade from sustainable, high-altitude farms.</p>
+        </div>
+        <div class="note-item">
+          <h4>Roasting</h4>
+          <p>Small batch roasted daily in our artisan facility.</p>
         </div>
       </div>
     </div>
