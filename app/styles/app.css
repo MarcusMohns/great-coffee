@@ -2012,3 +2012,24 @@ h3 {
   background: var(--coffee-light);
   border-radius: 10px;
 }
+
+/* Ensure LinkTo components don't have default link appearance */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Style for navigation links in breadcrumbs and similar */
+.navigation-text a,
+.footer-column a,
+.coffee-name a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.navigation-text a:hover,
+.footer-column a:hover,
+.coffee-name a:hover {
+  color: var(--coffee-accent);
+}
