@@ -1,5 +1,4 @@
 <div class="wrapper">
-
   <div
     class={{if
       this.open.isOpen
@@ -21,39 +20,50 @@
 
       {{#each this.shoppingCart.items as |item|}}
         <div class="shopping-cart-item">
-          <button
-            type="button"
-            class="remove-item-btn"
-            {{on "click" (fn this.removeItem item)}}
-          >&times;</button>
-          <img src={{item.image}} alt={{item.name}} class="coffee-icon" />
-          <div class="sc-info">
-            <p>
-              <span>{{item.name}}</span>
-            </p>
-            <p>
-              <span>Ground:</span>
-              {{displayGround item.ground}}
-
-            </p>
-            <p>
-              <span>Weight:</span>100g
-            </p>
+          <div class="sc-item-image-wrapper">
+            <img src={{item.image}} alt={{item.name}} class="coffee-icon" />
           </div>
-          <div class="column-container sc-item-qty-and-price">
-            <p>
-              <span class="sc-price-total">€{{multiply
-                  item.price
-                  item.quantity
-                }}</span>
-            </p>
-            <div class="row-container">
-              <p class="sc-qty">
-                <div
-                  class="sc-qtybtn"
-                  aria-hidden="true"
+
+          <div class="sc-item-main">
+            <div class="sc-item-header">
+              <span class="item-name">{{item.name}}</span>
+              <button
+                type="button"
+                class="remove-item-btn"
+                aria-label="Remove item"
+                {{on "click" (fn this.removeItem item)}}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div class="sc-item-meta">
+              <span>Ground: {{displayGround item.ground}}</span>
+              <span class="meta-sep">|</span>
+              <span>100g</span>
+            </div>
+
+            <div class="sc-item-footer">
+              <div class="sc-qty-pill">
+                <button
+                  type="button"
+                  class="qty-btn"
                   {{on "click" (fn this.decrementQty item)}}
-                >&minus;</div>
+                >&minus;</button>
                 <input
                   type="number"
                   name="qty-input"
@@ -63,16 +73,28 @@
                   value={{item.quantity}}
                   {{on "change" (fn this.handleQtyChange item)}}
                 />
-                <div
-                  class="sc-qtybtn"
-                  aria-hidden="true"
+                <button
+                  type="button"
+                  class="qty-btn"
                   {{on "click" (fn this.incrementQty item)}}
-                >&plus;</div>
-              </p>
+                >&plus;</button>
+              </div>
+              <span class="sc-price-total">€{{multiply
+                  item.price
+                  item.quantity
+                }}</span>
             </div>
-
           </div>
-
+        </div>
+      {{else}}
+        <div class="empty-cart-message">
+          <div class="empty-cart-icon">☕</div>
+          <p>Your cart is currently empty.</p>
+          <LinkTo
+            @route="coffees"
+            class="browse-btn"
+            {{on "click" this.toggleOpen}}
+          >Browse Coffees</LinkTo>
         </div>
       {{/each}}
     </div>
