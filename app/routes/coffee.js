@@ -6,7 +6,8 @@ export default class CoffeeRoute extends Route {
   @service store;
 
   async model(params) {
-    return this.store.findRecord('coffee', params.coffee_id);
+    const coffees = await this.store.findAll('coffee');
+    return coffees.find((coffee) => coffee.id === params.coffee_id);
   }
 
   afterModel() {
