@@ -234,7 +234,7 @@ h3 {
   min-height: 85vh;
   background:
     linear-gradient(rgba(31, 20, 16, 0.75), rgba(31, 20, 16, 0.9)),
-    url("/images/frontpage/hero-bg.png") no-repeat;
+    url("../images/frontpage/hero-bg.png") no-repeat;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -1154,7 +1154,7 @@ h3 {
   }
 }
 
-.coffee.detailed {
+.coffee-detailed {
   background: transparent;
   border: none;
   box-shadow: none;
@@ -1394,12 +1394,6 @@ h3 {
 }
 
 .field-group {
-  @media (max-width: 600px) {
-    width: 100%;
-  }
-}
-
-.field-group {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -1463,10 +1457,6 @@ h3 {
 .btn-group {
   display: flex;
   gap: 1.5rem;
-
-  @media (max-width: 600px) {
-    flex-direction: column;
-  }
 }
 @media (max-width: 600px) {
   .btn-group {
