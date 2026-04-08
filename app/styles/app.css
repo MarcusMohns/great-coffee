@@ -868,10 +868,6 @@ h3 {
 .coffees {
   padding: 15% 10%;
   background-color: var(--cream);
-
-  @media (max-width: 900px) {
-    padding: 30% 5%;
-  }
 }
 @media (max-width: 900px) {
   .coffees {
@@ -885,15 +881,8 @@ h3 {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 3rem;
-
   flex-wrap: wrap;
   gap: 1.5rem;
-
-  @media (max-width: 900px) {
-    align-items: flex-start;
-    margin-top: 2rem;
-    flex-direction: column-reverse;
-  }
 }
 
 .coffees-search-container {
@@ -1085,10 +1074,6 @@ h3 {
   padding: 12px;
   border-radius: 8px;
   transform: rotate(0.125turn);
-
-  @media screen and (max-width: 900px) {
-    left: 42%;
-  }
 }
 
 .view-coffee-btn {
@@ -1166,9 +1151,16 @@ h3 {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
-  gap: 6rem;
+  align-items: flex-start;
+  gap: 12rem;
   margin-bottom: 3rem;
+  margin-top: 4rem;
+}
+
+@media (max-width: 1500px) {
+  .detailed-hero {
+    gap: 8rem;
+  }
 }
 @media (max-width: 900px) {
   .detailed-hero {
@@ -1235,12 +1227,13 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   padding-top: 1rem;
 }
 @media (max-width: 900px) {
   .details {
     width: 100%;
+    align-items: center;
   }
 }
 
