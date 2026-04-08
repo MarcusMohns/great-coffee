@@ -798,8 +798,10 @@ h3 {
 .points-container {
   width: 60%;
   padding-bottom: 2rem;
+}
 
-  @media (max-width: 900px) {
+@media (max-width: 900px) {
+  .points-container {
     width: 100%;
     text-align: center;
   }
@@ -1064,7 +1066,7 @@ h3 {
 
 .cool-coffee-bean {
   position: relative;
-  left: 50%;
+  left: 0;
   top: -45px;
   background-color: var(--coffee-dark);
   border-top: 1px solid var(--coffee-dark);
@@ -1074,6 +1076,11 @@ h3 {
   padding: 12px;
   border-radius: 8px;
   transform: rotate(0.125turn);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  left: 0;
 }
 
 .view-coffee-btn {
