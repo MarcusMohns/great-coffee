@@ -1685,6 +1685,13 @@ h3 {
   gap: 4rem;
 }
 
+@media (max-width: 900px) {
+  .footer-content-wrapper {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
 .footer-column {
   opacity: 0;
   transition: var(--transition-smooth);
@@ -1719,10 +1726,9 @@ h3 {
   margin-bottom: 1rem;
 }
 
-.social-media a {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+.social-media,
+.footer-links {
+  color: var(--cream);
 }
 
 .social-media svg {
