@@ -887,14 +887,26 @@ h3 {
   gap: 1.5rem;
 }
 
+@media (max-width: 900px) {
+  .coffees-header {
+    flex-direction: column-reverse;
+  }
+}
+
 .coffees-search-container {
-  flex-grow: 1;
   max-width: 400px;
+  flex-grow: 1;
+}
+
+@media (max-width: 900px) {
+  .coffees-search-container {
+    width: 100%;
+  }
 }
 
 .coffees-search-input {
   width: 100%;
-  padding: 0.8rem 1.2rem;
+  padding: 0.8rem 0;
   border: 1px solid var(--coffee-light);
   border-radius: 50px;
   font-size: 1rem;
@@ -906,6 +918,7 @@ h3 {
 .coffees-search-input::placeholder {
   color: var(--coffee-medium);
   opacity: 0.7;
+  padding-left: 1rem;
 }
 
 .coffees-search-input:focus {
@@ -1112,7 +1125,8 @@ h3 {
 
 @media (max-width: 900px) {
   .navigation-text {
-    margin-top: 8rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -1424,22 +1438,13 @@ h3 {
 }
 
 @media (max-width: 600px) {
-  .detail-select {
-    width: 100%;
-  }
-}
-
-@media (max-width: 600px) {
   .selection-row {
-    flex-direction: column;
+    flex-direction: row;
     align-items: stretch;
     gap: 1rem;
   }
   .qty-select {
     min-width: 100%;
-  }
-  .detail-select {
-    width: 100%;
   }
 }
 
@@ -1456,10 +1461,15 @@ h3 {
 
 .btn-group {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 1.5rem;
 }
+
 @media (max-width: 600px) {
   .btn-group {
+    width: 100%;
+    gap: 0.5rem;
     flex-direction: column;
   }
 }
@@ -1480,6 +1490,12 @@ h3 {
   justify-content: center;
   cursor: pointer;
   transition: var(--transition-smooth);
+}
+
+@media (max-width: 600px) {
+  .primary-btn {
+    width: "100%";
+  }
 }
 
 .primary-btn:hover {
