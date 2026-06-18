@@ -231,7 +231,7 @@ h3 {
 
 /* --- Re-imagined Typographic Hero --- */
 .front-page-header {
-  min-height: 85vh;
+  min-height: 100vh;
   background:
     linear-gradient(rgba(31, 20, 16, 0.75), rgba(31, 20, 16, 0.9)),
     url("../images/frontpage/hero-bg.png") no-repeat;
@@ -319,8 +319,7 @@ h3 {
 
 /* --- Big Image Sections --- */
 .big-image-section {
-  padding: 8rem 10%;
-  padding-bottom: 2rem;
+  padding: 4rem 10% 8rem 10%;
   background-color: var(--cream);
 }
 .big-image-container {
@@ -388,8 +387,7 @@ h3 {
 
 /* --- Text Only Section --- */
 .text-only-section {
-  padding: 10rem 10%;
-  padding-top: 0;
+  padding: 10rem 10% 2rem 10%;
   background-color: var(--cream);
   text-align: center;
   position: relative;
@@ -398,6 +396,13 @@ h3 {
 .text-section-content {
   max-width: 800px;
   margin: 0 auto;
+}
+
+.text-section-divider,
+.text-section-title,
+.text-section-body {
+  opacity: 0;
+  will-change: opacity, transform;
 }
 
 .text-section-divider {
@@ -1053,7 +1058,7 @@ h3 {
 
 .coffees-search-input {
   width: 100%;
-  padding: 0.8rem 0;
+  padding: 0.8rem 1.5rem;
   border: 1px solid var(--coffee-light);
   border-radius: 50px;
   font-size: 1rem;
@@ -1065,7 +1070,6 @@ h3 {
 .coffees-search-input::placeholder {
   color: var(--coffee-medium);
   opacity: 0.7;
-  padding-left: 1rem;
 }
 
 .coffees-search-input:focus {
@@ -1925,6 +1929,33 @@ h3 {
   opacity: 0;
 }
 
+/* --- Scroll Flow Indicator --- */
+.scroll-crumbs-observer {
+  background-color: var(--cream);
+  position: relative;
+}
+
+.scroll-crumbs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 2rem 0;
+  opacity: 0;
+}
+
+.crumb-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--coffee-accent);
+  border-radius: 50%;
+}
+
+/* Dummy header for observer logic */
+.observer-dummy-header {
+  display: none;
+}
+
 /* --- Animations (Triggered by intersection-observer) --- */
 @keyframes fadeInUp {
   from {
@@ -1950,19 +1981,37 @@ h3 {
 
 /* These classes are added by modifier */
 [class*="animated-"] {
-  animation: fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation: fadeInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s forwards;
   opacity: 0;
 }
 
 /* Staggered delays for point lists */
 .animated-points-0 {
-  animation-delay: 0.1s;
+  animation-delay: 0.4s;
 }
 .animated-points-1 {
-  animation-delay: 0.2s;
+  animation-delay: 0.5s;
 }
 .animated-points-2 {
+  animation-delay: 0.6s;
+}
+
+.animated-text-section-divider-1 {
+.animated-text-section-title-0 {
+  animation-delay: 0.2s;
+  animation-duration: 0.8s;
+}
+
+
+.animated-text-section-title-2 {
+.animated-text-section-divider-1 {
   animation-delay: 0.3s;
+  animation-duration: 0.8s;
+}
+
+.animated-text-section-body-2 {
+  animation-delay: 0.4s;
+  animation-duration: 0.8s;
 }
 
 /* --- Responsive Toggle --- */
@@ -1975,38 +2024,38 @@ h3 {
   }
 }
 .animated-points-3 {
-  animation-delay: 0.4s;
+  animation-delay: 0.7s;
 }
 
 /* Staggered delays for news items */
 .animated-image-news-card-0 {
-  animation-delay: 0.1s;
+  animation-delay: 0.4s;
 }
 .animated-image-news-card-1 {
-  animation-delay: 0.2s;
+  animation-delay: 0.5s;
 }
 .animated-image-news-card-2 {
-  animation-delay: 0.3s;
+  animation-delay: 0.6s;
 }
 
 /* Staggered delays for Big Image features */
 .animated-big-image-title-0 {
-  animation-delay: 0.1s;
+  animation-delay: 0.4s;
 }
 
 .animated-big-image-description-1 {
-  animation-delay: 0.3s;
+  animation-delay: 0.6s;
 }
 
 /* Footer animations */
 .animated-footer-column-0 {
-  animation-delay: 0.1s;
+  animation-delay: 0.4s;
 }
 .animated-footer-column-1 {
-  animation-delay: 0.2s;
+  animation-delay: 0.5s;
 }
 .animated-footer-column-2 {
-  animation-delay: 0.3s;
+  animation-delay: 0.6s;
 }
 
 /* --- Alerts --- */

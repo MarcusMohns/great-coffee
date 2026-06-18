@@ -17,6 +17,32 @@
       </div>
     </div>
   </section>
+
+  <section class="text-only-section" {{intersection-observer}}>
+    {{! Dummy header makes the content div child[1], designating it as the animation container }}
+    <div class="observer-dummy-header"></div>
+    <div class="text-section-content">
+      <h2 class="text-section-title">The Art of the Slow Roast</h2>
+      <div class="text-section-divider"></div>
+      <p class="text-section-body">
+        We believe that great coffee isn't just grown; it's crafted. Our
+        roasting process is a meticulous dance of temperature and timing,
+        designed to unlock the unique soul of every bean. From the volcanic
+        slopes of Antigua to the high-altitude estates of Yirgacheffe, we bring
+        the world's finest harvests directly to your cup.
+      </p>
+    </div>
+  </section>
+
+  <div class="scroll-crumbs-observer" {{intersection-observer}}>
+    {{! Only one child here ensures the scroll-crumbs div itself is animated as a unit }}
+    <div class="scroll-crumbs">
+      <div class="crumb-dot"></div>
+      <div class="crumb-dot"></div>
+      <div class="crumb-dot"></div>
+    </div>
+  </div>
+
   <section class="big-image-section">
     <div class="big-image-container" {{intersection-observer}}>
       <Coffee::Image
@@ -68,20 +94,6 @@
           gifts and more!
         </p>
       </div>
-    </div>
-  </section>
-
-  <section class="text-only-section" {{intersection-observer}}>
-    <div class="text-section-content">
-      <div class="text-section-divider"></div>
-      <h2 class="text-section-title">The Art of the Slow Roast</h2>
-      <p class="text-section-body">
-        We believe that great coffee isn't just grown; it's crafted. Our
-        roasting process is a meticulous dance of temperature and timing,
-        designed to unlock the unique soul of every bean. From the volcanic
-        slopes of Antigua to the high-altitude estates of Yirgacheffe, we bring
-        the world's finest harvests directly to your cup.
-      </p>
     </div>
   </section>
 
