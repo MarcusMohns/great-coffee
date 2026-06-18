@@ -2,9 +2,9 @@
 
 :root {
   --coffee-dark: #1f1410;
-  --coffee-medium: #4b3832;
+  --coffee-medium: rgb(107, 43, 21);
   --coffee-light: #967259;
-  --coffee-accent: #bc6733; /* Warm roasted terracotta */
+  --coffee-accent: #bc6733; /* Refined Copper */
   --cream: #f4ece1;
   --white: #ffffff;
   --text-main: #3d3d3d;
@@ -296,7 +296,7 @@ h3 {
 }
 
 .browse-coffee-btn:hover {
-  background: var(--coffee-dark);
+  background: var(--coffee-medium);
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
@@ -670,13 +670,25 @@ h3 {
 /* --- News Cards --- */
 .images-with-text-section {
   background: var(--cream);
-  padding: 12rem 10%;
+  padding: 8rem 10% 10rem 10%;
 }
 
 @media (max-width: 900px) {
   .images-with-text-section {
     padding: 4rem 5%;
     overflow: hidden;
+  }
+
+  .news-section-header-container {
+    margin-bottom: 3rem !important;
+  }
+
+  .images-with-text-section-header {
+    font-size: 2.5rem !important;
+  }
+
+  .news-intro {
+    font-size: 1rem !important;
   }
 
   .images-with-text-content {
@@ -690,11 +702,35 @@ h3 {
   }
 }
 
-.images-with-text-section-header {
+.news-section-header-container {
   text-align: center;
-  margin-bottom: 4rem;
-  font-size: 3rem;
+  margin-bottom: 6rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.news-pre-title {
+  display: block;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--coffee-accent);
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+
+.images-with-text-section-header {
+  font-size: 3.5rem;
   color: var(--coffee-dark);
+  margin: 0 0 1.5rem 0;
+  line-height: 1.1;
+}
+
+.news-intro {
+  font-size: 1.15rem;
+  color: var(--coffee-light);
+  line-height: 1.7;
 }
 
 .image-news-card {
@@ -714,8 +750,9 @@ h3 {
 
 .images-with-text-content {
   display: flex;
-  justify-content: space-between;
-  gap: 4rem;
+  justify-content: center;
+  align-items: stretch;
+  gap: 3rem;
 }
 
 .image-text-img-wrapper {
@@ -1027,12 +1064,10 @@ h3 {
 }
 
 .coffee-image-container img {
-  width: 100%;
-  max-width: 70%;
   height: auto;
   max-height: 200px;
   object-fit: contain;
-  border-radius: 8px;
+  border-radius: 12px;
   transition: transform 0.3s ease;
 }
 
@@ -2135,7 +2170,7 @@ h3 {
 .coffee-image-container,
 .image-text-img-wrapper,
 .about-image-wrapper {
-  border-radius: 16px;
+  border-radius: 12px;
   overflow: hidden;
 }
 

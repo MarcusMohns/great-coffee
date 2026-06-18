@@ -103,7 +103,15 @@
 
   </section>
   <section class="images-with-text-section" {{intersection-observer}}>
-    <h2 class="images-with-text-section-header">News</h2>
+    <div class="news-section-header-container">
+      <span class="news-pre-title">Curated Selection</span>
+      <h2 class="images-with-text-section-header">Fresh From the Roastery</h2>
+      <p class="news-intro">
+        Explore our latest arrivals and seasonal highlights, hand-selected by
+        our master roasters to ensure the ultimate brewing experience at home.
+      </p>
+    </div>
+
     <div class="images-with-text-content">
       {{#each this.newsCoffees as |coffee|}}
         <div class="image-news-card">
