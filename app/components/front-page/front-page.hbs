@@ -102,20 +102,40 @@
       alt="cozy-coffee"
       class="cozy-coffee"
     />
-    <div class="points-container" {{intersection-observer}}>
-      <h3 class="points-container-h3">Subscription has its perks!</h3>
-      <ul>
-        <li class="points">Free shipping on all subscriptions.</li>
-        <li class="points">Exclusive member pricing on all single coffees.</li>
-        <li class="points">Earn free coffee with 5% back in credits on every
-          purchase.</li>
-        <li class="points">VIP treatment with members-only promotions, early
-          access, and surprise gifts!</li>
+    <div class="subscription-content" {{intersection-observer}}>
+      <div class="subscription-header">
+        <span class="sub-pre-title">The Membership</span>
+        <h3 class="subscription-title">Elevate Your Morning Ritual</h3>
+        <p class="subscription-lead">Join our community of coffee lovers and
+          enjoy exclusive benefits tailored for the home barista.</p>
+      </div>
 
-      </ul>
+      <div class="perks-grid">
+        <div class="points perk-item">
+          <span class="perk-icon">🚚</span>
+          <div class="perk-text">
+            <strong>Complimentary Shipping</strong>
+            <p>Always free on every subscription delivery.</p>
+          </div>
+        </div>
+        <div class="points perk-item">
+          <span class="perk-icon">🏷️</span>
+          <div class="perk-text">
+            <strong>Member Pricing</strong>
+            <p>Exclusive discounts on all single-origin bags.</p>
+          </div>
+        </div>
+        <div class="points perk-item">
+          <span class="perk-icon">✨</span>
+          <div class="perk-text">
+            <strong>VIP Access</strong>
+            <p>Early access to limited small-batch releases.</p>
+          </div>
+        </div>
+      </div>
+
       <LinkTo @route="coffees" class="get-started-btn">Get Started!</LinkTo>
     </div>
-
   </section>
   <section class="images-with-text-section" {{intersection-observer}}>
     <div class="news-section-header-container">
@@ -154,16 +174,6 @@
           </div>
         </div>
       {{/each}}
-    </div>
-  </section>
-  <section class="explore-coffee-section">
-    <h3 class="explore-coffee-section-h3">EXPLORE THE WORLD OF COFFEE</h3>
-    <div><b>up now or give a gift!</b>
-      Coffee from around the world, delivered straight to your door.
-    </div>
-    <div class="explore-coffee-btns">
-      <LinkTo @route="coffees" class="get-started-btn">Join now!</LinkTo>
-      <LinkTo @route="coffees" class="get-started-btn">Give as a gift!</LinkTo>
     </div>
   </section>
 </div>
