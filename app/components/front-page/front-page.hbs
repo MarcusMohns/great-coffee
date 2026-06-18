@@ -105,54 +105,32 @@
   <section class="images-with-text-section" {{intersection-observer}}>
     <h2 class="images-with-text-section-header">News</h2>
     <div class="images-with-text-content">
-      <div class="image-news-card">
-        <div class="image-text-img-wrapper">
-          <Coffee::Image
-            src="/images/coffees/coffee-type-1.jpg"
-            class="image-text-img"
-            alt="Fresh Roast Coffee"
-          />
+      {{#each this.newsCoffees as |coffee|}}
+        <div class="image-news-card">
+          <div class="image-text-img-wrapper">
+            <Coffee::Image
+              src={{coffee.image}}
+              class="image-text-img"
+              alt={{coffee.name}}
+            />
+          </div>
+          <p class="image-text-meta">{{coffee.bean}}
+            •
+            <span
+              class="roast-badge {{coffee.roastLevel}}"
+            >{{coffee.roastLevel}} Roast</span></p>
+          <h3 class="image-text-header">{{coffee.name}}</h3>
+          <div class="image-text-action">
+            <LinkTo
+              class="image-text-button"
+              @route="coffee"
+              @model={{coffee.id}}
+            >
+              Explore ⭢
+            </LinkTo>
+          </div>
         </div>
-        <p class="image-text-meta">New Arrival • Dark Roast</p>
-        <h3 class="image-text-header">French Roast Coffee</h3>
-        <div class="image-text-action">
-          <LinkTo class="image-text-button" @route="coffees">
-            Explore ⭢
-          </LinkTo>
-        </div>
-      </div>
-      <div class="image-news-card">
-        <div class="image-text-img-wrapper">
-          <Coffee::Image
-            src="/images/coffees/coffee-type-2.jpg"
-            class="image-text-img"
-            alt="Fresh Roast Coffee"
-          />
-        </div>
-        <p class="image-text-meta">Limited Edition • Single Origin</p>
-        <h3 class="image-text-header">Colombia Narino Roast</h3>
-        <div class="image-text-action">
-          <LinkTo class="image-text-button" @route="coffees">
-            Explore ⭢
-          </LinkTo>
-        </div>
-      </div>
-      <div class="image-news-card">
-        <div class="image-text-img-wrapper">
-          <Coffee::Image
-            src="/images/coffees/coffee-type-3.jpg"
-            class="image-text-img"
-            alt="Fresh Roast Coffee"
-          />
-        </div>
-        <p class="image-text-meta">Featured Flavor • Aromatic</p>
-        <h3 class="image-text-header">Hazelnut Specialty</h3>
-        <div class="image-text-action">
-          <LinkTo class="image-text-button" @route="coffees">
-            Explore ⭢
-          </LinkTo>
-        </div>
-      </div>
+      {{/each}}
     </div>
   </section>
   <section class="explore-coffee-section">
