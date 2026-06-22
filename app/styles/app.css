@@ -730,14 +730,8 @@ h3 {
     font-size: 1rem !important;
   }
 
-  .images-with-text-content {
-    flex-direction: column;
-    gap: 3rem;
-  }
-
   .image-news-card {
-    width: 100%;
-    max-width: 480px;
+    width: auto;
   }
 }
 
@@ -790,8 +784,16 @@ h3 {
 .images-with-text-content {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  gap: 3rem;
   align-items: stretch;
   gap: 3rem;
+}
+
+@media (min-width: 900px) {
+  .images-with-text-content {
+    flex-direction: row;
+  }
 }
 
 .image-text-img-wrapper {
@@ -806,6 +808,12 @@ h3 {
   border-radius: 4px;
   background-color: var(--cream);
   height: 250px;
+}
+
+@media (max-width: 900px) {
+  .image-text-img-wrapper {
+    width: stretch;
+  }
 }
 
 .image-text-img-wrapper::after {
@@ -1067,6 +1075,12 @@ h3 {
   transition: var(--transition-smooth);
 }
 
+@media (max-width: 900px) {
+  .coffees-search-input {
+    width: stretch;
+  }
+}
+
 .coffees-search-input::placeholder {
   color: var(--coffee-medium);
   opacity: 0.7;
@@ -1270,6 +1284,12 @@ h3 {
 
 /* --- Detailed Coffee View --- */
 .navigation-text {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
   font-size: 0.75rem;
   color: var(--coffee-medium);
   font-weight: 700;
@@ -1359,13 +1379,34 @@ h3 {
   }
 }
 
-.img-magnifier-container {
+.img-magnifier-container-large {
   position: relative;
   padding: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: zoom-in;
+}
+
+@media (max-width: 900px) {
+  .img-magnifier-container-large {
+    display: none;
+  }
+}
+
+.img-magnifier-container-small {
+  position: relative;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: zoom-in;
+}
+
+@media (min-width: 900px) {
+  .img-magnifier-container-small {
+    display: none;
+  }
 }
 
 .img-magnifier-glass {
@@ -1378,16 +1419,6 @@ h3 {
   box-shadow: var(--shadow-lg);
   z-index: 10;
   pointer-events: none;
-}
-
-@media (max-width: 900px) {
-  .img-magnifier-glass {
-    display: none;
-  }
-
-  .img-magnifier-container {
-    cursor: default;
-  }
 }
 
 .magnify-image {
@@ -1435,7 +1466,7 @@ h3 {
 
 @media (max-width: 900px) {
   .detailed-coffee-name {
-    font-size: 2.8rem;
+    text-align: center;
   }
 }
 
@@ -1996,15 +2027,12 @@ h3 {
   animation-delay: 0.6s;
 }
 
-.animated-text-section-divider-1 {
-.animated-text-section-title-0 {
+.animated-text-section-divider-1 .animated-text-section-title-0 {
   animation-delay: 0.2s;
   animation-duration: 0.8s;
 }
 
-
-.animated-text-section-title-2 {
-.animated-text-section-divider-1 {
+.animated-text-section-title-2 .animated-text-section-divider-1 {
   animation-delay: 0.3s;
   animation-duration: 0.8s;
 }

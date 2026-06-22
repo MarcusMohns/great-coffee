@@ -14,7 +14,7 @@
   <article class="coffee-detailed">
     <div class="detailed-hero">
       <div class="detailed-image-section">
-        <div class="image img-magnifier-container" {{magnify}}>
+        <div class="image img-magnifier-container-large" {{magnify}}>
           <div class="img-magnifier-glass" />
           <Coffee::Image
             src={{@coffee.image}}
@@ -63,6 +63,13 @@
         <header class="product-header">
           <div class="brand-tag">Great Coffee Co.</div>
           <h2 class="detailed-coffee-name">{{@coffee.name}}</h2>
+          <div class="image img-magnifier-container-small" {{magnify}}>
+            <Coffee::Image
+              src={{@coffee.image}}
+              alt="A picture of {{@coffee.name}}"
+              class="magnify-image"
+            />
+          </div>
           <div class="detail detailed-reviews">
             <span class="stars">{{repeat "★" @coffee.reviews}}{{repeat
                 "☆"
